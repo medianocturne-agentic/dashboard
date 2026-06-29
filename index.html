@@ -6,42 +6,122 @@
 <meta name="robots" content="noindex, nofollow" />
 <title>Agentic Account — Snapshot</title>
 <style>
-  :root { color-scheme: dark; }
+  /* ===== Trading-terminal / neon theme ===== */
+  :root {
+    color-scheme: dark;
+    --bg: #05080a;
+    --panel: #0a1014;
+    --panel-line: #15321f;
+    --grid-line: rgba(0, 255, 140, 0.05);
+    --green: #2bff9a;       /* primary neon green */
+    --green-dim: #1f8f5c;
+    --cyan: #25e0ff;        /* secondary neon cyan */
+    --red: #ff4d6d;         /* neon loss red */
+    --amber: #ffcf4a;
+    --text: #b9f3d2;        /* phosphor green-white */
+    --text-dim: #5f8f78;
+    --mono: "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Consolas, "Liberation Mono", monospace;
+  }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; background: #15151a; color: #ededec; }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 18px 16px 40px; }
-  .header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-  .title { font-size: 18px; font-weight: 600; margin: 0; color: #f5f5f4; }
-  .sub { font-size: 12px; color: #8e8e96; margin: 2px 0 0; }
-  .snapbar { background: #2a2410; border: 1px solid #4a3d15; border-radius: 9px; padding: 8px 12px; margin-bottom: 14px; font-size: 12px; color: #d9c987; }
-  .cycle { background: #1a2230; border: 1px solid #243349; border-radius: 9px; padding: 9px 12px; margin-bottom: 16px; font-size: 12px; color: #9fb6d4; line-height: 1.5; }
-  .cycle b { color: #cfe0f2; font-weight: 600; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 18px; }
-  .card { background: #1f1f26; border: 1px solid #2c2c35; border-radius: 10px; padding: 12px 14px; }
-  .card .label { font-size: 12px; color: #9a9aa2; margin: 0 0 4px; }
-  .card .value { font-size: 21px; font-weight: 600; margin: 0; color: #f5f5f4; }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  thead th { text-align: right; padding: 7px 6px; color: #9a9aa2; font-weight: 500; border-bottom: 1px solid #2c2c35; }
+  body {
+    margin: 0;
+    font-family: var(--mono);
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    /* faint terminal grid */
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  /* subtle CRT scanlines */
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,0.16) 0px, rgba(0,0,0,0.16) 1px, transparent 1px, transparent 3px);
+    opacity: 0.35;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 22px 16px 48px; position: relative; z-index: 1; }
+  .header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .title {
+    font-size: 17px; font-weight: 700; margin: 0; color: var(--green);
+    text-transform: uppercase; letter-spacing: 0.14em;
+    text-shadow: 0 0 6px rgba(43,255,154,0.55), 0 0 18px rgba(43,255,154,0.25);
+  }
+  .title::before { content: "▌ "; color: var(--green); }
+  .title::after { content: " ▮"; color: var(--green); animation: blink 1.1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .sub { font-size: 11px; color: var(--text-dim); margin: 3px 0 0; letter-spacing: 0.04em; text-transform: uppercase; }
+  #generated { color: var(--cyan); text-shadow: 0 0 6px rgba(37,224,255,0.4); }
+  .snapbar { background: rgba(255,207,74,0.05); border: 1px solid rgba(255,207,74,0.3); border-radius: 4px; padding: 8px 12px; margin-bottom: 14px; font-size: 11px; color: var(--amber); letter-spacing: 0.03em; }
+  .cycle { background: rgba(37,224,255,0.04); border: 1px solid rgba(37,224,255,0.22); border-radius: 4px; padding: 10px 12px; margin-bottom: 18px; font-size: 11.5px; color: #8fd4e6; line-height: 1.6; letter-spacing: 0.02em; }
+  .cycle b { color: var(--cyan); font-weight: 700; text-shadow: 0 0 6px rgba(37,224,255,0.35); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 20px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--panel-line); border-radius: 4px; padding: 12px 14px;
+    box-shadow: inset 0 0 22px rgba(0,255,140,0.04);
+  }
+  .card .label { font-size: 10px; color: var(--text-dim); margin: 0 0 5px; text-transform: uppercase; letter-spacing: 0.12em; }
+  .card .value { font-size: 22px; font-weight: 700; margin: 0; color: var(--green); font-variant-numeric: tabular-nums; text-shadow: 0 0 8px rgba(43,255,154,0.4); }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+  thead th { text-align: right; padding: 8px 7px; color: var(--green-dim); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; font-size: 10px; border-bottom: 1px solid var(--panel-line); }
   thead th:first-child { text-align: left; }
-  tbody td { padding: 9px 6px; text-align: right; border-bottom: 1px solid #24242c; color: #d8d8da; }
-  tbody td:first-child { text-align: left; font-weight: 600; color: #f5f5f4; }
+  tbody td { padding: 9px 7px; text-align: right; border-bottom: 1px solid rgba(21,50,31,0.6); color: var(--text); }
+  tbody td:first-child { text-align: left; font-weight: 700; color: var(--green); letter-spacing: 0.04em; }
   tbody tr:last-child td { border-bottom: none; }
-  .pos { color: #4ade80; }
-  .neg { color: #f87171; }
-  .badge { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 6px; white-space: nowrap; }
-  .badge.success { background: #163a24; color: #6ee7a0; }
-  .badge.danger { background: #3a1717; color: #fca5a5; }
-  .badge.warning { background: #3a2c10; color: #fcd34d; }
-  .badge.info { background: #1c2a3f; color: #93c5fd; }
-  .lev-tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.03em; padding: 1px 5px; margin-left: 6px; border-radius: 4px; background: #2a1f3f; color: #c4b5fd; vertical-align: 1px; }
-  .subtext { font-size: 10px; color: #75757e; margin-top: 2px; }
-  .note { font-size: 12px; color: #8e8e96; margin-top: 12px; }
-  .legend { font-size: 11px; color: #8e8e96; margin-top: 10px; line-height: 1.7; }
+  tbody tr:hover td { background: rgba(43,255,154,0.04); }
+  .pos { color: var(--green) !important; text-shadow: 0 0 6px rgba(43,255,154,0.35); }
+  .neg { color: var(--red) !important; text-shadow: 0 0 6px rgba(255,77,109,0.35); }
+  .badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 3px; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid transparent; }
+  .badge.success { background: rgba(43,255,154,0.08); color: var(--green); border-color: rgba(43,255,154,0.4); }
+  .badge.danger { background: rgba(255,77,109,0.08); color: var(--red); border-color: rgba(255,77,109,0.4); }
+  .badge.warning { background: rgba(255,207,74,0.08); color: var(--amber); border-color: rgba(255,207,74,0.4); }
+  .badge.info { background: rgba(37,224,255,0.08); color: var(--cyan); border-color: rgba(37,224,255,0.4); }
+  .lev-tag { display: inline-block; font-size: 8px; font-weight: 700; letter-spacing: 0.1em; padding: 1px 5px; margin-left: 6px; border-radius: 2px; background: rgba(37,224,255,0.1); color: var(--cyan); border: 1px solid rgba(37,224,255,0.35); vertical-align: 1px; }
+  .subtext { font-size: 9.5px; color: var(--text-dim); margin-top: 2px; letter-spacing: 0.02em; }
+  .note { font-size: 11px; color: var(--text-dim); margin-top: 12px; }
+  .legend { font-size: 10.5px; color: var(--text-dim); margin-top: 12px; line-height: 1.8; }
   .legend .badge { margin-right: 5px; }
-  .legend b { color: #c9c9cf; }
-  .section-title { font-size: 13px; font-weight: 600; color: #c9c9cf; margin: 22px 0 8px; }
-  .loading { font-size: 13px; color: #8e8e96; }
-  .foot { font-size: 11px; color: #6a6a72; margin-top: 26px; border-top: 1px solid #24242c; padding-top: 12px; line-height: 1.6; }
+  .legend b { color: var(--green); }
+  .section-title { font-size: 11px; font-weight: 700; color: var(--green-dim); margin: 24px 0 8px; text-transform: uppercase; letter-spacing: 0.12em; }
+  .section-title::before { content: "// "; color: var(--green); }
+  .loading { font-size: 12px; color: var(--text-dim); }
+  .foot { font-size: 10px; color: var(--text-dim); margin-top: 28px; border-top: 1px solid var(--panel-line); padding-top: 12px; line-height: 1.7; letter-spacing: 0.02em; }
+
+  /* ===== iPhone 16 Pro (and similar phones, <= 440px CSS width) ===== */
+  @media (max-width: 440px) {
+    body { background-size: 22px 22px; }
+    .wrap { padding: 14px 11px 34px; }
+    .header { margin-bottom: 12px; }
+    .title { font-size: 14px; letter-spacing: 0.08em; }
+    .sub { font-size: 10px; }
+    .snapbar, .cycle { font-size: 10.5px; padding: 8px 10px; }
+    .cards { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .card { padding: 10px 11px; }
+    .card .value { font-size: 18px; }
+    .section-title { font-size: 10px; margin: 18px 0 6px; }
+    /* let the 7-column positions table scroll horizontally instead of crushing */
+    #app { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    #app table { min-width: 520px; }
+    table { font-size: 11.5px; }
+    thead th, tbody td { padding: 7px 5px; }
+    .legend, .foot { font-size: 10px; }
+  }
+
+  /* ===== iPad Pro 12.9" and larger (>= 1024px CSS width) ===== */
+  @media (min-width: 1024px) {
+    .wrap { max-width: 1060px; padding: 30px 26px 56px; }
+    .title { font-size: 20px; }
+    .sub { font-size: 12px; }
+    .snapbar, .cycle { font-size: 12.5px; }
+    .cards { grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .card { padding: 14px 16px; }
+    .card .value { font-size: 25px; }
+    table { font-size: 13.5px; }
+    thead th { font-size: 11px; }
+    thead th, tbody td { padding: 10px 9px; }
+    .legend { font-size: 11.5px; }
+  }
 </style>
 </head>
 <body>
@@ -66,7 +146,7 @@
        positions:[{symbol,qty,avgCost,last,pnl,pnlPct,isLev,stopLabel,stopTone,triggerVal,triggerReal,triggerNote}],
        intraday:[{time,pnlPct,totalValue}], history:[{date,pnlPct}] } -->
 <script type="application/json" id="snapshot-data">
-{"generatedAt":"awaiting first scheduled snapshot","portfolio":{},"totalPnl":null,"totalPnlPct":null,"positions":[],"intraday":[],"history":[]}
+{"generatedAt":"2026-06-29 3:46 PM ET","portfolio":{"totalValue":568.60,"equityValue":139.37,"cash":429.23,"buyingPower":0.00},"totalPnl":11.17,"totalPnlPct":8.72,"positions":[{"symbol":"SLS","qty":0.700139,"avgCost":11.68,"last":15.03,"pnl":2.35,"pnlPct":28.68,"isLev":false,"stopLabel":"Synthetic","stopTone":"info","triggerVal":14.58,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TQQQ","qty":0.811579,"avgCost":73.93,"last":77.015,"pnl":2.50,"pnlPct":4.17,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":75.86,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TSLL","qty":4.862276,"avgCost":12.34,"last":13.64,"pnl":6.32,"pnlPct":10.54,"isLev":true,"stopLabel":"Stop $13.46","stopTone":"success","triggerVal":13.46,"triggerReal":true,"triggerNote":""}],"intraday":[{"time":"10:16 AM","pnlPct":4.11,"totalValue":543.49},{"time":"11:23 AM","pnlPct":12.47,"totalValue":555.14},{"time":"12:11 PM","pnlPct":13.71,"totalValue":557.28},{"time":"1:06 PM","pnlPct":6.72,"totalValue":565.38},{"time":"3:46 PM","pnlPct":8.72,"totalValue":568.60}],"history":[{"date":"2026-06-26","pnlPct":3.87}]}
 </script>
 
 <script>
