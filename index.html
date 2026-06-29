@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex, nofollow" />
 <title>Agentic Account — Snapshot</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PG1hc2sgaWQ9ImMiPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iIzAwMCIvPjxjaXJjbGUgY3g9IjI3IiBjeT0iMzIiIHI9IjIwIiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iMzciIGN5PSIyOSIgcj0iMTgiIGZpbGw9IiMwMDAiLz48L21hc2s+PC9kZWZzPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSIjMDYwODBhIi8+PGNpcmNsZSBjeD0iMjciIGN5PSIzMiIgcj0iMjAiIGZpbGw9IiMyYmZmOWEiIG1hc2s9InVybCgjYykiLz48ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNWUwZmYiIHN0cm9rZS13aWR0aD0iMS41Ij48Y2lyY2xlIGN4PSIzNiIgY3k9IjMyIiByPSI4Ii8+PGNpcmNsZSBjeD0iNDQiIGN5PSIzMiIgcj0iOCIvPjxjaXJjbGUgY3g9IjI4IiBjeT0iMzIiIHI9IjgiLz48Y2lyY2xlIGN4PSI0MCIgY3k9IjM4LjkzIiByPSI4Ii8+PGNpcmNsZSBjeD0iMzIiIGN5PSIzOC45MyIgcj0iOCIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iMjUuMDciIHI9IjgiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjI1LjA3IiByPSI4Ii8+PC9nPjwvc3ZnPg==" />
 <style>
   /* ===== Trading-terminal / neon theme ===== */
   :root {
@@ -56,6 +57,11 @@
   .snapbar { background: rgba(255,207,74,0.05); border: 1px solid rgba(255,207,74,0.3); border-radius: 4px; padding: 8px 12px; margin-bottom: 14px; font-size: 11px; color: var(--amber); letter-spacing: 0.03em; }
   .cycle { background: rgba(37,224,255,0.04); border: 1px solid rgba(37,224,255,0.22); border-radius: 4px; padding: 10px 12px; margin-bottom: 18px; font-size: 11.5px; color: #8fd4e6; line-height: 1.6; letter-spacing: 0.02em; }
   .cycle b { color: var(--cyan); font-weight: 700; text-shadow: 0 0 6px rgba(37,224,255,0.35); }
+  .overall { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: linear-gradient(90deg, rgba(43,255,154,0.09), rgba(37,224,255,0.04)); border: 1px solid rgba(43,255,154,0.38); border-radius: 5px; padding: 13px 16px; margin-bottom: 18px; box-shadow: inset 0 0 28px rgba(43,255,154,0.06); }
+  .overall .ov-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin-bottom: 3px; }
+  .overall .ov-value { font-size: 27px; font-weight: 700; font-variant-numeric: tabular-nums; text-shadow: 0 0 11px rgba(43,255,154,0.4); line-height: 1.1; }
+  .overall .ov-break { font-size: 10.5px; color: var(--text-dim); letter-spacing: 0.03em; text-align: right; line-height: 1.6; }
+  .overall .ov-break b { color: var(--text); font-weight: 600; }
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 20px; }
   .card {
     background: var(--panel); border: 1px solid var(--panel-line); border-radius: 4px; padding: 12px 14px;
@@ -135,6 +141,7 @@
   </div>
   <div class="snapbar">Static snapshot &mdash; the numbers below are frozen at the generation time shown above, not live. Regenerated hourly during market hours.</div>
   <div class="cycle"><b>Daily cycle:</b> ~9:37am ET deploy all settled cash into the top 3 movers &rarr; hourly trailing-stop ratchets &amp; momentum/stagnation exits &rarr; <b>~3:51pm ET full flatten to cash</b> &rarr; rebuilt next morning. Nothing is held overnight, so there is no overnight or weekend gap exposure.</div>
+  <div id="overall"></div>
   <div id="app"><p class="loading">Loading snapshot…</p></div>
   <div id="intraday-section"></div>
   <div id="history-section"></div>
@@ -146,7 +153,7 @@
        positions:[{symbol,qty,avgCost,last,pnl,pnlPct,isLev,stopLabel,stopTone,triggerVal,triggerReal,triggerNote}],
        intraday:[{time,pnlPct,totalValue}], history:[{date,pnlPct}] } -->
 <script type="application/json" id="snapshot-data">
-{"generatedAt":"2026-06-29 3:46 PM ET","portfolio":{"totalValue":568.60,"equityValue":139.37,"cash":429.23,"buyingPower":0.00},"totalPnl":11.17,"totalPnlPct":8.72,"positions":[{"symbol":"SLS","qty":0.700139,"avgCost":11.68,"last":15.03,"pnl":2.35,"pnlPct":28.68,"isLev":false,"stopLabel":"Synthetic","stopTone":"info","triggerVal":14.58,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TQQQ","qty":0.811579,"avgCost":73.93,"last":77.015,"pnl":2.50,"pnlPct":4.17,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":75.86,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TSLL","qty":4.862276,"avgCost":12.34,"last":13.64,"pnl":6.32,"pnlPct":10.54,"isLev":true,"stopLabel":"Stop $13.46","stopTone":"success","triggerVal":13.46,"triggerReal":true,"triggerNote":""}],"intraday":[{"time":"10:16 AM","pnlPct":4.11,"totalValue":543.49},{"time":"11:23 AM","pnlPct":12.47,"totalValue":555.14},{"time":"12:11 PM","pnlPct":13.71,"totalValue":557.28},{"time":"1:06 PM","pnlPct":6.72,"totalValue":565.38},{"time":"3:46 PM","pnlPct":8.72,"totalValue":568.60}],"history":[{"date":"2026-06-26","pnlPct":3.87}]}
+{"generatedAt":"2026-06-29 3:46 PM ET","portfolio":{"totalValue":568.60,"equityValue":139.37,"cash":429.23,"buyingPower":0.00},"totalPnl":11.17,"totalPnlPct":8.72,"realizedAllTime":24.54,"realizedRate":5.31,"positions":[{"symbol":"SLS","qty":0.700139,"avgCost":11.68,"last":15.03,"pnl":2.35,"pnlPct":28.68,"isLev":false,"stopLabel":"Synthetic","stopTone":"info","triggerVal":14.58,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TQQQ","qty":0.811579,"avgCost":73.93,"last":77.015,"pnl":2.50,"pnlPct":4.17,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":75.86,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TSLL","qty":4.862276,"avgCost":12.34,"last":13.64,"pnl":6.32,"pnlPct":10.54,"isLev":true,"stopLabel":"Stop $13.46","stopTone":"success","triggerVal":13.46,"triggerReal":true,"triggerNote":""}],"intraday":[{"time":"10:16 AM","pnlPct":4.11,"totalValue":543.49},{"time":"11:23 AM","pnlPct":12.47,"totalValue":555.14},{"time":"12:11 PM","pnlPct":13.71,"totalValue":557.28},{"time":"1:06 PM","pnlPct":6.72,"totalValue":565.38},{"time":"3:46 PM","pnlPct":8.72,"totalValue":568.60}],"history":[{"date":"2026-06-26","pnlPct":3.87}]}
 </script>
 
 <script>
@@ -158,6 +165,23 @@ function render(d){
   document.getElementById('generated').textContent = 'Snapshot: ' + (d.generatedAt || '—');
   var p = d.portfolio || {};
   var app = document.getElementById('app');
+
+  // Overall (holistic) P/L = all-time realized + current open unrealized
+  var ovEl = document.getElementById('overall');
+  var realized = (d.realizedAllTime === null || d.realizedAllTime === undefined) ? null : d.realizedAllTime;
+  var unreal = (d.totalPnl === null || d.totalPnl === undefined) ? 0 : d.totalPnl;
+  if (realized === null && (!d.positions || !d.positions.length)) {
+    ovEl.innerHTML = '';
+  } else {
+    var overall = (realized === null ? 0 : realized) + unreal;
+    var ovCls = overall >= 0 ? 'pos' : 'neg';
+    var rateTxt = (d.realizedRate === null || d.realizedRate === undefined) ? '' : ' (' + (d.realizedRate >= 0 ? '+' : '') + d.realizedRate.toFixed(2) + '%)';
+    ovEl.innerHTML =
+        '<div><div class="ov-label">Overall P/L &middot; realized + unrealized, all-time</div>'
+      + '<div class="ov-value ' + ovCls + '">' + fmtUsd(overall) + '</div></div>'
+      + '<div class="ov-break">Realized (closed trades): <b>' + fmtUsd(realized) + '</b>' + rateTxt
+      + '<br>Open unrealized: <b>' + fmtUsd(unreal) + '</b></div>';
+  }
 
   if(!d.positions || !d.positions.length){
     app.innerHTML = '<p class="loading">Flat — no open positions at this snapshot. Cash: ' + fmtUsd(p.cash) + '. This is the expected state overnight and before the ~9:37am deploy.</p>';
