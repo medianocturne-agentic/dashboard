@@ -256,7 +256,7 @@ function render(d){
       hr += '<tr><td>'+h.date+'</td><td class="'+(h.pnlPct>=0?'pos':'neg')+'">'+fmtPctOnly(h.pnlPct)+'</td></tr>';
     });
     var meanCls = hmean>=0?'pos':'neg';
-    hel.innerHTML = '<p class="section-title">End-of-day aggregate P/L % (cost basis)</p>'
+    hel.innerHTML = '<p class="section-title">Daily realized P/L %</p>'
       + '<table><thead><tr><th>Date</th><th>P/L %</th></tr></thead><tbody>'+hr+'</tbody>'
       + '<tfoot><tr class="meanrow"><td>Mean &middot; '+hist.length+' day'+(hist.length===1?'':'s')+'</td>'
       + '<td class="'+meanCls+'">'+fmtPctOnly(hmean)+'</td></tr></tfoot>'
