@@ -76,6 +76,8 @@
   tbody td:first-child { text-align: left; font-weight: 700; color: var(--green); letter-spacing: 0.04em; }
   tbody tr:last-child td { border-bottom: none; }
   tbody tr:hover td { background: rgba(43,255,154,0.04); }
+  tfoot .meanrow td { border-top: 1px solid var(--panel-line); border-bottom: none; padding-top: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; font-size: 11px; }
+  tfoot .meanrow td:first-child { color: var(--green-dim); text-align: left; }
   .pos { color: var(--green) !important; text-shadow: 0 0 6px rgba(43,255,154,0.35); }
   .neg { color: var(--red) !important; text-shadow: 0 0 6px rgba(255,77,109,0.35); }
   .badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 3px; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid transparent; }
@@ -241,11 +243,19 @@ function render(d){
   // History
   var hel = document.getElementById('history-section');
   if(d.history && d.history.length){
+    var hist = d.history.slice();
+    var hsum = 0; hist.forEach(function(h){ hsum += h.pnlPct; });
+    var hmean = hsum / hist.length;
     var hr = '';
-    d.history.slice().sort(function(a,b){return a.date<b.date?1:-1;}).slice(0,30).forEach(function(h){
+    hist.sort(function(a,b){return a.date<b.date?1:-1;}).slice(0,30).forEach(function(h){
       hr += '<tr><td>'+h.date+'</td><td class="'+(h.pnlPct>=0?'pos':'neg')+'">'+fmtPctOnly(h.pnlPct)+'</td></tr>';
     });
-    hel.innerHTML = '<p class="section-title">End-of-day aggregate P/L % (cost basis)</p><table><thead><tr><th>Date</th><th>P/L %</th></tr></thead><tbody>'+hr+'</tbody></table>';
+    var meanCls = hmean>=0?'pos':'neg';
+    hel.innerHTML = '<p class="section-title">End-of-day aggregate P/L % (cost basis)</p>'
+      + '<table><thead><tr><th>Date</th><th>P/L %</th></tr></thead><tbody>'+hr+'</tbody>'
+      + '<tfoot><tr class="meanrow"><td>Mean &middot; '+hist.length+' day'+(hist.length===1?'':'s')+'</td>'
+      + '<td class="'+meanCls+'">'+fmtPctOnly(hmean)+'</td></tr></tfoot>'
+      + '</table>';
   } else { hel.innerHTML = ''; }
 }
 
