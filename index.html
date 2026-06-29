@@ -54,6 +54,10 @@
   @keyframes blink { 50% { opacity: 0; } }
   .sub { font-size: 11px; color: var(--text-dim); margin: 3px 0 0; letter-spacing: 0.04em; text-transform: uppercase; }
   #generated { color: var(--cyan); text-shadow: 0 0 6px rgba(37,224,255,0.4); }
+  .arclink { margin: 0 0 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .arclink a { color: var(--cyan); text-decoration: none; }
+  .arclink a:hover { text-shadow: 0 0 6px rgba(37,224,255,0.5); }
+  .arclink a::after { content: " ›"; color: var(--green-dim); }
   .snapbar { background: rgba(255,207,74,0.05); border: 1px solid rgba(255,207,74,0.3); border-radius: 4px; padding: 8px 12px; margin-bottom: 14px; font-size: 11px; color: var(--amber); letter-spacing: 0.03em; }
   .cycle { background: rgba(37,224,255,0.04); border: 1px solid rgba(37,224,255,0.22); border-radius: 4px; padding: 10px 12px; margin-bottom: 18px; font-size: 11.5px; color: #8fd4e6; line-height: 1.6; letter-spacing: 0.02em; }
   .cycle b { color: var(--cyan); font-weight: 700; text-shadow: 0 0 6px rgba(37,224,255,0.35); }
@@ -143,6 +147,7 @@
   </div>
   <div class="snapbar">Static snapshot &mdash; the numbers below are frozen at the generation time shown above, not live. Regenerated hourly during market hours.</div>
   <div class="cycle"><b>Daily cycle:</b> ~9:37am ET deploy all settled cash into the top 3 movers &rarr; hourly trailing-stop ratchets &amp; momentum/stagnation exits &rarr; <b>~3:51pm ET full flatten to cash</b> &rarr; rebuilt next morning. Nothing is held overnight, so there is no overnight or weekend gap exposure.</div>
+  <div class="arclink"><a href="reports/">EOD report archive</a></div>
   <div id="overall"></div>
   <div id="app"><p class="loading">Loading snapshot…</p></div>
   <div id="intraday-section"></div>
