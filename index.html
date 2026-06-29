@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Agentic Account — Snapshot</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; background: #15151a; color: #ededec; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 18px 16px 40px; }
+  .header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .title { font-size: 18px; font-weight: 600; margin: 0; color: #f5f5f4; }
+  .sub { font-size: 12px; color: #8e8e96; margin: 2px 0 0; }
+  .snapbar { background: #2a2410; border: 1px solid #4a3d15; border-radius: 9px; padding: 8px 12px; margin-bottom: 14px; font-size: 12px; color: #d9c987; }
+  .cycle { background: #1a2230; border: 1px solid #243349; border-radius: 9px; padding: 9px 12px; margin-bottom: 16px; font-size: 12px; color: #9fb6d4; line-height: 1.5; }
+  .cycle b { color: #cfe0f2; font-weight: 600; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 18px; }
+  .card { background: #1f1f26; border: 1px solid #2c2c35; border-radius: 10px; padding: 12px 14px; }
+  .card .label { font-size: 12px; color: #9a9aa2; margin: 0 0 4px; }
+  .card .value { font-size: 21px; font-weight: 600; margin: 0; color: #f5f5f4; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th { text-align: right; padding: 7px 6px; color: #9a9aa2; font-weight: 500; border-bottom: 1px solid #2c2c35; }
+  thead th:first-child { text-align: left; }
+  tbody td { padding: 9px 6px; text-align: right; border-bottom: 1px solid #24242c; color: #d8d8da; }
+  tbody td:first-child { text-align: left; font-weight: 600; color: #f5f5f4; }
+  tbody tr:last-child td { border-bottom: none; }
+  .pos { color: #4ade80; }
+  .neg { color: #f87171; }
+  .badge { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 6px; white-space: nowrap; }
+  .badge.success { background: #163a24; color: #6ee7a0; }
+  .badge.danger { background: #3a1717; color: #fca5a5; }
+  .badge.warning { background: #3a2c10; color: #fcd34d; }
+  .badge.info { background: #1c2a3f; color: #93c5fd; }
+  .lev-tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.03em; padding: 1px 5px; margin-left: 6px; border-radius: 4px; background: #2a1f3f; color: #c4b5fd; vertical-align: 1px; }
+  .subtext { font-size: 10px; color: #75757e; margin-top: 2px; }
+  .note { font-size: 12px; color: #8e8e96; margin-top: 12px; }
+  .legend { font-size: 11px; color: #8e8e96; margin-top: 10px; line-height: 1.7; }
+  .legend .badge { margin-right: 5px; }
+  .legend b { color: #c9c9cf; }
+  .section-title { font-size: 13px; font-weight: 600; color: #c9c9cf; margin: 22px 0 8px; }
+  .loading { font-size: 13px; color: #8e8e96; }
+  .foot { font-size: 11px; color: #6a6a72; margin-top: 26px; border-top: 1px solid #24242c; padding-top: 12px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div>
+      <p class="title">Agentic account</p>
+      <p class="sub">Robinhood account 849696877 &middot; intraday-only, flat to cash overnight</p>
+    </div>
+    <p class="sub" id="generated">—</p>
+  </div>
+  <div class="snapbar">Static snapshot &mdash; the numbers below are frozen at the generation time shown above, not live. Regenerated hourly during market hours.</div>
+  <div class="cycle"><b>Daily cycle:</b> ~9:37am ET deploy all settled cash into the top 3 movers &rarr; hourly trailing-stop ratchets &amp; momentum/stagnation exits &rarr; <b>~3:51pm ET full flatten to cash</b> &rarr; rebuilt next morning. Nothing is held overnight, so there is no overnight or weekend gap exposure.</div>
+  <div id="app"><p class="loading">Loading snapshot…</p></div>
+  <div id="intraday-section"></div>
+  <div id="history-section"></div>
+  <div class="foot">Generated automatically from the Agentic momentum strategy. Snapshot only &mdash; informational, not investment advice. Leveraged/inverse ETFs carry substantial risk of loss.</div>
+</div>
+
+<!-- The scheduled task replaces ONLY the JSON inside this block each run. Shape:
+     { generatedAt, portfolio:{totalValue,equityValue,cash,buyingPower}, totalPnl, totalPnlPct,
+       positions:[{symbol,qty,avgCost,last,pnl,pnlPct,isLev,stopLabel,stopTone,triggerVal,triggerReal,triggerNote}],
+       intraday:[{time,pnlPct,totalValue}], history:[{date,pnlPct}] } -->
+<script type="application/json" id="snapshot-data">
+{"generatedAt":"awaiting first scheduled snapshot","portfolio":{},"totalPnl":null,"totalPnlPct":null,"positions":[],"intraday":[],"history":[]}
+</script>
+
+<script>
+function fmtUsd(n){ if(n===null||n===undefined||isNaN(n))return '—'; var s=n<0?'-':''; return s+'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function fmtPct(n){ if(n===null||n===undefined||isNaN(n))return ''; var s=n>=0?'+':''; return ' ('+s+n.toFixed(1)+'%)'; }
+function fmtPctOnly(n){ if(n===null||n===undefined||isNaN(n))return '—'; var s=n>=0?'+':''; return s+n.toFixed(2)+'%'; }
+
+function render(d){
+  document.getElementById('generated').textContent = 'Snapshot: ' + (d.generatedAt || '—');
+  var p = d.portfolio || {};
+  var app = document.getElementById('app');
+
+  if(!d.positions || !d.positions.length){
+    app.innerHTML = '<p class="loading">Flat — no open positions at this snapshot. Cash: ' + fmtUsd(p.cash) + '. This is the expected state overnight and before the ~9:37am deploy.</p>';
+  } else {
+    var cards = ''
+      + '<div class="card"><p class="label">Account value</p><p class="value">'+fmtUsd(p.totalValue)+'</p></div>'
+      + '<div class="card"><p class="label">Equity value</p><p class="value">'+fmtUsd(p.equityValue)+'</p></div>'
+      + '<div class="card"><p class="label">Cash</p><p class="value">'+fmtUsd(p.cash)+'</p></div>'
+      + '<div class="card"><p class="label">Unrealized P&amp;L</p><p class="value '+((d.totalPnl>=0)?'pos':'neg')+'">'+fmtUsd(d.totalPnl)+fmtPct(d.totalPnlPct)+'</p></div>';
+
+    var rows = '';
+    d.positions.forEach(function(r){
+      var pnlClass = (r.pnl===null||r.pnl===undefined)?'':(r.pnl>=0?'pos':'neg');
+      var pnlText = (r.pnl===null||r.pnl===undefined)?'—':fmtUsd(r.pnl)+fmtPct(r.pnlPct);
+      var trig = '—';
+      if(r.triggerVal!==null && r.triggerVal!==undefined){
+        var prefix = r.triggerReal?'':'~';
+        var sub = r.triggerReal?'resting order':(r.triggerNote||'estimate');
+        if(r.last!==null && r.last!==undefined){ sub += ' &middot; '+(((r.last-r.triggerVal)/r.last)*100).toFixed(1)+'% below current'; }
+        trig = '<div>'+prefix+fmtUsd(r.triggerVal)+'</div><div class="subtext">'+sub+'</div>';
+      }
+      rows += '<tr>'
+        + '<td>'+r.symbol+(r.isLev?'<span class="lev-tag">LEV</span>':'')+'</td>'
+        + '<td>'+(r.qty!=null?Number(r.qty).toFixed(2):'—')+'</td>'
+        + '<td>'+fmtUsd(r.avgCost)+'</td>'
+        + '<td>'+(r.last==null?'—':fmtUsd(r.last))+'</td>'
+        + '<td class="'+pnlClass+'">'+pnlText+'</td>'
+        + '<td>'+trig+'</td>'
+        + '<td><span class="badge '+(r.stopTone||'info')+'">'+(r.stopLabel||'—')+'</span></td>'
+        + '</tr>';
+    });
+
+    var legend = '<div class="legend">'
+      + '<span class="badge success">Stop $X</span>real broker-side stop-loss order, actively resting. '
+      + '<span class="badge info">Synthetic</span>fully-fractional position watched intraday via a periodic high-water-mark/breakeven check; closed with everything else at the daily flatten. '
+      + '<span class="badge warning">Pending Renewal</span>whole shares, no stop resting this exact moment — the hourly task places a fresh one every run. '
+      + '<span class="badge danger">Unprotected</span>no protection active right now — needs a look. '
+      + '<br><b>Overnight: nothing is held.</b> Every position is sold to cash at the ~3:51pm ET daily flatten and rebuilt the next morning, so there is no overnight or weekend gap risk. '
+      + '<br>Bands: leveraged tickers 0.5% once up 5%+ / 1.5% below that; all other positions 3%.'
+      + '</div>';
+
+    app.innerHTML = '<div class="cards">'+cards+'</div>'
+      + '<table><thead><tr><th>Symbol</th><th>Qty</th><th>Avg cost</th><th>Current</th><th>P&amp;L</th><th>Stop trigger</th><th>Stop</th></tr></thead><tbody>'+rows+'</tbody></table>'
+      + legend;
+  }
+
+  // Intraday
+  var iel = document.getElementById('intraday-section');
+  if(d.intraday && d.intraday.length){
+    var ir = '';
+    d.intraday.slice().reverse().forEach(function(e){
+      ir += '<tr><td>'+e.time+'</td><td class="'+(e.pnlPct>=0?'pos':'neg')+'">'+fmtPctOnly(e.pnlPct)+'</td><td>'+fmtUsd(e.totalValue)+'</td></tr>';
+    });
+    iel.innerHTML = '<p class="section-title">Today’s activity</p><table><thead><tr><th>Time (ET)</th><th>P/L %</th><th>Account value</th></tr></thead><tbody>'+ir+'</tbody></table>';
+  } else { iel.innerHTML = ''; }
+
+  // History
+  var hel = document.getElementById('history-section');
+  if(d.history && d.history.length){
+    var hr = '';
+    d.history.slice().sort(function(a,b){return a.date<b.date?1:-1;}).slice(0,30).forEach(function(h){
+      hr += '<tr><td>'+h.date+'</td><td class="'+(h.pnlPct>=0?'pos':'neg')+'">'+fmtPctOnly(h.pnlPct)+'</td></tr>';
+    });
+    hel.innerHTML = '<p class="section-title">End-of-day aggregate P/L % (cost basis)</p><table><thead><tr><th>Date</th><th>P/L %</th></tr></thead><tbody>'+hr+'</tbody></table>';
+  } else { hel.innerHTML = ''; }
+}
+
+try { render(JSON.parse(document.getElementById('snapshot-data').textContent) || {}); }
+catch(e){ document.getElementById('app').innerHTML = '<p class="loading">Snapshot data unavailable.</p>'; }
+</script>
+</body>
+</html>
