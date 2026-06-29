@@ -59,6 +59,8 @@
   .arclink a:hover { text-shadow: 0 0 6px rgba(37,224,255,0.5); }
   .arclink a::after { content: " ›"; color: var(--green-dim); }
   .snapbar { background: rgba(255,207,74,0.05); border: 1px solid rgba(255,207,74,0.3); border-radius: 4px; padding: 8px 12px; margin-bottom: 14px; font-size: 11px; color: var(--amber); letter-spacing: 0.03em; }
+  .alert { background: rgba(255,77,109,0.08); border: 1px solid rgba(255,77,109,0.45); border-radius: 4px; padding: 10px 13px; margin-bottom: 14px; font-size: 11.5px; color: #ffb3c1; letter-spacing: 0.02em; line-height: 1.5; }
+  .alert b { color: var(--red); }
   .cycle { background: rgba(37,224,255,0.04); border: 1px solid rgba(37,224,255,0.22); border-radius: 4px; padding: 10px 12px; margin-bottom: 18px; font-size: 11.5px; color: #8fd4e6; line-height: 1.6; letter-spacing: 0.02em; }
   .cycle b { color: var(--cyan); font-weight: 700; text-shadow: 0 0 6px rgba(37,224,255,0.35); }
   .overall { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: linear-gradient(90deg, rgba(43,255,154,0.09), rgba(37,224,255,0.04)); border: 1px solid rgba(43,255,154,0.38); border-radius: 5px; padding: 13px 16px; margin-bottom: 18px; box-shadow: inset 0 0 28px rgba(43,255,154,0.06); }
@@ -66,6 +68,11 @@
   .overall .ov-value { font-size: 27px; font-weight: 700; font-variant-numeric: tabular-nums; text-shadow: 0 0 11px rgba(43,255,154,0.4); line-height: 1.1; }
   .overall .ov-break { font-size: 10.5px; color: var(--text-dim); letter-spacing: 0.03em; text-align: right; line-height: 1.6; }
   .overall .ov-break b { color: var(--text); font-weight: 600; }
+  .plgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 10px; margin-bottom: 18px; }
+  .plcard { background: var(--panel); border: 1px solid rgba(43,255,154,0.22); border-radius: 4px; padding: 13px 15px; box-shadow: inset 0 0 22px rgba(0,255,140,0.05); }
+  .plcard .label { font-size: 10px; color: var(--text-dim); margin: 0 0 5px; text-transform: uppercase; letter-spacing: 0.12em; }
+  .plcard .value { font-size: 22px; font-weight: 700; margin: 0; font-variant-numeric: tabular-nums; text-shadow: 0 0 8px rgba(43,255,154,0.3); }
+  .plcard .sub2 { font-size: 10.5px; color: var(--text-dim); margin: 4px 0 0; letter-spacing: 0.04em; }
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 20px; }
   .card {
     background: var(--panel); border: 1px solid var(--panel-line); border-radius: 4px; padding: 12px 14px;
@@ -141,12 +148,13 @@
   <div class="header">
     <div>
       <p class="title">Agentic account</p>
-      <p class="sub">Robinhood account 849696877 &middot; intraday-only, flat to cash overnight</p>
+      <p class="sub">Agentic Account &middot; intraday-only, flat to cash overnight</p>
     </div>
     <p class="sub" id="generated">—</p>
   </div>
   <div class="snapbar">Static snapshot &mdash; the numbers below are frozen at the generation time shown above, not live. Regenerated hourly during market hours.</div>
-  <div class="cycle"><b>Daily cycle:</b> ~9:37am ET deploy all settled cash into the top 3 movers &rarr; hourly trailing-stop ratchets &amp; momentum/stagnation exits &rarr; <b>~3:51pm ET full flatten to cash</b> &rarr; rebuilt next morning. Nothing is held overnight, so there is no overnight or weekend gap exposure.</div>
+  <div id="alert"></div>
+  <div class="cycle"><b>Daily cycle:</b> ~8:41am CT deploy all settled cash into the top 3 movers &rarr; hourly trailing-stop ratchets &amp; momentum/stagnation exits &rarr; <b>~2:26pm CT full flatten to cash</b> &rarr; rebuilt next morning. Nothing is held overnight, so there is no overnight or weekend gap exposure. (All times Central / CT.)</div>
   <div class="arclink"><a href="reports/">EOD report archive</a></div>
   <div id="overall"></div>
   <div id="app"><p class="loading">Loading snapshot…</p></div>
@@ -160,7 +168,7 @@
        positions:[{symbol,qty,avgCost,last,pnl,pnlPct,isLev,stopLabel,stopTone,triggerVal,triggerReal,triggerNote}],
        intraday:[{time,pnlPct,totalValue}], history:[{date,pnlPct}] } -->
 <script type="application/json" id="snapshot-data">
-{"generatedAt":"2026-06-29 3:46 PM ET","portfolio":{"totalValue":568.60,"equityValue":139.37,"cash":429.23,"buyingPower":0.00},"totalPnl":11.17,"totalPnlPct":8.72,"realizedAllTime":24.54,"realizedRate":5.31,"positions":[{"symbol":"SLS","qty":0.700139,"avgCost":11.68,"last":15.03,"pnl":2.35,"pnlPct":28.68,"isLev":false,"stopLabel":"Synthetic","stopTone":"info","triggerVal":14.58,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TQQQ","qty":0.811579,"avgCost":73.93,"last":77.015,"pnl":2.50,"pnlPct":4.17,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":75.86,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TSLL","qty":4.862276,"avgCost":12.34,"last":13.64,"pnl":6.32,"pnlPct":10.54,"isLev":true,"stopLabel":"Stop $13.46","stopTone":"success","triggerVal":13.46,"triggerReal":true,"triggerNote":""}],"intraday":[{"time":"10:16 AM","pnlPct":4.11,"totalValue":543.49},{"time":"11:23 AM","pnlPct":12.47,"totalValue":555.14},{"time":"12:11 PM","pnlPct":13.71,"totalValue":557.28},{"time":"1:06 PM","pnlPct":6.72,"totalValue":565.38},{"time":"3:46 PM","pnlPct":8.72,"totalValue":568.60}],"history":[{"date":"2026-06-26","pnlPct":3.87}]}
+{"generatedAt": "2026-06-29 5:18 PM CT", "alert": "<b>Flatten missed today.</b> The end-of-day liquidation did not run before the 4:00 PM ET close (a scheduler timezone slip, since fixed), so SLS, TQQQ and TSLL are being held overnight rather than closed to cash. They will be reviewed at tomorrow's open by the morning viability check.", "portfolio": {"totalValue": 568.84, "equityValue": 85.17, "cash": 483.67, "buyingPower": 0.0}, "totalPnl": 6.4, "totalPnlPct": 8.12, "realizedAllTime": 29.62, "realizedRate": 5.7951, "positions": [{"symbol": "SLS", "qty": 0.700139, "avgCost": 11.68, "last": 15.46, "pnl": 2.65, "pnlPct": 32.36, "isLev": false, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 14.9962, "triggerReal": false, "triggerNote": "synthetic watch (est.)"}, {"symbol": "TQQQ", "qty": 0.811579, "avgCost": 73.93, "last": 77.21, "pnl": 2.66, "pnlPct": 4.44, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 76.0519, "triggerReal": false, "triggerNote": "synthetic watch (est.)"}, {"symbol": "TSLL", "qty": 0.862276, "avgCost": 12.34, "last": 13.6101, "pnl": 1.1, "pnlPct": 10.29, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 13.542, "triggerReal": false, "triggerNote": "synthetic watch (est.)"}], "intraday": [{"time": "9:16 AM", "pnlPct": 4.11, "totalValue": 543.49}, {"time": "10:23 AM", "pnlPct": 12.47, "totalValue": 555.14}, {"time": "11:11 AM", "pnlPct": 13.71, "totalValue": 557.28}, {"time": "12:06 PM", "pnlPct": 6.72, "totalValue": 565.38}, {"time": "1:03 PM", "pnlPct": 7.41, "totalValue": 566.93}, {"time": "2:11 PM", "pnlPct": 8.18, "totalValue": 567.99}, {"time": "3:05 PM", "pnlPct": 8.84, "totalValue": 568.7}], "history": [{"date": "2026-06-26", "pnlPct": 3.87}, {"date": "2026-06-29", "pnlPct": 6.6}]}
 </script>
 
 <script>
@@ -170,6 +178,7 @@ function fmtPctOnly(n){ if(n===null||n===undefined||isNaN(n))return '—'; var s
 
 function render(d){
   document.getElementById('generated').textContent = 'Snapshot: ' + (d.generatedAt || '—');
+  var alertEl = document.getElementById('alert'); if (alertEl) { alertEl.innerHTML = d.alert ? '<div class="alert">' + d.alert + '</div>' : ''; }
   var p = d.portfolio || {};
   var app = document.getElementById('app');
 
@@ -182,16 +191,21 @@ function render(d){
   } else {
     var overall = (realized === null ? 0 : realized) + unreal;
     var ovCls = overall >= 0 ? 'pos' : 'neg';
-    var rateTxt = (d.realizedRate === null || d.realizedRate === undefined) ? '' : ' (' + (d.realizedRate >= 0 ? '+' : '') + d.realizedRate.toFixed(2) + '%)';
+    var realCls = (realized === null || realized >= 0) ? 'pos' : 'neg';
+    var uCls = unreal >= 0 ? 'pos' : 'neg';
+    var rateTxt = (d.realizedRate === null || d.realizedRate === undefined) ? '' : ((d.realizedRate >= 0 ? '+' : '') + d.realizedRate.toFixed(2) + '% on cost');
+    var uPctTxt = (d.totalPnlPct === null || d.totalPnlPct === undefined) ? '' : ((d.totalPnlPct >= 0 ? '+' : '') + d.totalPnlPct.toFixed(2) + '% vs cost');
     ovEl.innerHTML =
-        '<div><div class="ov-label">Overall P/L &middot; realized + unrealized, all-time</div>'
-      + '<div class="ov-value ' + ovCls + '">' + fmtUsd(overall) + '</div></div>'
-      + '<div class="ov-break">Realized (closed trades): <b>' + fmtUsd(realized) + '</b>' + rateTxt
-      + '<br>Open unrealized: <b>' + fmtUsd(unreal) + '</b></div>';
+        '<div class="overall"><div><div class="ov-label">Overall P/L &middot; realized + unrealized, all-time</div>'
+      + '<div class="ov-value ' + ovCls + '">' + fmtUsd(overall) + '</div></div></div>'
+      + '<div class="plgrid">'
+      + '<div class="plcard"><p class="label">Realized &middot; closed trades, all-time</p><p class="value ' + realCls + '">' + fmtUsd(realized) + '</p>' + (rateTxt ? '<p class="sub2">' + rateTxt + '</p>' : '') + '</div>'
+      + '<div class="plcard"><p class="label">Open unrealized</p><p class="value ' + uCls + '">' + fmtUsd(unreal) + '</p>' + (uPctTxt ? '<p class="sub2">' + uPctTxt + '</p>' : '') + '</div>'
+      + '</div>';
   }
 
   if(!d.positions || !d.positions.length){
-    app.innerHTML = '<p class="loading">Flat — no open positions at this snapshot. Cash: ' + fmtUsd(p.cash) + '. This is the expected state overnight and before the ~9:37am deploy.</p>';
+    app.innerHTML = '<p class="loading">Flat — no open positions at this snapshot. Cash: ' + fmtUsd(p.cash) + '. This is the expected state overnight and before the ~8:41am CT deploy.</p>';
   } else {
     var cards = ''
       + '<div class="card"><p class="label">Account value</p><p class="value">'+fmtUsd(p.totalValue)+'</p></div>'
@@ -226,7 +240,7 @@ function render(d){
       + '<span class="badge info">Synthetic</span>fully-fractional position watched intraday via a periodic high-water-mark/breakeven check; closed with everything else at the daily flatten. '
       + '<span class="badge warning">Pending Renewal</span>whole shares, no stop resting this exact moment — the hourly task places a fresh one every run. '
       + '<span class="badge danger">Unprotected</span>no protection active right now — needs a look. '
-      + '<br><b>Overnight: nothing is held.</b> Every position is sold to cash at the ~3:51pm ET daily flatten and rebuilt the next morning, so there is no overnight or weekend gap risk. '
+      + '<br><b>Overnight: nothing is held.</b> Every position is sold to cash at the ~2:26pm CT daily flatten and rebuilt the next morning, so there is no overnight or weekend gap risk. '
       + '<br>Bands: leveraged tickers 0.5% once up 5%+ / 1.5% below that; all other positions 3%.'
       + '</div>';
 
@@ -242,7 +256,7 @@ function render(d){
     d.intraday.slice().reverse().forEach(function(e){
       ir += '<tr><td>'+e.time+'</td><td class="'+(e.pnlPct>=0?'pos':'neg')+'">'+fmtPctOnly(e.pnlPct)+'</td><td>'+fmtUsd(e.totalValue)+'</td></tr>';
     });
-    iel.innerHTML = '<p class="section-title">Today’s activity</p><table><thead><tr><th>Time (ET)</th><th>P/L %</th><th>Account value</th></tr></thead><tbody>'+ir+'</tbody></table>';
+    iel.innerHTML = '<p class="section-title">Today’s activity</p><table><thead><tr><th>Time (CT)</th><th>P/L %</th><th>Account value</th></tr></thead><tbody>'+ir+'</tbody></table>';
   } else { iel.innerHTML = ''; }
 
   // History

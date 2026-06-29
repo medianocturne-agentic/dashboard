@@ -37,6 +37,14 @@
   td a::after { content:" ›"; color:var(--green-dim); }
   .pos { color:var(--green)!important; text-shadow:0 0 6px rgba(43,255,154,0.35); }
   .neg { color:var(--red)!important; text-shadow:0 0 6px rgba(255,77,109,0.35); }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin-bottom:20px; }
+  .stat { background:var(--panel); border:1px solid var(--panel-line); border-radius:4px; padding:11px 13px; box-shadow:inset 0 0 22px rgba(0,255,140,0.04); }
+  .stat.hero { grid-column:1 / -1; border-color:rgba(43,255,154,0.38); background:linear-gradient(90deg,rgba(43,255,154,0.09),rgba(37,224,255,0.04)); box-shadow:inset 0 0 28px rgba(43,255,154,0.06); }
+  .stat .l { font-size:9.5px; color:var(--text-dim); margin:0 0 5px; text-transform:uppercase; letter-spacing:0.12em; }
+  .stat .v { font-size:19px; font-weight:700; margin:0; color:var(--green); font-variant-numeric:tabular-nums; text-shadow:0 0 8px rgba(43,255,154,0.3); }
+  .stat.hero .v { font-size:26px; text-shadow:0 0 11px rgba(43,255,154,0.4); }
+  .section-title { font-size:11px; font-weight:700; color:var(--green-dim); margin:22px 0 8px; text-transform:uppercase; letter-spacing:0.12em; }
+  .section-title::before { content:"// "; color:var(--green); }
   .loading { font-size:12px; color:var(--text-dim); }
   .foot { font-size:10px; color:var(--text-dim); margin-top:28px; border-top:1px solid var(--panel-line); padding-top:12px; line-height:1.7; }
   @media (max-width:440px) {
@@ -56,7 +64,7 @@
 <div class="wrap">
   <div class="nav"><a href="../index.html">Live dashboard</a></div>
   <p class="title">EOD Reports</p>
-  <p class="sub">Account 849696877 &middot; one report per trading day, newest first</p>
+  <p class="sub">Agentic Account &middot; one report per trading day, newest first</p>
   <div id="list"><p class="loading">Loading reports…</p></div>
   <div class="foot">Automated end-of-day reports from the Agentic momentum strategy. Informational only, not investment advice.</div>
 </div>
@@ -64,7 +72,7 @@
 <!-- The daily-report task replaces ONLY the JSON in this block: an array of
      {date, pnlPct, totalValue}, one per report, any order (sorted client-side, newest first). -->
 <script type="application/json" id="reports-list">
-[]
+[{"date": "2026-06-29", "pnlPct": 6.6, "totalValue": 568.84}]
 </script>
 
 <script>
@@ -75,6 +83,23 @@ try { list=JSON.parse(document.getElementById('reports-list').textContent)||[]; 
 var el=document.getElementById('list');
 if(!list.length){ el.innerHTML='<p class="loading">No reports logged yet — the first lands after today’s close.</p>'; }
 else {
+  // ===== Summary stats block — distributes the raw daily values into a performance overview =====
+  var n=list.length, sum=0, best=-Infinity, worst=Infinity, wins=0, comp=1, latestVal=null, latestDate='';
+  list.forEach(function(r){
+    var p=Number(r.pnlPct);
+    if(!isNaN(p)){ sum+=p; if(p>best)best=p; if(p<worst)worst=p; if(p>0)wins++; comp*=(1+p/100); }
+    if(latestDate===''||r.date>latestDate){ latestDate=r.date; latestVal=r.totalValue; }
+  });
+  var mean=sum/n, cumulative=(comp-1)*100, winRate=(wins/n)*100;
+  var statsHtml='<div class="stats">'
+    + '<div class="stat hero"><p class="l">Cumulative return &middot; compounded, '+n+' day'+(n===1?'':'s')+'</p><p class="v '+(cumulative>=0?'pos':'neg')+'">'+fmtPctOnly(cumulative)+'</p></div>'
+    + '<div class="stat"><p class="l">Mean daily</p><p class="v '+(mean>=0?'pos':'neg')+'">'+fmtPctOnly(mean)+'</p></div>'
+    + '<div class="stat"><p class="l">Best day</p><p class="v '+(best>=0?'pos':'neg')+'">'+fmtPctOnly(best)+'</p></div>'
+    + '<div class="stat"><p class="l">Worst day</p><p class="v '+(worst>=0?'pos':'neg')+'">'+fmtPctOnly(worst)+'</p></div>'
+    + '<div class="stat"><p class="l">Win rate</p><p class="v">'+winRate.toFixed(0)+'% ('+wins+'/'+n+')</p></div>'
+    + '<div class="stat"><p class="l">Latest account value</p><p class="v">'+fmtUsd(latestVal)+'</p></div>'
+    + '</div>';
+
   list.sort(function(a,b){ return a.date<b.date?1:-1; });
   var rows='';
   list.forEach(function(r){
@@ -82,7 +107,9 @@ else {
       +'<td class="'+(r.pnlPct>=0?'pos':'neg')+'">'+fmtPctOnly(r.pnlPct)+'</td>'
       +'<td>'+fmtUsd(r.totalValue)+'</td></tr>';
   });
-  el.innerHTML='<table><thead><tr><th>Date</th><th>EOD P/L %</th><th>Account value</th></tr></thead><tbody>'+rows+'</tbody></table>';
+  el.innerHTML=statsHtml
+    + '<p class="section-title">Daily history</p>'
+    + '<table><thead><tr><th>Date</th><th>EOD P/L %</th><th>Account value</th></tr></thead><tbody>'+rows+'</tbody></table>';
 }
 </script>
 </body>
