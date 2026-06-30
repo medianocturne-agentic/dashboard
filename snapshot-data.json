@@ -1,1 +1,155 @@
-{"generatedAt":"2026-06-30 11:39 AM CT","portfolio":{"totalValue":595.34,"equityValue":585.44,"cash":9.90,"buyingPower":0.00},"totalPnl":16.73,"totalPnlPct":2.94,"realizedAllTime":31.34,"realizedRate":6.04,"positions":[{"symbol":"TQQQ","qty":0.811579,"avgCost":73.93,"last":80.65,"pnl":5.45,"pnlPct":9.09,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":80.25,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TSLL","qty":0.862276,"avgCost":12.34,"last":13.94,"pnl":1.38,"pnlPct":12.97,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":13.87,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"SOXL","qty":0.633079,"avgCost":254.66,"last":263.25,"pnl":5.44,"pnlPct":3.37,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":259.30,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TECL","qty":0.720498,"avgCost":223.76,"last":227.72,"pnl":2.85,"pnlPct":1.77,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":224.30,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"UPRO","qty":1.14968,"avgCost":140.24,"last":141.659,"pnl":1.63,"pnlPct":1.01,"isLev":true,"stopLabel":"Stop $139.53","stopTone":"success","triggerVal":139.53,"triggerReal":true,"triggerNote":""},{"symbol":"AMDL","qty":0.177563,"avgCost":81.83,"last":81.71,"pnl":-0.02,"pnlPct":-0.15,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":80.48,"triggerReal":false,"triggerNote":"synthetic watch (est.)"}],"intraday":[{"time":"6:10 AM","pnlPct":8.12,"totalValue":569.90},{"time":"7:10 AM","pnlPct":8.12,"totalValue":569.06},{"time":"8:12 AM","pnlPct":7.26,"totalValue":568.18},{"time":"9:00 AM","pnlPct":1.86,"totalValue":573.02},{"time":"9:05 AM","pnlPct":1.93,"totalValue":574.54},{"time":"10:12 AM","pnlPct":2.40,"totalValue":592.20},{"time":"11:09 AM","pnlPct":2.94,"totalValue":595.34}],"history":[{"date":"2026-06-26","pnlPct":3.87},{"date":"2026-06-29","pnlPct":6.60}]}
+{
+  "generatedAt": "2026-06-30 12:25 PM CT",
+  "portfolio": {
+    "totalValue": 598.3311536067,
+    "equityValue": 588.4311536067,
+    "cash": 9.9,
+    "buyingPower": 0.0
+  },
+  "totalPnl": 19.52,
+  "totalPnlPct": 3.43,
+  "realizedAllTime": 31.34,
+  "realizedRate": 6.035047178894671,
+  "positions": [
+    {
+      "symbol": "TQQQ",
+      "qty": 0.811579,
+      "avgCost": 73.93,
+      "last": 81.03,
+      "pnl": 5.76,
+      "pnlPct": 9.6,
+      "isLev": true,
+      "stopLabel": "Synthetic",
+      "stopTone": "info",
+      "triggerVal": 80.62,
+      "triggerReal": false,
+      "triggerNote": "synthetic watch (est.)"
+    },
+    {
+      "symbol": "TSLL",
+      "qty": 0.862276,
+      "avgCost": 12.34,
+      "last": 14.045,
+      "pnl": 1.47,
+      "pnlPct": 13.82,
+      "isLev": true,
+      "stopLabel": "Synthetic",
+      "stopTone": "info",
+      "triggerVal": 13.97,
+      "triggerReal": false,
+      "triggerNote": "synthetic watch (est.)"
+    },
+    {
+      "symbol": "SOXL",
+      "qty": 0.633079,
+      "avgCost": 254.66,
+      "last": 264.76,
+      "pnl": 6.39,
+      "pnlPct": 3.97,
+      "isLev": true,
+      "stopLabel": "Synthetic",
+      "stopTone": "info",
+      "triggerVal": 260.79,
+      "triggerReal": false,
+      "triggerNote": "synthetic watch (est.)"
+    },
+    {
+      "symbol": "TECL",
+      "qty": 0.720498,
+      "avgCost": 223.76,
+      "last": 229.055,
+      "pnl": 3.82,
+      "pnlPct": 2.37,
+      "isLev": true,
+      "stopLabel": "Synthetic",
+      "stopTone": "info",
+      "triggerVal": 225.62,
+      "triggerReal": false,
+      "triggerNote": "synthetic watch (est.)"
+    },
+    {
+      "symbol": "UPRO",
+      "qty": 1.14968,
+      "avgCost": 140.24,
+      "last": 141.9899,
+      "pnl": 2.01,
+      "pnlPct": 1.25,
+      "isLev": true,
+      "stopLabel": "Stop $140.04",
+      "stopTone": "success",
+      "triggerVal": 140.04,
+      "triggerReal": true,
+      "triggerNote": ""
+    },
+    {
+      "symbol": "AMDL",
+      "qty": 0.177563,
+      "avgCost": 81.83,
+      "last": 82.2,
+      "pnl": 0.07,
+      "pnlPct": 0.45,
+      "isLev": true,
+      "stopLabel": "Synthetic",
+      "stopTone": "info",
+      "triggerVal": 82.24,
+      "triggerReal": false,
+      "triggerNote": "synthetic watch (est.)"
+    }
+  ],
+  "intraday": [
+    {
+      "time": "6:10 AM",
+      "pnlPct": 8.12,
+      "totalValue": 569.9
+    },
+    {
+      "time": "7:10 AM",
+      "pnlPct": 8.12,
+      "totalValue": 569.06
+    },
+    {
+      "time": "8:12 AM",
+      "pnlPct": 7.26,
+      "totalValue": 568.18
+    },
+    {
+      "time": "9:00 AM",
+      "pnlPct": 1.86,
+      "totalValue": 573.02
+    },
+    {
+      "time": "9:05 AM",
+      "pnlPct": 1.93,
+      "totalValue": 574.54
+    },
+    {
+      "time": "10:12 AM",
+      "pnlPct": 2.4,
+      "totalValue": 592.2
+    },
+    {
+      "time": "11:09 AM",
+      "pnlPct": 2.94,
+      "totalValue": 595.34
+    },
+    {
+      "time": "12:11 PM",
+      "pnlPct": 3.58,
+      "totalValue": 599.18
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-06-26",
+      "pnlPct": 3.87
+    },
+    {
+      "date": "2026-06-29",
+      "pnlPct": 6.6
+    },
+    {
+      "date": "2026-06-30",
+      "pnlPct": 21.03
+    }
+  ]
+}
