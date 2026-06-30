@@ -278,8 +278,16 @@ function render(d){
   } else { hel.innerHTML = ''; }
 }
 
-try { render(JSON.parse(document.getElementById('snapshot-data').textContent) || {}); }
-catch(e){ document.getElementById('app').innerHTML = '<p class="loading">Snapshot data unavailable.</p>'; }
+function loadSnapshot(){
+  fetch('snapshot-data.json?t=' + Date.now(), { cache: 'no-store' })
+    .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(d){ render(d); })
+    .catch(function(e){
+      try { render(JSON.parse(document.getElementById('snapshot-data').textContent) || {}); }
+      catch(_) { document.getElementById('app').innerHTML = '<p class="loading">Snapshot data unavailable.</p>'; }
+    });
+}
+loadSnapshot();
 </script>
 </body>
 </html>
