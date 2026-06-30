@@ -2,3 +2,5 @@
 
 .__owntest
 snapshot-data.json.tmp
+*.tmp
+reports/*.tmp
