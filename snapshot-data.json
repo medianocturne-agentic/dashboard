@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-30 3:25 PM CT",
+  "generatedAt": "2026-07-01 8:25 AM CT",
   "portfolio": {
     "totalValue": 603.58,
     "equityValue": 0.0,
     "cash": 603.58,
-    "buyingPower": 0.0
+    "buyingPower": 603.58
   },
   "totalPnl": 0,
   "totalPnlPct": null,
@@ -13,54 +13,9 @@
   "positions": [],
   "intraday": [
     {
-      "time": "6:10 AM",
-      "pnlPct": 8.12,
-      "totalValue": 569.9
-    },
-    {
-      "time": "7:10 AM",
-      "pnlPct": 8.12,
-      "totalValue": 569.06
-    },
-    {
-      "time": "8:12 AM",
-      "pnlPct": 7.26,
-      "totalValue": 568.18
-    },
-    {
-      "time": "9:00 AM",
-      "pnlPct": 1.86,
-      "totalValue": 573.02
-    },
-    {
-      "time": "9:05 AM",
-      "pnlPct": 1.93,
-      "totalValue": 574.54
-    },
-    {
-      "time": "10:12 AM",
-      "pnlPct": 2.4,
-      "totalValue": 592.2
-    },
-    {
-      "time": "11:09 AM",
-      "pnlPct": 2.94,
-      "totalValue": 595.34
-    },
-    {
-      "time": "12:11 PM",
-      "pnlPct": 3.58,
-      "totalValue": 599.18
-    },
-    {
-      "time": "1:10 PM",
-      "pnlPct": 3.64,
-      "totalValue": 599.34
-    },
-    {
-      "time": "2:10 PM",
-      "pnlPct": 4.51,
-      "totalValue": 604.24
+      "time": "8:10 AM",
+      "pnlPct": 0,
+      "totalValue": 603.58
     }
   ],
   "history": [
@@ -70,11 +25,11 @@
     },
     {
       "date": "2026-06-29",
-      "pnlPct": 6.6
+      "pnlPct": 6.60
     },
     {
       "date": "2026-06-30",
-      "pnlPct": 21.03
+      "pnlPct": 4.6
     }
   ]
 }
