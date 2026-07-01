@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-01 9:25 AM CT",
+  "generatedAt": "2026-07-01 10:25 AM CT",
   "portfolio": {
-    "totalValue": 594.9994348091,
-    "equityValue": 17.6294348091,
+    "totalValue": 595.61537898,
+    "equityValue": 18.24537898,
     "cash": 577.37,
     "buyingPower": 0.0
   },
-  "totalPnl": 0.3749,
-  "totalPnlPct": 2.1761,
+  "totalPnl": 1.05,
+  "totalPnlPct": 6.07,
   "realizedAllTime": 47.21,
   "realizedRate": 2.81936589648191,
   "positions": [
@@ -15,13 +15,13 @@
       "symbol": "METU",
       "qty": 0.650042,
       "avgCost": 23.26,
-      "last": 23.79,
-      "pnl": 0.3445,
-      "pnlPct": 2.2786,
+      "last": 24.71,
+      "pnl": 0.94,
+      "pnlPct": 6.23,
       "isLev": true,
       "stopLabel": "Synthetic",
       "stopTone": "info",
-      "triggerVal": 23.43,
+      "triggerVal": 24.59,
       "triggerReal": false,
       "triggerNote": "synthetic watch (est.)"
     },
@@ -29,41 +29,25 @@
       "symbol": "PLTU",
       "qty": 0.074191,
       "avgCost": 28.44,
-      "last": 28.85,
-      "pnl": 0.0304,
-      "pnlPct": 1.4416,
+      "last": 29.83,
+      "pnl": 0.1,
+      "pnlPct": 4.89,
       "isLev": true,
       "stopLabel": "Synthetic",
       "stopTone": "info",
-      "triggerVal": 28.58,
+      "triggerVal": 29.38,
       "triggerReal": false,
       "triggerNote": "synthetic watch (est.)"
     }
   ],
   "intraday": [
-    {
-      "time": "8:10 AM",
-      "pnlPct": 0,
-      "totalValue": 603.58
-    },
-    {
-      "time": "9:10 AM",
-      "pnlPct": 2.46,
-      "totalValue": 595.07
-    }
+    {"time": "8:10 AM", "pnlPct": 0, "totalValue": 603.58},
+    {"time": "9:10 AM", "pnlPct": 2.46, "totalValue": 595.07},
+    {"time": "10:04 AM", "pnlPct": 6.14, "totalValue": 595.64}
   ],
   "history": [
-    {
-      "date": "2026-06-26",
-      "pnlPct": 3.87
-    },
-    {
-      "date": "2026-06-29",
-      "pnlPct": 6.6
-    },
-    {
-      "date": "2026-06-30",
-      "pnlPct": 4.6
-    }
+    {"date": "2026-06-26", "pnlPct": 3.87},
+    {"date": "2026-06-29", "pnlPct": 6.60},
+    {"date": "2026-06-30", "pnlPct": 4.6}
   ]
 }
