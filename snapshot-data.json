@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-07-01 11:25 AM CT",
+  "generatedAt": "2026-07-01 12:25 PM CT",
   "portfolio": {
-    "totalValue": 595.39269922,
-    "equityValue": 2.18269922,
+    "totalValue": 595.41050506,
+    "equityValue": 2.20050506,
     "cash": 593.21,
     "buyingPower": 0.0
   },
-  "totalPnl": 0.0727,
-  "totalPnlPct": 3.45,
+  "totalPnl": 0.09,
+  "totalPnlPct": 4.29,
   "realizedAllTime": 47.93,
-  "realizedRate": 2.8367,
+  "realizedRate": 2.84,
   "positions": [
     {
       "symbol": "PLTU",
       "qty": 0.074191,
       "avgCost": 28.44,
-      "last": 29.42,
-      "pnl": 0.0727,
-      "pnlPct": 3.45,
+      "last": 29.66,
+      "pnl": 0.09,
+      "pnlPct": 4.29,
       "isLev": true,
       "stopLabel": "Synthetic",
       "stopTone": "info",
-      "triggerVal": 28.98,
+      "triggerVal": 29.22,
       "triggerReal": false,
       "triggerNote": "synthetic watch (est.)"
     }
@@ -29,8 +29,7 @@
   "intraday": [
     {"time": "8:10 AM", "pnlPct": 0, "totalValue": 603.58},
     {"time": "9:10 AM", "pnlPct": 2.46, "totalValue": 595.07},
-    {"time": "10:04 AM", "pnlPct": 6.14, "totalValue": 595.64},
-    {"time": "11:11 AM", "pnlPct": 4.18, "totalValue": 595.37}
+    {"time": "10:04 AM", "pnlPct": 6.14, "totalValue": 595.64}
   ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
