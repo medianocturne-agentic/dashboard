@@ -155,7 +155,7 @@
   <div class="snapbar">Static snapshot &mdash; the numbers below are frozen at the generation time shown above, not live. Regenerated hourly during market hours.</div>
   <div id="alert"></div>
   <div class="cycle"><b>Daily cycle:</b> ~8:41am CT deploy all settled cash into the top 3 movers &rarr; hourly trailing-stop ratchets &amp; momentum/stagnation exits &rarr; <b>~2:26pm CT full flatten to cash</b> &rarr; rebuilt next morning. Nothing is held overnight, so there is no overnight or weekend gap exposure. (All times Central / CT.)</div>
-  <div class="arclink"><a href="reports/">EOD report archive</a></div>
+  <div class="arclink"><a href="explainer.html">How it works</a> &nbsp;&middot;&nbsp; <a href="reports/">EOD report archive</a></div>
   <div id="overall"></div>
   <div id="app"><p class="loading">Loading snapshot…</p></div>
   <div id="intraday-section"></div>
@@ -236,12 +236,12 @@ function render(d){
     });
 
     var legend = '<div class="legend">'
-      + '<span class="badge success">Stop $X</span>real broker-side stop-loss order, actively resting. '
-      + '<span class="badge info">Synthetic</span>fully-fractional position watched intraday via a periodic high-water-mark/breakeven check; closed with everything else at the daily flatten. '
-      + '<span class="badge warning">Pending Renewal</span>whole shares, no stop resting this exact moment — the hourly task places a fresh one every run. '
-      + '<span class="badge danger">Unprotected</span>no protection active right now — needs a look. '
-      + '<br><b>Overnight: nothing is held.</b> Every position is sold to cash at the ~2:26pm CT daily flatten and rebuilt the next morning, so there is no overnight or weekend gap risk. '
-      + '<br>Bands: leveraged tickers 0.5% once up 5%+ / 1.5% below that; all other positions 3%.'
+      + '<span class="badge success">Stop $X</span>real resting stop-loss. '
+      + '<span class="badge info">Synthetic</span>fractional position, watched each run. '
+      + '<span class="badge warning">Pending Renewal</span>stop refreshes next run. '
+      + '<span class="badge danger">Unprotected</span>needs a look. '
+      + '<br><b>Nothing is held overnight</b> — flattened to cash by ~2:26pm CT daily, so no gap risk. Stops are structure-based (trail under the trend), with a catastrophe floor, breakeven &amp; giveback locks, plus a day-level ratchet. '
+      + '<b><a href="explainer.html" style="color:var(--cyan);text-decoration:none;">How it all works &rsaquo;</a></b>'
       + '</div>';
 
     app.innerHTML = '<div class="cards">'+cards+'</div>'

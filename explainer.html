@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Agentic Account — How it works</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #05080a; --panel: #0a1014; --panel-line: #15321f;
+    --grid-line: rgba(0,255,140,0.05);
+    --green: #2bff9a; --green-dim: #1f8f5c; --cyan: #25e0ff; --red: #ff4d6d; --amber: #ffcf4a;
+    --text: #b9f3d2; --text-dim: #5f8f78;
+    --mono: "SF Mono","JetBrains Mono","Fira Code",Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: var(--mono); background: var(--bg); color: var(--text);
+    -webkit-font-smoothing: antialiased; line-height: 1.62;
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:9999;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,0.16) 0, rgba(0,0,0,0.16) 1px, transparent 1px, transparent 3px); opacity:0.35; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 22px 18px 60px; position: relative; z-index: 1; }
+  .back { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+  .back a { color: var(--cyan); text-decoration: none; }
+  .back a::before { content: "‹ "; color: var(--green-dim); }
+  .back a:hover { text-shadow: 0 0 6px rgba(37,224,255,0.5); }
+  h1 { font-size: 20px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.1em;
+    text-shadow: 0 0 6px rgba(43,255,154,0.5), 0 0 18px rgba(43,255,154,0.22); margin: 0 0 4px; }
+  h1::before { content: "▌ "; }
+  .lede { font-size: 13px; color: var(--text); margin: 10px 0 24px; }
+  h2 { font-size: 13px; font-weight: 700; color: var(--green-dim); text-transform: uppercase; letter-spacing: 0.1em; margin: 30px 0 10px; }
+  h2::before { content: "// "; color: var(--green); }
+  p { font-size: 12.5px; margin: 0 0 12px; }
+  b, strong { color: var(--text); font-weight: 700; }
+  .hl { color: var(--cyan); }
+  .card { background: var(--panel); border: 1px solid rgba(43,255,154,0.22); border-radius: 5px; padding: 13px 15px; margin: 10px 0; box-shadow: inset 0 0 22px rgba(0,255,140,0.04); }
+  .card .k { color: var(--green); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 11.5px; }
+  .card .k .tag { font-size: 9px; color: var(--cyan); border: 1px solid rgba(37,224,255,0.35); border-radius: 3px; padding: 1px 5px; margin-left: 8px; letter-spacing: 0.08em; vertical-align: 1px; }
+  .card p { margin: 6px 0 0; font-size: 12px; color: var(--text-dim); }
+  .card p b { color: var(--text); }
+  .flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 6px 0 14px; font-size: 11px; color: var(--text-dim); }
+  .flow .step { background: rgba(37,224,255,0.05); border: 1px solid rgba(37,224,255,0.25); border-radius: 4px; padding: 6px 10px; color: #9fdcea; }
+  .flow .arr { color: var(--green-dim); }
+  .glossary dt { color: var(--green); font-weight: 700; font-size: 12px; margin-top: 10px; }
+  .glossary dd { margin: 2px 0 0; font-size: 12px; color: var(--text-dim); }
+  .glossary dd b { color: var(--text); }
+  .stat { display: inline-block; color: var(--green); font-weight: 700; }
+  .foot { font-size: 10px; color: var(--text-dim); margin-top: 34px; border-top: 1px solid var(--panel-line); padding-top: 14px; line-height: 1.7; }
+  @media (max-width: 440px){ .wrap{padding:16px 12px 44px;} h1{font-size:17px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="back"><a href="index.html">Back to dashboard</a></div>
+  <h1>How the Agentic system works</h1>
+  <p class="lede">A plain-English guide to what this account does, why, and the safety net that protects it. No jargon left unexplained &mdash; there's a glossary at the bottom.</p>
+
+  <h2>The one-line idea</h2>
+  <p>Each morning we put the account's cash into a few things that are <b>already moving up hard</b>, ride them during the day, and sell everything back to cash before the close. We use <span class="hl">leveraged and inverse-leveraged ETFs</span> &mdash; funds that move 2&ndash;3&times; a stock or index, in either direction &mdash; so we don't need the market to go up. If semiconductors are ripping, there's a fund pointed up (SOXL); if they're falling, there's one pointed down (SOXS). We just follow whichever way the tape is already going. <b>Direction doesn't matter to us; momentum does.</b></p>
+
+  <h2>The daily rhythm</h2>
+  <div class="flow">
+    <span class="step">~8:41am CT &middot; Deploy cash into the top movers</span>
+    <span class="arr">&rarr;</span>
+    <span class="step">All day &middot; Protect &amp; trail stops</span>
+    <span class="arr">&rarr;</span>
+    <span class="step">~2:26pm CT &middot; Flatten everything to cash</span>
+    <span class="arr">&rarr;</span>
+    <span class="step">Next morning &middot; Rebuild</span>
+  </div>
+  <p>Because the account is a <b>cash account</b>, money from a sale takes one day to settle before it can be redeployed &mdash; so we sell to cash at the end of each day, it settles overnight, and it funds the next morning's buys. <b>Nothing is ever held overnight</b>, which means zero overnight or weekend gap risk. The single biggest way to lose money in leveraged funds &mdash; a bad-news gap while you're asleep &mdash; simply can't happen to us.</p>
+
+  <h2>How we pick what to buy</h2>
+  <p>We don't just grab the single biggest gainer &mdash; those are often <b>spikes about to reverse</b>. Instead we rank on <b>quality of the move</b>: a fund that's rising, making <span class="hl">higher lows</span>, and holding near the top of its range. We deliberately <b>skip</b> anything that just spiked and is fading, or that's gone vertical (a "parabolic" top we'd be chasing). We'd rather buy controlled strength than chase a firework.</p>
+
+  <h2>How we protect it &mdash; the safety net, in layers</h2>
+  <p>Every position carries a <b>stop-loss</b>: a standing order that automatically sells if the price drops to a set level. Ours isn't a single fixed line &mdash; it's four layers stacked together, and the sell fires at whichever is highest. Every layer can only <b>ratchet up, never down</b>. From the bottom up:</p>
+
+  <div class="card">
+    <div class="k">Catastrophe floor <span class="tag">MAX LOSS</span></div>
+    <p>A hard stop placed the instant we buy, at <b>&minus;4%</b> (leveraged) below our entry. This is the worst it can ever get on a single trade. It's wide enough that normal opening wiggles don't trip it, but it caps a real collapse. It only matters for a brief moment at entry, before the tighter layers below take over.</p>
+  </div>
+  <div class="card">
+    <div class="k">Structure trail <span class="tag">THE MAIN STOP</span></div>
+    <p>As the trend climbs it makes a staircase of <b>higher lows</b>. We tuck the stop just under the most recent one. As long as each dip stays above the last low, we stay in &mdash; a normal pullback doesn't touch us. Only a genuine <b>break of the trend's structure</b> gets us out. This is the primary stop, and it adapts to how much each fund actually moves instead of using an arbitrary percentage.</p>
+  </div>
+  <div class="card">
+    <div class="k">Breakeven lock <span class="tag">CAN'T GO RED</span></div>
+    <p>Once a position is up <b>+3%</b>, we raise the stop to just above our entry. From that point on, a trade that was a winner <b>can never turn into a loss</b>. The worst case becomes a tiny gain.</p>
+  </div>
+  <div class="card">
+    <div class="k">Giveback lock <span class="tag">KEEP THE PROFIT</span></div>
+    <p>Once a position is up <b>+5%</b>, we guarantee we keep at least <b>half of its best gain</b>. If it peaked at +10% and starts sliding, we're out with at least +5% &mdash; it can't fully round-trip back to nothing.</p>
+  </div>
+  <div class="card">
+    <div class="k">Day-level giveback ratchet <span class="tag">BANK A GOOD DAY</span></div>
+    <p>A whole-account backstop on top of the per-position stops. Once the <b>day</b> is up +4% or better, if the account gives back more than <b>40% of that day's peak</b>, we flatten the entire book to cash and call it a day. It exists to kill one specific nightmare: <b>watching a great day quietly melt back down before the close</b>. On calm trending days it stays dormant and costs nothing.</p>
+  </div>
+
+  <h2>What changed on July 1, 2026</h2>
+  <p>We started the day with a single tight stop placed right at entry. That morning it backfired: routine opening jitter tripped the stops within <b>five minutes</b>, sold everything at a small loss &mdash; and then all three picks rallied +14&ndash;18% without us. Classic <span class="hl">whipsaw</span>. So we rebuilt:</p>
+  <p>&bull; <b>Better entries</b> &mdash; rank on quality of the move, skip spikes and parabolas.<br/>
+     &bull; <b>Structure-based stops</b> &mdash; trail under the trend's own higher-lows instead of a fixed percentage.<br/>
+     &bull; <b>The layered locks</b> &mdash; catastrophe floor, breakeven, giveback.<br/>
+     &bull; <b>The day-level ratchet</b> &mdash; to bank a good day before it can melt.</p>
+  <p>We tested the new design on our own real trades from 6/29&ndash;7/1: it returned <span class="stat">+3.6% on deployed capital with a worst single trade of +0.6%</span> &mdash; it never actually lost on a trade &mdash; versus the old tight stop's +0.2%. <b>One honest caveat:</b> that was a strongly up-trending week. The new system's one weakness &mdash; giving a little back during a sustained reversal &mdash; hasn't been stress-tested yet. That's bounded by the catastrophe floor and the daily flatten, and we watch for it.</p>
+
+  <h2>Glossary</h2>
+  <dl class="glossary">
+    <dt>Leveraged / inverse-leveraged ETF</dt>
+    <dd>A fund engineered to move <b>2&ndash;3&times;</b> a stock or index each day. "Inverse" ones move the <b>opposite</b> way, so we can profit from a fall as easily as a rise. Big multipliers up <em>and</em> down &mdash; which is exactly why the safety net matters.</dd>
+    <dt>Momentum</dt>
+    <dd>The tendency of something already moving hard to keep moving that way for a while. Our entire edge is noticing the direction and clipping a piece of it.</dd>
+    <dt>Whipsaw</dt>
+    <dd>When price dips just enough to trip your stop, sells you out, then immediately reverses and runs &mdash; leaving you on the sidelines at a loss. The thing we spent July 1 engineering against.</dd>
+    <dt>Higher low</dt>
+    <dd>Each pullback in an uptrend bottoms out <b>higher</b> than the last one &mdash; the staircase of a healthy trend. Our main stop trails just under the most recent one.</dd>
+    <dt>Giveback</dt>
+    <dd>Handing back gains you'd already made &mdash; measured as a fraction of the <b>peak gain</b>, not the price. Peak +10%, now +6% = a 40% giveback (you kept 60%). You can give back and still be up; it's "un-making money," and the whole system is a war against it.</dd>
+    <dt>Catastrophe floor</dt>
+    <dd>The hard maximum loss on any trade (&minus;4%), measured from what we paid. The one line that never moves down.</dd>
+    <dt>Flatten</dt>
+    <dd>Sell everything to 100% cash. We flatten daily before the close (and early, via the ratchet, if a good day starts rolling over).</dd>
+    <dt>T+1 settlement</dt>
+    <dd>Cash from a sale isn't spendable until the next trading day. It's why we bank to cash each afternoon and redeploy the next morning, rather than trading the same dollars twice in a day.</dd>
+  </dl>
+
+  <div class="foot">
+    This page explains the Agentic momentum strategy for account &bull;&bull;&bull;&bull;6877 in plain language. Informational only &mdash; not investment advice. Leveraged and inverse ETFs carry substantial risk of loss. The live figures and positions are on the <a href="index.html" style="color:var(--cyan);text-decoration:none;">dashboard</a>.
+  </div>
+</div>
+</body>
+</html>
