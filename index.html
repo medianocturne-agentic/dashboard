@@ -75,6 +75,17 @@
   .statusband.closed { background: rgba(95,143,120,0.07); color: var(--text-dim); border-color: rgba(95,143,120,0.32); }
   .statusband.closed .dot { background: var(--text-dim); }
   @keyframes stpulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+  /* ===== always-visible account balance hero ===== */
+  .balance { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 20px; background: linear-gradient(90deg, rgba(37,224,255,0.11), rgba(43,255,154,0.03)); border: 1px solid rgba(37,224,255,0.42); border-radius: 5px; padding: 15px 18px; margin-bottom: 16px; box-shadow: inset 0 0 30px rgba(37,224,255,0.06); }
+  .balance .bal-main { display: flex; flex-direction: column; }
+  .balance .bal-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-dim); margin-bottom: 4px; }
+  .balance .bal-value { font-size: 34px; font-weight: 700; color: var(--green); font-variant-numeric: tabular-nums; text-shadow: 0 0 14px rgba(43,255,154,0.45); line-height: 1; }
+  .balance .bal-break { display: flex; gap: 20px; flex-wrap: wrap; }
+  .balance .bal-item { display: flex; flex-direction: column; align-items: flex-end; }
+  .balance .bal-item .k { font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 2px; }
+  .balance .bal-item .v { font-size: 17px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); }
+  .balance .bal-item .v.pos { color: var(--green); }
+  .balance .bal-item .v.neg { color: var(--red); }
   .overall { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: linear-gradient(90deg, rgba(43,255,154,0.09), rgba(37,224,255,0.04)); border: 1px solid rgba(43,255,154,0.38); border-radius: 5px; padding: 13px 16px; margin-bottom: 18px; box-shadow: inset 0 0 28px rgba(43,255,154,0.06); }
   .overall .ov-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin-bottom: 3px; }
   .overall .ov-value { font-size: 27px; font-weight: 700; font-variant-numeric: tabular-nums; text-shadow: 0 0 11px rgba(43,255,154,0.4); line-height: 1.1; }
@@ -127,6 +138,10 @@
     .title { font-size: 14px; letter-spacing: 0.08em; }
     .sub { font-size: 10px; }
     .snapbar, .cycle { font-size: 9px; padding: 8px 10px; }
+    .balance { padding: 12px 13px; }
+    .balance .bal-value { font-size: 27px; }
+    .balance .bal-break { gap: 14px; }
+    .balance .bal-item .v { font-size: 15px; }
     .cards { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     .card { padding: 10px 11px; }
     .card .value { font-size: 18px; }
@@ -165,6 +180,7 @@
     <p class="sub" id="generated">—</p>
   </div>
   <div id="statusband" class="statusband closed" style="display:none"></div>
+  <div id="balance" class="balance" style="display:none"></div>
   <div class="snapbar">Static snapshot &mdash; the numbers below are frozen at the generation time shown above, not live. Regenerated hourly during market hours. The status band above reflects the exposure at the last snapshot; market open/closed is evaluated live.</div>
   <div id="alert"></div>
   <div class="cycle"><b>Daily cycle:</b> ~8:41am CT deploy all settled cash into the top 3 movers &rarr; hourly trailing-stop ratchets &amp; momentum/stagnation exits &rarr; <b>~2:26pm CT full flatten to cash</b> &rarr; rebuilt next morning. Nothing is held overnight, so there is no overnight or weekend gap exposure. (All times Central / CT.)</div>
@@ -208,11 +224,30 @@ function setStatus(state, sub){
   el.innerHTML = '<span class="dot"></span><span class="st-main">' + map[cls] + '</span>' + (sub ? '<span class="st-sub">' + sub + '</span>' : '');
 }
 
+// Always-visible account balance hero. unrealPnl/unrealPct optional (shown only when invested).
+function renderBalance(p, unrealPnl, unrealPct){
+  var el = document.getElementById('balance');
+  if(!el) return;
+  p = p || {};
+  var tv = parseFloat(p.totalValue || 0);
+  var cash = parseFloat(p.cash || 0);
+  var eq = parseFloat(p.equityValue || 0);
+  var items = '<div class="bal-item"><span class="k">Cash</span><span class="v">' + fmtUsd(cash) + '</span></div>'
+    + '<div class="bal-item"><span class="k">Equity</span><span class="v">' + fmtUsd(eq) + '</span></div>';
+  if(unrealPnl !== null && unrealPnl !== undefined){
+    items += '<div class="bal-item"><span class="k">Unreal. P&amp;L</span><span class="v ' + (unrealPnl>=0?'pos':'neg') + '">' + fmtUsd(unrealPnl) + fmtPct(unrealPct) + '</span></div>';
+  }
+  el.style.display = 'flex';
+  el.innerHTML = '<div class="bal-main"><span class="bal-label">Account Balance</span><span class="bal-value">' + fmtUsd(tv) + '</span></div>'
+    + '<div class="bal-break">' + items + '</div>';
+}
+
 function render(d){
   document.getElementById('generated').textContent = 'Snapshot: ' + (d.generatedAt || '—');
   var _n = (d.positions && d.positions.length) ? d.positions.length : 0;
   if(_n > 0){ setStatus('exposed', _n + ' position' + (_n===1?'':'s') + ' at last snapshot'); }
   else { setStatus(isRegularHoursET() ? 'flat' : 'closed', isRegularHoursET() ? 'In cash · market open' : 'In cash · flat overnight'); }
+  renderBalance(d.portfolio || {}, _n > 0 ? d.totalPnl : null, _n > 0 ? d.totalPnlPct : null);
   var alertEl = document.getElementById('alert'); if (alertEl) { alertEl.innerHTML = d.alert ? '<div class="alert">' + d.alert + '</div>' : ''; }
   var p = d.portfolio || {};
   var app = document.getElementById('app');
@@ -240,7 +275,7 @@ function render(d){
   }
 
   if(!d.positions || !d.positions.length){
-    app.innerHTML = '<p class="loading">Flat — no open positions at this snapshot. Cash: ' + fmtUsd(p.cash) + '. This is the expected state overnight and before the ~8:41am CT deploy.</p>';
+    app.innerHTML = '<p class="note">Flat — no open positions at this snapshot; the balance above is 100% cash. Expected overnight and before the ~9:20am CT deploy.</p>';
   } else {
     var cards = ''
       + '<div class="card"><p class="label">Account value</p><p class="value">'+fmtUsd(p.totalValue)+'</p></div>'
@@ -279,8 +314,7 @@ function render(d){
       + '<b><a href="explainer.html" style="color:var(--cyan);text-decoration:none;">How it all works &rsaquo;</a></b>'
       + '</div>';
 
-    app.innerHTML = '<div class="cards">'+cards+'</div>'
-      + '<table><thead><tr><th>Symbol</th><th>Qty</th><th>Avg cost</th><th>Current</th><th>P&amp;L</th><th>Stop trigger</th><th>Stop</th></tr></thead><tbody>'+rows+'</tbody></table>'
+    app.innerHTML = '<table><thead><tr><th>Symbol</th><th>Qty</th><th>Avg cost</th><th>Current</th><th>P&amp;L</th><th>Stop trigger</th><th>Stop</th></tr></thead><tbody>'+rows+'</tbody></table>'
       + legend;
   }
 
