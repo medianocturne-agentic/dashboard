@@ -1,31 +1,16 @@
 {
-  "generatedAt": "2026-07-02 11:25 AM CT",
+  "generatedAt": "2026-07-02 12:25 PM CT",
   "portfolio": {
-    "totalValue": 584.34409992,
-    "equityValue": 20.87409992,
-    "cash": 563.47,
+    "totalValue": 584.04,
+    "equityValue": 0,
+    "cash": 584.04,
     "buyingPower": 0.0
   },
-  "totalPnl": -0.36,
-  "totalPnlPct": -1.68,
-  "realizedAllTime": 37.31,
-  "realizedRate": 1.6465936122230101,
-  "positions": [
-    {
-      "symbol": "NUGT",
-      "qty": 0.166354,
-      "avgCost": 127.62,
-      "last": 125.48,
-      "pnl": -0.36,
-      "pnlPct": -1.68,
-      "isLev": true,
-      "stopLabel": "Synthetic",
-      "stopTone": "info",
-      "triggerVal": 123.6,
-      "triggerReal": false,
-      "triggerNote": "synthetic watch (est.)"
-    }
-  ],
+  "totalPnl": 0,
+  "totalPnlPct": null,
+  "realizedAllTime": 36.65,
+  "realizedRate": 1.6024519920249,
+  "positions": [],
   "intraday": [
     {"time": "8:10 AM", "pnlPct": 0, "totalValue": 595.4},
     {"time": "9:10 AM", "pnlPct": -0.73, "totalValue": 591.45},
