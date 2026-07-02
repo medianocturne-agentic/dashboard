@@ -63,6 +63,18 @@
   .alert b { color: var(--red); }
   .cycle { background: rgba(37,224,255,0.04); border: 1px solid rgba(37,224,255,0.22); border-radius: 4px; padding: 9px 11px; margin-bottom: 18px; font-size: 9.5px; color: #8fd4e6; line-height: 1.55; letter-spacing: 0.02em; }
   .cycle b { color: var(--cyan); font-weight: 700; text-shadow: 0 0 6px rgba(37,224,255,0.35); }
+  /* ===== overall in/out/exposed status band ===== */
+  .statusband { display: flex; align-items: center; gap: 11px; border-radius: 5px; padding: 12px 16px; margin-bottom: 16px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; border: 1px solid transparent; }
+  .statusband .dot { width: 11px; height: 11px; border-radius: 50%; flex: 0 0 auto; }
+  .statusband .st-main { font-size: 14px; }
+  .statusband .st-sub { font-size: 10px; font-weight: 600; letter-spacing: 0.05em; margin-left: auto; text-transform: none; opacity: 0.9; }
+  .statusband.exposed { background: linear-gradient(90deg, rgba(43,255,154,0.16), rgba(43,255,154,0.03)); color: var(--green); border-color: rgba(43,255,154,0.55); text-shadow: 0 0 8px rgba(43,255,154,0.45); box-shadow: inset 0 0 26px rgba(43,255,154,0.08); }
+  .statusband.exposed .dot { background: var(--green); box-shadow: 0 0 10px var(--green); animation: stpulse 1.25s ease-in-out infinite; }
+  .statusband.flat { background: linear-gradient(90deg, rgba(255,207,74,0.1), rgba(255,207,74,0.02)); color: var(--amber); border-color: rgba(255,207,74,0.5); }
+  .statusband.flat .dot { background: var(--amber); box-shadow: 0 0 8px rgba(255,207,74,0.6); }
+  .statusband.closed { background: rgba(95,143,120,0.07); color: var(--text-dim); border-color: rgba(95,143,120,0.32); }
+  .statusband.closed .dot { background: var(--text-dim); }
+  @keyframes stpulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
   .overall { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: linear-gradient(90deg, rgba(43,255,154,0.09), rgba(37,224,255,0.04)); border: 1px solid rgba(43,255,154,0.38); border-radius: 5px; padding: 13px 16px; margin-bottom: 18px; box-shadow: inset 0 0 28px rgba(43,255,154,0.06); }
   .overall .ov-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin-bottom: 3px; }
   .overall .ov-value { font-size: 27px; font-weight: 700; font-variant-numeric: tabular-nums; text-shadow: 0 0 11px rgba(43,255,154,0.4); line-height: 1.1; }
@@ -152,7 +164,8 @@
     </div>
     <p class="sub" id="generated">—</p>
   </div>
-  <div class="snapbar">Static snapshot &mdash; the numbers below are frozen at the generation time shown above, not live. Regenerated hourly during market hours.</div>
+  <div id="statusband" class="statusband closed" style="display:none"></div>
+  <div class="snapbar">Static snapshot &mdash; the numbers below are frozen at the generation time shown above, not live. Regenerated hourly during market hours. The status band above reflects the exposure at the last snapshot; market open/closed is evaluated live.</div>
   <div id="alert"></div>
   <div class="cycle"><b>Daily cycle:</b> ~8:41am CT deploy all settled cash into the top 3 movers &rarr; hourly trailing-stop ratchets &amp; momentum/stagnation exits &rarr; <b>~2:26pm CT full flatten to cash</b> &rarr; rebuilt next morning. Nothing is held overnight, so there is no overnight or weekend gap exposure. (All times Central / CT.)</div>
   <div class="arclink"><a href="explainer.html">How it works</a> &nbsp;&middot;&nbsp; <a href="reports/">EOD report archive</a></div>
@@ -176,8 +189,30 @@ function fmtUsd(n){ if(n===null||n===undefined||isNaN(n))return '—'; var s=n<0
 function fmtPct(n){ if(n===null||n===undefined||isNaN(n))return ''; var s=n>=0?'+':''; return ' ('+s+n.toFixed(1)+'%)'; }
 function fmtPctOnly(n){ if(n===null||n===undefined||isNaN(n))return '—'; var s=n>=0?'+':''; return s+n.toFixed(2)+'%'; }
 
+function isRegularHoursET(){
+  // 9:30am-4:00pm ET, Mon-Fri (ignores market holidays/early closes). Evaluated live in the browser.
+  var parts = new Intl.DateTimeFormat('en-US', { timeZone:'America/New_York', hour:'numeric', minute:'numeric', hour12:false, weekday:'short' }).formatToParts(new Date());
+  var m = {}; parts.forEach(function(p){ m[p.type]=p.value; });
+  var wd = ['Mon','Tue','Wed','Thu','Fri'].indexOf(m.weekday) !== -1;
+  var mins = parseInt(m.hour,10)*60 + parseInt(m.minute,10);
+  return wd && mins >= (9*60+30) && mins < (16*60);
+}
+// Overall in/out/exposed status band. state: 'exposed' | 'flat' | 'closed'.
+function setStatus(state, sub){
+  var el = document.getElementById('statusband');
+  if(!el) return;
+  var map = { exposed:'Trading Active · Exposed', flat:'Flat · No Exposure', closed:'Markets Closed · Flat' };
+  var cls = map[state] ? state : 'closed';
+  el.className = 'statusband ' + cls;
+  el.style.display = 'flex';
+  el.innerHTML = '<span class="dot"></span><span class="st-main">' + map[cls] + '</span>' + (sub ? '<span class="st-sub">' + sub + '</span>' : '');
+}
+
 function render(d){
   document.getElementById('generated').textContent = 'Snapshot: ' + (d.generatedAt || '—');
+  var _n = (d.positions && d.positions.length) ? d.positions.length : 0;
+  if(_n > 0){ setStatus('exposed', _n + ' position' + (_n===1?'':'s') + ' at last snapshot'); }
+  else { setStatus(isRegularHoursET() ? 'flat' : 'closed', isRegularHoursET() ? 'In cash · market open' : 'In cash · flat overnight'); }
   var alertEl = document.getElementById('alert'); if (alertEl) { alertEl.innerHTML = d.alert ? '<div class="alert">' + d.alert + '</div>' : ''; }
   var p = d.portfolio || {};
   var app = document.getElementById('app');
