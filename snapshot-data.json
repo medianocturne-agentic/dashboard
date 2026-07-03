@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03 8:24 AM CT",
+  "generatedAt": "2026-07-03 9:25 AM CT",
   "portfolio": {
     "totalValue": 584.04,
     "equityValue": 0,
@@ -11,7 +11,9 @@
   "realizedAllTime": 36.65,
   "realizedRate": 1.6024519920249,
   "positions": [],
-  "intraday": [],
+  "intraday": [
+    {"time": "8:11 AM", "pnlPct": 0, "totalValue": 584.04}
+  ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
     {"date": "2026-06-29", "pnlPct": 6.60},
