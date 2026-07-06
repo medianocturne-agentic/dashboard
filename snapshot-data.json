@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-06 3:25 PM CT",
+  "generatedAt": "2026-07-06 6:49 PM CT",
   "portfolio": {
-    "totalValue": 595.7205795915,
-    "equityValue": 49.5805795915,
+    "totalValue": 595.585022324,
+    "equityValue": 49.445022324,
     "cash": 546.14,
     "buyingPower": 0.04
   },
@@ -103,6 +103,21 @@
       "time": "3:10 PM",
       "pnlPct": 2.11,
       "totalValue": 595.72
+    },
+    {
+      "time": "5:09 PM",
+      "pnlPct": 2.11,
+      "totalValue": 595.85
+    },
+    {
+      "time": "5:25 PM",
+      "pnlPct": 2.11,
+      "totalValue": 595.82
+    },
+    {
+      "time": "6:21 PM",
+      "pnlPct": 2.11,
+      "totalValue": 595.68
     }
   ],
   "history": [
