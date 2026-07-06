@@ -183,7 +183,7 @@
   <div id="balance" class="balance" style="display:none"></div>
   <div class="snapbar">Static snapshot &mdash; the numbers below are frozen at the generation time shown above, not live. Regenerated hourly during market hours. The status band above reflects the exposure at the last snapshot; market open/closed is evaluated live.</div>
   <div id="alert"></div>
-  <div class="cycle"><b>Daily cycle:</b> ~8:41am CT deploy all settled cash into the top 3 movers &rarr; hourly trailing-stop ratchets &amp; momentum/stagnation exits &rarr; <b>~2:26pm CT full flatten to cash</b> &rarr; rebuilt next morning. Nothing is held overnight, so there is no overnight or weekend gap exposure. (All times Central / CT.)</div>
+  <div class="cycle"><b>Daily cycle:</b> ~8:50am CT (after a 15-min opening range) deploy settled cash into the strongest <b>confirmed, non-extended</b> intraday breakout(s) &mdash; ranked by move from the open, concentrated into the best 1&ndash;3; if the leveraged list is quiet it rescans through ~12:30pm CT and can branch to a guarded market-wide momentum scan &rarr; <b>bank +5%</b> (sell &frac34;, ride a &frac14; tail) with an <b>adaptive volatility-sized trailing stop</b> + hard catastrophe floor on the rest &rarr; <b>~2:26pm CT full flatten to cash</b> &rarr; rebuilt next morning. Nothing is held overnight. (All times Central / CT.)</div>
   <div class="arclink"><a href="explainer.html">How it works</a> &nbsp;&middot;&nbsp; <a href="reports/">EOD report archive</a></div>
   <div id="overall"></div>
   <div id="app"><p class="loading">Loading snapshot…</p></div>
@@ -197,7 +197,7 @@
        positions:[{symbol,qty,avgCost,last,pnl,pnlPct,isLev,stopLabel,stopTone,triggerVal,triggerReal,triggerNote}],
        intraday:[{time,pnlPct,totalValue}], history:[{date,pnlPct}] } -->
 <script type="application/json" id="snapshot-data">
-{"generatedAt":"2026-06-30 10:28 AM CT","portfolio":{"totalValue":591.17,"equityValue":566.74,"cash":24.43,"buyingPower":14.53},"totalPnl":12.44,"totalPnlPct":2.24,"realizedAllTime":31.34,"realizedRate":6.04,"positions":[{"symbol":"TQQQ","qty":0.811579,"avgCost":73.93,"last":80.025,"pnl":4.95,"pnlPct":8.24,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":79.63,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TSLL","qty":0.862276,"avgCost":12.34,"last":13.865,"pnl":1.32,"pnlPct":12.36,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":13.80,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"SOXL","qty":0.633079,"avgCost":254.66,"last":260.34,"pnl":3.60,"pnlPct":2.23,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":256.43,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"TECL","qty":0.720498,"avgCost":223.76,"last":225.70,"pnl":1.40,"pnlPct":0.87,"isLev":true,"stopLabel":"Synthetic","stopTone":"info","triggerVal":224.88,"triggerReal":false,"triggerNote":"synthetic watch (est.)"},{"symbol":"UPRO","qty":1.14968,"avgCost":140.24,"last":141.27,"pnl":1.18,"pnlPct":0.73,"isLev":true,"stopLabel":"Stop $138.64","stopTone":"success","triggerVal":138.64,"triggerReal":true,"triggerNote":""}],"intraday":[{"time":"6:10 AM","pnlPct":8.12,"totalValue":569.90},{"time":"7:10 AM","pnlPct":8.12,"totalValue":569.06},{"time":"8:12 AM","pnlPct":7.26,"totalValue":568.18},{"time":"9:00 AM","pnlPct":1.86,"totalValue":573.02},{"time":"9:05 AM","pnlPct":1.93,"totalValue":574.54},{"time":"10:12 AM","pnlPct":2.40,"totalValue":592.20},{"time":"10:28 AM","pnlPct":2.24,"totalValue":591.17}],"history":[{"date":"2026-06-26","pnlPct":3.87},{"date":"2026-06-29","pnlPct":6.60}]}
+{"generatedAt":"awaiting first scheduled snapshot","portfolio":{},"totalPnl":null,"totalPnlPct":null,"positions":[],"intraday":[],"history":[]}
 </script>
 
 <script>
@@ -310,7 +310,7 @@ function render(d){
       + '<span class="badge info">Synthetic</span>fractional position, watched each run. '
       + '<span class="badge warning">Pending Renewal</span>stop refreshes next run. '
       + '<span class="badge danger">Unprotected</span>needs a look. '
-      + '<br><b>Nothing is held overnight</b> — flattened to cash by ~2:26pm CT daily, so no gap risk. Stops are structure-based (trail under the trend), with a catastrophe floor, breakeven &amp; giveback locks, plus a day-level ratchet. '
+      + '<br><b>Nothing is held overnight</b> — flattened to cash by ~2:26pm CT daily, so no gap risk. Primary exit is the <b>+5% bank</b> (sell &frac34; at target, ride a &frac14; tail); the rest is held by an <b>adaptive volatility-sized trailing stop</b> (widens in chop so normal pullbacks don\'t shake us out) over a hard catastrophe floor + breakeven lock, plus a day-level giveback ratchet. '
       + '<b><a href="explainer.html" style="color:var(--cyan);text-decoration:none;">How it all works &rsaquo;</a></b>'
       + '</div>';
 
