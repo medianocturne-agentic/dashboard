@@ -64,16 +64,16 @@
   <h1>How the Agentic system works</h1>
   <p class="lede">A plain-English guide to what this account does, why, and the safety net that protects it. No jargon left unexplained — there's a glossary at the bottom, and a running log of what we've learned and changed.</p>
 
-  <div class="betabar"><b>Note:</b> June 29 – July 2, 2026 was the <b>beta / learning period</b> — we found and fixed real flaws (see Learnings below). Formal performance tracking starts fresh at <b>Day 1</b> on the rebuilt system.</div>
+  <div class="betabar"><b>Note:</b> June 29 – July 6, 2026 was the <b>beta / learning period</b> — we found and fixed real flaws (see Learnings below), then substantially rebuilt the strategy on July 6. Formal performance tracking starts fresh at <b>Day 1</b> on the rebuilt system.</div>
 
   <h2>The one-line idea</h2>
   <p>Each session we put the account's cash into a few <span class="hl">leveraged ETFs that are climbing hard during the day</span>, ride them while they trend, and sell everything back to cash before the close. We use leveraged and inverse-leveraged funds (2–3× a stock or index, in either direction) so we don't need the market to go up — if semiconductors are ripping there's a fund pointed up (SOXL); if they're falling there's one pointed down (SOXS). We just follow whatever is <b>actually moving right now</b>. <b>Direction doesn't matter to us; live momentum does.</b></p>
 
   <h2>The daily rhythm</h2>
   <div class="flow">
-    <span class="step">~10:20am ET · Deploy into confirmed intraday breakouts</span>
+    <span class="step">~9:50am ET · Deploy into the strongest confirmed, not-yet-extended breakout</span>
     <span class="arr">→</span>
-    <span class="step">All day · Ride winners, trail the stop</span>
+    <span class="step">At +5% · Bank ¾, ride a ¼ tail</span>
     <span class="arr">→</span>
     <span class="step">~2:26pm CT · Flatten everything to cash</span>
     <span class="arr">→</span>
@@ -82,18 +82,23 @@
   <p>Because it's a <b>cash account</b>, proceeds from a sale take a day to settle (T+1), so we sell to cash each afternoon, it settles overnight, and it funds the next morning's buys. <b>Nothing is ever held overnight</b> — zero overnight or weekend gap risk. The biggest way to lose money in leveraged funds — a bad-news gap while you're asleep — simply can't happen to us.</p>
 
   <h2>How we pick what to buy</h2>
-  <p>We wait out the first 30 minutes (the "opening range"), then buy names that are <b>confirming a live intraday uptrend</b>: up <em>since today's open</em>, breaking to <b>new highs</b> beyond the opening range, still rising, and doing it on <b>real volume</b>. Crucially, we rank by the move <b>from today's open — not the overnight gap.</b> A name can gap up 10% overnight and then fall all day; that gap is uncatchable (we're in cash overnight) and it tends to fade. What we want is what's trending up <em>during the session we can actually trade</em>. If nothing confirms, we hold cash rather than force a bad buy.</p>
+  <p>We wait out a short <b>15-minute opening range</b>, then rank every leveraged fund by its move <b>from today's open</b> and buy the ones <b>confirming a live intraday uptrend</b>: up since the open, breaking to <b>new highs</b> beyond the opening range, still rising, near their highs, on <b>real volume</b>. We rank by the intraday move, <b>never the overnight gap</b> — a name can gap up 10% overnight and then fall all day; that gap is uncatchable (we're in cash overnight) and it tends to fade.</p>
+  <p>Two refinements matter. First, we <b>avoid names that have already run too far.</b> If something is already up 6–8% by the time we look, most of its move is behind it and it's prone to snapping back — so we prefer names still <em>early</em> in a clean move, with room left to reach our target. Second, we <b>concentrate</b>: the best one or two names, not a forced spread. A single dominant mover can take the whole stake. And we <b>don't sit out</b> without good reason — cash makes nothing, which hurts a daily compounding goal. If our leveraged list is quiet we keep <b>rescanning through the early afternoon</b> for a fresh breakout; if a fast day has everything already extended we take the least-stretched name that's still climbing; and as a genuine last resort we widen the hunt to a <b>quality-filtered scan of the whole market's liquid movers</b> (small, tightly guarded). We hold cash only when there is truly nothing breaking out.</p>
 
-  <h2>How we protect it — the safety net, in layers</h2>
-  <p>Every position carries a <b>stop-loss</b> (a standing "sell if it drops to X" order). Ours isn't one fixed line — it's a stack that ratchets <b>up, never down</b>, built to <b>ride a winner and exit only on a real turn</b>:</p>
+  <h2>How we protect it — and how we take the win</h2>
+  <p>Two mechanisms run together: a <b>profit target</b> that banks the win, and a <b>trailing stop</b> that caps the loss. Both move in our favor and <b>never against us</b>. Our goal is simple — <b>get +5% and bank it, every market day</b> — then be 100% cash by the close.</p>
 
   <div class="card">
-    <div class="k">Catastrophe floor <span class="tag">MAX LOSS</span></div>
-    <p>A hard stop placed the instant we buy, at <b>−4%</b> below entry. The worst any single trade can do. It matters only briefly at entry before the trail takes over.</p>
+    <div class="k">The +5% bank <span class="tag">TAKE THE WIN</span></div>
+    <p>Our primary exit. When a position is up <b>+5%</b>, we <b>sell about ¾ of it</b> to lock in the daily goal, and let the remaining <b>¼ "lottery ticket"</b> keep riding. If a name pops +5% in twenty minutes, we've banked our day in twenty minutes — we don't need to sit and hope for more.</p>
   </div>
   <div class="card">
-    <div class="k">Structure trail <span class="tag">RIDE THE WINNER</span></div>
-    <p>As the trend climbs it makes a staircase of <b>higher lows</b>. We tuck the stop just under the most recent one. A normal pullback that holds above the last low doesn't touch us — we keep riding. We exit only when it <b>breaks structure</b> (takes out that higher-low), a genuine trend turn. This is the primary exit.</p>
+    <div class="k">Adaptive trailing stop <span class="tag">RIDE &amp; PROTECT</span></div>
+    <p>Everything still open is held by a trailing stop that <b>sizes itself to the name's own choppiness.</b> In a jumpy stretch — the opening minutes or a midday chop — the leash automatically <b>widens</b>, so a normal pullback doesn't shake us out. When the name trends smoothly, it tightens back up. It only ever ratchets higher. This is what fixed our habit of getting stopped out right before a name recovered.</p>
+  </div>
+  <div class="card">
+    <div class="k">Catastrophe floor <span class="tag">MAX LOSS</span></div>
+    <p>A hard stop placed the instant we buy, at <b>−4%</b> below entry (−3% for the rare individual-stock case). The worst any single trade can do.</p>
   </div>
   <div class="card">
     <div class="k">Breakeven lock <span class="tag">CAN'T GO RED</span></div>
@@ -101,9 +106,8 @@
   </div>
   <div class="card">
     <div class="k">Day-level giveback ratchet <span class="tag">BANK A GOOD DAY</span></div>
-    <p>A whole-book backstop: once the day's total P&amp;L has peaked at +4% or better, if the book gives back more than <b>40% of that peak</b>, we flatten everything to cash and call it a day. It guards against a good day melting to the close, but it never trims a single still-running winner.</p>
+    <p>A whole-book backstop: once the day's total P&amp;L has peaked at +4% or better, if the book gives back more than <b>40% of that peak</b>, we flatten everything to cash and call it a day. And once we've banked ~+5% for the day, the goal is met — we stop opening anything new and just let the tails ride to the flatten.</p>
   </div>
-  <p style="font-size:11.5px;color:var(--text-dim);">We <b>deliberately do not</b> use a per-position profit cap or a tight "keep X% of the gain" rule anymore — see the July 2 learning below for why they choked our winners.</p>
 
   <h2>Learnings — what broke and what we changed</h2>
 
@@ -119,6 +123,14 @@
     <p><b>Fixes shipped that evening:</b> (1) rank by <b>intraday</b> move (from the open) and buy only <b>confirmed breakouts</b> after the opening range, on real volume; (2) <b>let winners run</b> — structure trail + breakeven only, giveback lock removed. Backtested on that day: the rebuilt entry+exit turns the −2.9% result into roughly +4%.</p>
   </div>
 
+  <div class="learn">
+    <div class="d">July 6, 2026 — The overhaul: bank the pop, don't get shaken out, don't sit out</div>
+    <p><b>A quiet bug was killing the deploy.</b> Our "is there real volume behind this breakout?" check compared each move to the <em>whole day's average</em> volume. But leveraged funds trade most of their volume in the opening minutes, so that average was always huge and <b>no later breakout could ever clear the bar</b> — on a perfectly good trending day, the system bought nothing. Fixed to compare against <b>recent</b> volume instead.</p>
+    <p><b>"Ride all day" gave profits back.</b> Letting a winner run until it broke trend meant we handed back gains on ordinary midday dips, then often got stopped out right before the recovery. We changed the goal to <b>bank +5% and take the win</b> (sell ¾, ride a ¼ tail), and made the stop <b>adaptive</b> — it widens in choppy stretches so normal pullbacks don't eject us. Testing showed no fixed trailing stop could tell a routine 2% dip from a real turn; taking the +5% is the honest answer.</p>
+    <p><b>Chasing the biggest mover backfired.</b> Concentrating into whatever had run the <em>most</em> by mid-morning meant buying names that had already peaked and were about to fade (a test showed this turning a green day red). Fix: <b>prefer names that haven't already run too far</b> — confirmed momentum with room left, not exhausted spikes.</p>
+    <p><b>But being too cautious meant sitting in cash — which makes nothing.</b> On the fastest, best days everything was already "too far" by the time we looked, so a strict rule left us out of a great day. Fixes: enter <b>earlier</b> (after a 15-minute opening range), and if everything's extended take the <b>least-stretched name that's still climbing</b>; keep <b>rescanning into the early afternoon</b> if the morning is quiet; and as a last resort widen the search to a <b>quality-filtered scan of the whole market.</b> The aim: find our +5% somewhere, almost every day, without lowering our standards.</p>
+  </div>
+
   <h2>Glossary</h2>
   <dl class="glossary">
     <dt>Leveraged / inverse-leveraged ETF</dt>
@@ -126,9 +138,15 @@
     <dt>Overnight gap</dt>
     <dd>How much a name opens above (or below) yesterday's close. It happened while the market was closed, so we <b>can't capture it</b> — and it tends to fade. Ranking by the gap was the July 2 bug.</dd>
     <dt>Opening range</dt>
-    <dd>The first ~30 minutes of trading. We wait it out, then buy names <b>breaking above it</b> — proof they're still climbing, not just resting on an overnight gap.</dd>
+    <dd>The first <b>15 minutes</b> of trading. We wait it out, then buy names <b>breaking above it</b> — proof they're still climbing, not just resting on an overnight gap.</dd>
     <dt>Intraday move</dt>
     <dd>A name's move <b>from today's open</b> — what it's doing during the session we can actually trade. This is what we rank on now.</dd>
+    <dt>Extended / too far</dt>
+    <dd>A name that has <b>already run most of its move</b> (say, up 6–8%) by the time we look. It has little room left to our target and tends to snap back, so we prefer names still early in a clean move.</dd>
+    <dt>Bank the pop (scale-out)</dt>
+    <dd>Selling <b>most</b> of a position at our +5% target to lock the win, while keeping a small piece riding for any extra upside. Our main way of taking a profit.</dd>
+    <dt>Adaptive stop</dt>
+    <dd>A trailing stop whose distance <b>sizes to the name's own choppiness</b> — wider when it's jumpy, tighter when it's smooth — so ordinary wiggles don't stop us out but a real turn does.</dd>
     <dt>Higher low</dt>
     <dd>Each pullback in an uptrend bottoms <b>higher</b> than the last — the staircase of a healthy trend. Our stop trails just under the most recent one; break it and we're out.</dd>
     <dt>Whipsaw</dt>
