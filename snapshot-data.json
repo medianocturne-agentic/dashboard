@@ -1,36 +1,138 @@
 {
-  "generatedAt": "2026-07-06 2:28 PM CT",
+  "generatedAt": "2026-07-06 3:25 PM CT",
   "portfolio": {
-    "totalValue": 595.79031878,
-    "equityValue": 49.65031878,
+    "totalValue": 595.7205795915,
+    "equityValue": 49.5805795915,
     "cash": 546.14,
     "buyingPower": 0.04
   },
-  "totalPnl": 1.06,
-  "totalPnlPct": 2.18,
+  "totalPnl": 1.0244,
+  "totalPnlPct": 2.1081,
   "realizedAllTime": 47.34,
   "realizedRate": 1.6772,
   "positions": [
-    {"symbol": "CONL", "qty": 0.594291, "avgCost": 5.49, "last": 5.72, "pnl": 0.14, "pnlPct": 4.19, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 5.63, "triggerReal": false, "triggerNote": "synthetic watch (est.)"},
-    {"symbol": "TSLT", "qty": 0.836864, "avgCost": 18.63, "last": 19.33, "pnl": 0.59, "pnlPct": 3.76, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 19.04, "triggerReal": false, "triggerNote": "synthetic watch (est.)"},
-    {"symbol": "AAPU", "qty": 0.583701, "avgCost": 40.74, "last": 40.8699, "pnl": 0.08, "pnlPct": 0.32, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 40.94, "triggerReal": false, "triggerNote": "synthetic watch (est.)"},
-    {"symbol": "BITX", "qty": 0.510818, "avgCost": 11.67, "last": 12.1812, "pnl": 0.26, "pnlPct": 4.38, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 12.00, "triggerReal": false, "triggerNote": "synthetic watch (est.)"}
+    {
+      "symbol": "CONL",
+      "qty": 0.594291,
+      "avgCost": 5.49,
+      "last": 5.61,
+      "pnl": 0.0713,
+      "pnlPct": 2.1858,
+      "isLev": true,
+      "stopLabel": "Synthetic",
+      "stopTone": "info",
+      "triggerVal": 5.5259,
+      "triggerReal": false,
+      "triggerNote": "synthetic watch (est.)"
+    },
+    {
+      "symbol": "TSLT",
+      "qty": 0.836864,
+      "avgCost": 18.63,
+      "last": 19.54,
+      "pnl": 0.7615,
+      "pnlPct": 4.8846,
+      "isLev": true,
+      "stopLabel": "Synthetic",
+      "stopTone": "info",
+      "triggerVal": 19.2469,
+      "triggerReal": false,
+      "triggerNote": "synthetic watch (est.)"
+    },
+    {
+      "symbol": "AAPU",
+      "qty": 0.583701,
+      "avgCost": 40.74,
+      "last": 40.67,
+      "pnl": -0.0409,
+      "pnlPct": -0.1718,
+      "isLev": true,
+      "stopLabel": "Synthetic",
+      "stopTone": "info",
+      "triggerVal": 40.06,
+      "triggerReal": false,
+      "triggerNote": "synthetic watch (est.)"
+    },
+    {
+      "symbol": "BITX",
+      "qty": 0.510818,
+      "avgCost": 11.67,
+      "last": 12.125,
+      "pnl": 0.2324,
+      "pnlPct": 3.8989,
+      "isLev": true,
+      "stopLabel": "Synthetic",
+      "stopTone": "info",
+      "triggerVal": 11.9431,
+      "triggerReal": false,
+      "triggerNote": "synthetic watch (est.)"
+    }
   ],
   "intraday": [
-    {"time": "8:10 AM", "pnlPct": 0, "totalValue": 584.04},
-    {"time": "9:09 AM", "pnlPct": 0, "totalValue": 584.04},
-    {"time": "10:15 AM", "pnlPct": 0.11, "totalValue": 584.68},
-    {"time": "11:12 AM", "pnlPct": 2.59, "totalValue": 599.38},
-    {"time": "12:13 PM", "pnlPct": 4.26, "totalValue": 599.58},
-    {"time": "1:09 PM", "pnlPct": 1.44, "totalValue": 595.44}
+    {
+      "time": "8:10 AM",
+      "pnlPct": 0,
+      "totalValue": 584.04
+    },
+    {
+      "time": "9:09 AM",
+      "pnlPct": 0,
+      "totalValue": 584.04
+    },
+    {
+      "time": "10:15 AM",
+      "pnlPct": 0.11,
+      "totalValue": 584.68
+    },
+    {
+      "time": "11:12 AM",
+      "pnlPct": 2.59,
+      "totalValue": 599.38
+    },
+    {
+      "time": "12:13 PM",
+      "pnlPct": 4.26,
+      "totalValue": 599.58
+    },
+    {
+      "time": "1:09 PM",
+      "pnlPct": 1.44,
+      "totalValue": 595.44
+    },
+    {
+      "time": "3:10 PM",
+      "pnlPct": 2.11,
+      "totalValue": 595.72
+    }
   ],
   "history": [
-    {"date": "2026-06-26", "pnlPct": 3.87},
-    {"date": "2026-06-29", "pnlPct": 6.60},
-    {"date": "2026-06-30", "pnlPct": 4.6},
-    {"date": "2026-07-01", "pnlPct": -1.35},
-    {"date": "2026-07-02", "pnlPct": -1.91},
-    {"date": "2026-07-03", "pnlPct": 0},
-    {"date": "2026-07-06", "pnlPct": 2.00}
+    {
+      "date": "2026-06-26",
+      "pnlPct": 3.87
+    },
+    {
+      "date": "2026-06-29",
+      "pnlPct": 6.6
+    },
+    {
+      "date": "2026-06-30",
+      "pnlPct": 4.6
+    },
+    {
+      "date": "2026-07-01",
+      "pnlPct": -1.35
+    },
+    {
+      "date": "2026-07-02",
+      "pnlPct": -1.91
+    },
+    {
+      "date": "2026-07-03",
+      "pnlPct": 0
+    },
+    {
+      "date": "2026-07-06",
+      "pnlPct": 2.0
+    }
   ]
 }
