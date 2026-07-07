@@ -1,112 +1,30 @@
 {
-  "generatedAt": "2026-07-07 8:26 AM CT",
-  "portfolio": {
-    "totalValue": 595.5644244468,
-    "equityValue": 49.4244244468,
-    "cash": 546.14,
-    "buyingPower": 546.14
-  },
-  "totalPnl": 1.0244,
-  "totalPnlPct": 2.1081,
-  "realizedAllTime": 47.34,
-  "realizedRate": 1.6772,
+  "generatedAt": "2026-07-07 9:26 AM CT",
+  "portfolio": {"totalValue": 601.75, "equityValue": 598.32, "cash": 3.43, "buyingPower": 0.14},
+  "totalPnl": 7.90,
+  "totalPnlPct": 1.34,
+  "realizedAllTime": 47.37,
+  "realizedRate": 1.68,
   "positions": [
-    {
-      "symbol": "CONL",
-      "qty": 0.594291,
-      "avgCost": 5.49,
-      "last": 5.61,
-      "pnl": 0.0713,
-      "pnlPct": 2.1858,
-      "isLev": true,
-      "stopLabel": "Synthetic",
-      "stopTone": "info",
-      "triggerVal": 5.5259,
-      "triggerReal": false,
-      "triggerNote": "synthetic watch (est.)"
-    },
-    {
-      "symbol": "TSLT",
-      "qty": 0.836864,
-      "avgCost": 18.63,
-      "last": 19.54,
-      "pnl": 0.7615,
-      "pnlPct": 4.8846,
-      "isLev": true,
-      "stopLabel": "Synthetic",
-      "stopTone": "info",
-      "triggerVal": 19.2469,
-      "triggerReal": false,
-      "triggerNote": "synthetic watch (est.)"
-    },
-    {
-      "symbol": "AAPU",
-      "qty": 0.583701,
-      "avgCost": 40.74,
-      "last": 40.67,
-      "pnl": -0.0409,
-      "pnlPct": -0.1718,
-      "isLev": true,
-      "stopLabel": "Synthetic",
-      "stopTone": "info",
-      "triggerVal": 40.06,
-      "triggerReal": false,
-      "triggerNote": "synthetic watch (est.)"
-    },
-    {
-      "symbol": "BITX",
-      "qty": 0.510818,
-      "avgCost": 11.67,
-      "last": 12.125,
-      "pnl": 0.2324,
-      "pnlPct": 3.8989,
-      "isLev": true,
-      "stopLabel": "Synthetic",
-      "stopTone": "info",
-      "triggerVal": 11.9431,
-      "triggerReal": false,
-      "triggerNote": "synthetic watch (est.)"
-    }
+    {"symbol": "TSLT", "qty": 0.836864, "avgCost": 18.63, "last": 18.36, "pnl": -0.23, "pnlPct": -1.45, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 18.08, "triggerReal": false, "triggerNote": "synthetic watch (est.)"},
+    {"symbol": "AAPU", "qty": 0.583701, "avgCost": 40.74, "last": 40.33, "pnl": -0.24, "pnlPct": -1.01, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 39.73, "triggerReal": false, "triggerNote": "synthetic watch (est.)"},
+    {"symbol": "BITX", "qty": 0.510818, "avgCost": 11.67, "last": 11.825, "pnl": 0.08, "pnlPct": 1.33, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 11.73, "triggerReal": false, "triggerNote": "synthetic watch (est.)"},
+    {"symbol": "TSLQ", "qty": 17.870758, "avgCost": 16.79, "last": 17.15, "pnl": 6.43, "pnlPct": 2.14, "isLev": true, "stopLabel": "Stop $16.22", "stopTone": "success", "triggerVal": 16.22, "triggerReal": true, "triggerNote": ""},
+    {"symbol": "TZA", "qty": 62.122780, "avgCost": 3.96, "last": 3.9899, "pnl": 1.86, "pnlPct": 0.76, "isLev": true, "stopLabel": "Stop $3.80", "stopTone": "success", "triggerVal": 3.80, "triggerReal": true, "triggerNote": ""}
   ],
   "intraday": [
-    {
-      "time": "8:09 AM",
-      "pnlPct": 2.02,
-      "totalValue": 595.72
-    }
+    {"time": "8:09 AM", "pnlPct": 2.02, "totalValue": 595.72},
+    {"time": "8:44 AM", "pnlPct": 0.78, "totalValue": 595.10},
+    {"time": "9:12 AM", "pnlPct": 0.6, "totalValue": 596.07}
   ],
   "history": [
-    {
-      "date": "2026-06-26",
-      "pnlPct": 3.87
-    },
-    {
-      "date": "2026-06-29",
-      "pnlPct": 6.6
-    },
-    {
-      "date": "2026-06-30",
-      "pnlPct": 4.6
-    },
-    {
-      "date": "2026-07-01",
-      "pnlPct": -1.35
-    },
-    {
-      "date": "2026-07-02",
-      "pnlPct": -1.91
-    },
-    {
-      "date": "2026-07-03",
-      "pnlPct": 0
-    },
-    {
-      "date": "2026-07-06",
-      "pnlPct": 2.0
-    },
-    {
-      "date": "2026-07-07",
-      "pnlPct": 0
-    }
+    {"date": "2026-06-26", "pnlPct": 3.87},
+    {"date": "2026-06-29", "pnlPct": 6.60},
+    {"date": "2026-06-30", "pnlPct": 4.6},
+    {"date": "2026-07-01", "pnlPct": -1.35},
+    {"date": "2026-07-02", "pnlPct": -1.91},
+    {"date": "2026-07-03", "pnlPct": 0},
+    {"date": "2026-07-06", "pnlPct": 2.00},
+    {"date": "2026-07-07", "pnlPct": 0.92}
   ]
 }
