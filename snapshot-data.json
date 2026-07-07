@@ -1,41 +1,41 @@
 {
-  "generatedAt": "2026-07-07 10:26 AM CT",
+  "generatedAt": "2026-07-07 11:24 AM CT",
   "portfolio": {
-    "totalValue": 602.1459961844,
-    "equityValue": 583.2359961844,
-    "cash": 18.91,
+    "totalValue": 598.3116474754,
+    "equityValue": 332.3316474754,
+    "cash": 265.98,
     "buyingPower": 0.14
   },
-  "totalPnl": 7.52,
-  "totalPnlPct": 1.3056,
-  "realizedAllTime": 47.26,
-  "realizedRate": 1.6633,
+  "totalPnl": 6.6263,
+  "totalPnlPct": 2.0338,
+  "realizedAllTime": 44.36,
+  "realizedRate": 1.435,
   "positions": [
     {
       "symbol": "AAPU",
       "qty": 0.583701,
       "avgCost": 40.74,
-      "last": 40.89,
-      "pnl": 0.09,
-      "pnlPct": 0.3682,
+      "last": 40.81,
+      "pnl": 0.0409,
+      "pnlPct": 0.1718,
       "isLev": true,
       "stopLabel": "Synthetic",
       "stopTone": "info",
-      "triggerVal": 40.94,
+      "triggerVal": 40.9437,
       "triggerReal": false,
       "triggerNote": "synthetic watch (est.)"
     },
     {
       "symbol": "BITX",
-      "qty": 0.510818,
+      "qty": 0.127704,
       "avgCost": 11.67,
-      "last": 12.13,
-      "pnl": 0.23,
-      "pnlPct": 3.9417,
+      "last": 12.2376,
+      "pnl": 0.0725,
+      "pnlPct": 4.8638,
       "isLev": true,
       "stopLabel": "Synthetic",
       "stopTone": "info",
-      "triggerVal": 11.95,
+      "triggerVal": 12.054,
       "triggerReal": false,
       "triggerNote": "synthetic watch (est.)"
     },
@@ -43,29 +43,29 @@
       "symbol": "TSLQ",
       "qty": 17.870758,
       "avgCost": 16.79,
-      "last": 17.21,
-      "pnl": 7.51,
-      "pnlPct": 2.5015,
+      "last": 17.155,
+      "pnl": 6.5228,
+      "pnlPct": 2.1739,
       "isLev": true,
-      "stopLabel": "Stop $16.80",
+      "stopLabel": "Stop $17.03",
       "stopTone": "success",
-      "triggerVal": 16.80,
+      "triggerVal": 17.03,
       "triggerReal": true,
       "triggerNote": ""
     },
     {
       "symbol": "TZA",
-      "qty": 62.122780,
-      "avgCost": 3.96,
-      "last": 3.955,
-      "pnl": -0.31,
-      "pnlPct": -0.1263,
+      "qty": 0.12278,
+      "avgCost": 3.99,
+      "last": 3.91,
+      "pnl": -0.0098,
+      "pnlPct": -2.005,
       "isLev": true,
-      "stopLabel": "Stop $3.91",
-      "stopTone": "success",
-      "triggerVal": 3.91,
-      "triggerReal": true,
-      "triggerNote": ""
+      "stopLabel": "Synthetic",
+      "stopTone": "info",
+      "triggerVal": 3.8514,
+      "triggerReal": false,
+      "triggerNote": "synthetic watch (est.)"
     }
   ],
   "intraday": [
@@ -73,7 +73,9 @@
     {"time": "8:44 AM", "pnlPct": 0.78, "totalValue": 595.10},
     {"time": "9:12 AM", "pnlPct": 0.6, "totalValue": 596.07},
     {"time": "9:43 AM", "pnlPct": 1.07, "totalValue": 600.22},
-    {"time": "10:12 AM", "pnlPct": 0.45, "totalValue": 596.96}
+    {"time": "10:12 AM", "pnlPct": 0.45, "totalValue": 596.96},
+    {"time": "10:43 AM", "pnlPct": 1.73, "totalValue": 603.74},
+    {"time": "11:12 AM", "pnlPct": 0.94, "totalValue": 600.65}
   ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
@@ -83,6 +85,6 @@
     {"date": "2026-07-02", "pnlPct": -1.91},
     {"date": "2026-07-03", "pnlPct": 0},
     {"date": "2026-07-06", "pnlPct": 2.00},
-    {"date": "2026-07-07", "pnlPct": -0.42}
+    {"date": "2026-07-07", "pnlPct": 0.47}
   ]
 }
