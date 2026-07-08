@@ -1,12 +1,18 @@
 {
-  "generatedAt": "2026-07-08 8:25 AM CT",
-  "portfolio": {"totalValue": 596.18, "equityValue": 0, "cash": 596.18, "buyingPower": 596.18},
-  "totalPnl": 0,
-  "totalPnlPct": null,
+  "generatedAt": "2026-07-08 9:25 AM CT",
+  "portfolio": {"totalValue": 596.67237224, "equityValue": 596.67237224, "cash": 0, "buyingPower": 0},
+  "totalPnl": 0.49,
+  "totalPnlPct": 0.08,
   "realizedAllTime": 48.8,
   "realizedRate": 1.4281031980147,
-  "positions": [],
-  "intraday": [],
+  "positions": [
+    {"symbol": "AVGX", "qty": 12.279736, "avgCost": 48.55, "last": 48.59, "pnl": 0.49, "pnlPct": 0.08, "isLev": true, "stopLabel": "Stop $46.61", "stopTone": "success", "triggerVal": 46.61, "triggerReal": true, "triggerNote": ""}
+  ],
+  "intraday": [
+    {"time": "8:10 AM", "pnlPct": 0, "totalValue": 596.18},
+    {"time": "8:40 AM", "pnlPct": 0, "totalValue": 596.18},
+    {"time": "9:12 AM", "pnlPct": 0.34, "totalValue": 600.23}
+  ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
     {"date": "2026-06-29", "pnlPct": 6.60},
@@ -15,6 +21,7 @@
     {"date": "2026-07-02", "pnlPct": -1.91},
     {"date": "2026-07-03", "pnlPct": 0},
     {"date": "2026-07-06", "pnlPct": 2.00},
-    {"date": "2026-07-07", "pnlPct": 0.25}
+    {"date": "2026-07-07", "pnlPct": 0.25},
+    {"date": "2026-07-08", "pnlPct": 0}
   ]
 }
