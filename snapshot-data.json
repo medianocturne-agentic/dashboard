@@ -1,12 +1,19 @@
 {
-  "generatedAt": "2026-07-09 8:25 AM CT",
-  "portfolio": {"totalValue": 603.73, "equityValue": 0, "cash": 603.73, "buyingPower": 603.73},
-  "totalPnl": 0,
-  "totalPnlPct": null,
+  "generatedAt": "2026-07-09 9:25 AM CT",
+  "portfolio": {"totalValue": 598.16, "equityValue": 414.43, "cash": 183.73, "buyingPower": 183.73},
+  "totalPnl": -5.48,
+  "totalPnlPct": -1.3042,
   "realizedAllTime": 56.37,
   "realizedRate": 1.40457977225724,
-  "positions": [],
-  "intraday": [],
+  "positions": [
+    {"symbol": "AMDL", "qty": 3.235813, "avgCost": 74.17, "last": 72.66, "pnl": -4.89, "pnlPct": -2.0359, "isLev": true, "stopLabel": "Stop $71.20", "stopTone": "success", "triggerVal": 71.20, "triggerReal": true, "triggerNote": ""},
+    {"symbol": "NUGT", "qty": 1.557160, "avgCost": 115.60, "last": 115.22, "pnl": -0.59, "pnlPct": -0.3287, "isLev": true, "stopLabel": "Stop $110.97", "stopTone": "success", "triggerVal": 110.97, "triggerReal": true, "triggerNote": ""}
+  ],
+  "intraday": [
+    {"time": "8:10 AM", "pnlPct": 0, "totalValue": 603.73},
+    {"time": "8:40 AM", "pnlPct": 0, "totalValue": 603.73},
+    {"time": "9:13 AM", "pnlPct": -0.61, "totalValue": 601.18}
+  ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
     {"date": "2026-06-29", "pnlPct": 6.60},
@@ -16,6 +23,7 @@
     {"date": "2026-07-03", "pnlPct": 0},
     {"date": "2026-07-06", "pnlPct": 2.00},
     {"date": "2026-07-07", "pnlPct": 0.25},
-    {"date": "2026-07-08", "pnlPct": 1.27}
+    {"date": "2026-07-08", "pnlPct": 1.27},
+    {"date": "2026-07-09", "pnlPct": 0}
   ]
 }
