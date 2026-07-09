@@ -1,15 +1,14 @@
 {
-  "generatedAt": "2026-07-09 1:26 PM CT",
-  "portfolio": {"totalValue": 592.92, "equityValue": 281.51, "cash": 311.41, "buyingPower": 3.73},
-  "totalPnl": 2.00,
-  "totalPnlPct": 0.71,
-  "realizedAllTime": 52.41,
-  "realizedRate": 1.27,
+  "generatedAt": "2026-07-09 2:26 PM CT",
+  "portfolio": {"totalValue": 592.3876251754, "equityValue": 264.2076251754, "cash": 328.18, "buyingPower": 3.73},
+  "totalPnl": 2.21,
+  "totalPnlPct": 0.84,
+  "realizedAllTime": 42.81,
+  "realizedRate": 0.98,
   "positions": [
-    {"symbol": "AMDL", "qty": 0.235813, "avgCost": 74.17, "last": 71.131, "pnl": -0.72, "pnlPct": -4.10, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 70.06, "triggerReal": false, "triggerNote": "synthetic watch (est.)"},
-    {"symbol": "NUGT", "qty": 1.55716, "avgCost": 115.60, "last": 117.3601, "pnl": 2.74, "pnlPct": 1.52, "isLev": true, "stopLabel": "Stop $116.18", "stopTone": "success", "triggerVal": 116.18, "triggerReal": true, "triggerNote": ""},
-    {"symbol": "MSTX", "qty": 0.784644, "avgCost": 8.91, "last": 8.75, "pnl": -0.13, "pnlPct": -1.80, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 8.62, "triggerReal": false, "triggerNote": "synthetic watch (est.)"},
-    {"symbol": "TNA", "qty": 1.033129, "avgCost": 72.60, "last": 72.695, "pnl": 0.10, "pnlPct": 0.13, "isLev": true, "stopLabel": "Stop $69.69", "stopTone": "success", "triggerVal": 69.69, "triggerReal": true, "triggerNote": ""}
+    {"symbol": "NUGT", "qty": 1.557160, "avgCost": 115.60, "last": 116.9801, "pnl": 2.15, "pnlPct": 1.19, "isLev": true, "stopLabel": "Stop $116.18", "stopTone": "success", "triggerVal": 116.18, "triggerReal": true, "triggerNote": ""},
+    {"symbol": "MSTX", "qty": 0.784644, "avgCost": 8.91, "last": 8.68, "pnl": -0.18, "pnlPct": -2.58, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 8.55, "triggerReal": false, "triggerNote": "synthetic watch (est.)"},
+    {"symbol": "TNA", "qty": 1.033129, "avgCost": 72.60, "last": 72.835, "pnl": 0.24, "pnlPct": 0.32, "isLev": true, "stopLabel": "Stop $69.69", "stopTone": "success", "triggerVal": 69.69, "triggerReal": true, "triggerNote": ""}
   ],
   "intraday": [
     {"time": "8:10 AM", "pnlPct": 0, "totalValue": 603.73},
@@ -22,7 +21,9 @@
     {"time": "11:42 AM", "pnlPct": -0.32, "totalValue": 597.95},
     {"time": "12:10 PM", "pnlPct": -0.21, "totalValue": 598.47},
     {"time": "12:40 PM", "pnlPct": -1.00, "totalValue": 594.69},
-    {"time": "1:11 PM", "pnlPct": -0.99, "totalValue": 595.02}
+    {"time": "1:11 PM", "pnlPct": -0.99, "totalValue": 595.02},
+    {"time": "1:40 PM", "pnlPct": 0.54, "totalValue": 592.31},
+    {"time": "2:10 PM", "pnlPct": 0.86, "totalValue": 592.44}
   ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
@@ -34,6 +35,6 @@
     {"date": "2026-07-06", "pnlPct": 2.00},
     {"date": "2026-07-07", "pnlPct": 0.25},
     {"date": "2026-07-08", "pnlPct": 1.27},
-    {"date": "2026-07-09", "pnlPct": -4.04}
+    {"date": "2026-07-09", "pnlPct": -4.01}
   ]
 }
