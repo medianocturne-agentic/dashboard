@@ -1,16 +1,20 @@
 {
-  "generatedAt": "2026-07-10 12:25 PM CT",
+  "generatedAt": "2026-07-10 1:25 PM CT",
   "portfolio": {
-    "totalValue": 587.87,
-    "equityValue": 0,
-    "cash": 587.87,
-    "buyingPower": 106.18
+    "totalValue": 587.38,
+    "equityValue": 104.51,
+    "cash": 482.87,
+    "buyingPower": 1.18
   },
-  "totalPnl": 0,
-  "totalPnlPct": null,
+  "totalPnl": -0.53,
+  "totalPnlPct": -0.51,
   "realizedAllTime": 40.51,
-  "realizedRate": 0.8378,
-  "positions": [],
+  "realizedRate": 0.84,
+  "positions": [
+    { "symbol": "SOXL", "qty": 0.17922, "avgCost": 195.29, "last": 192.43, "pnl": -0.51, "pnlPct": -1.46, "isLev": true, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 189.54, "triggerReal": false, "triggerNote": "synthetic watch (est.)" },
+    { "symbol": "NVDL", "qty": 1.06295, "avgCost": 32.93, "last": 32.89, "pnl": -0.04, "pnlPct": -0.12, "isLev": true, "stopLabel": "Stop $31.61", "stopTone": "success", "triggerVal": 31.61, "triggerReal": true, "triggerNote": "" },
+    { "symbol": "UCO", "qty": 1.017146, "avgCost": 34.41, "last": 34.43, "pnl": 0.02, "pnlPct": 0.06, "isLev": true, "stopLabel": "Stop $33.03", "stopTone": "success", "triggerVal": 33.03, "triggerReal": true, "triggerNote": "" }
+  ],
   "intraday": [
     { "time": "8:13 AM", "pnlPct": 0.73, "totalValue": 592.20 },
     { "time": "8:40 AM", "pnlPct": 0, "totalValue": 589.72 },
@@ -18,7 +22,11 @@
     { "time": "9:40 AM", "pnlPct": 0.25, "totalValue": 589.93 },
     { "time": "10:10 AM", "pnlPct": -0.25, "totalValue": 589.51 },
     { "time": "10:40 AM", "pnlPct": 0.47, "totalValue": 590.10 },
-    { "time": "11:01 AM", "pnlPct": -0.32, "totalValue": 589.39 }
+    { "time": "11:01 AM", "pnlPct": -0.32, "totalValue": 589.39 },
+    { "time": "11:32 AM", "pnlPct": -0.61, "totalValue": 588.28 },
+    { "time": "12:14 PM", "pnlPct": 0, "totalValue": 587.94 },
+    { "time": "12:39 PM", "pnlPct": 0, "totalValue": 587.87 },
+    { "time": "1:08 PM", "pnlPct": -0.46, "totalValue": 587.37 }
   ],
   "history": [
     { "date": "2026-06-26", "pnlPct": 3.87 },
@@ -31,6 +39,6 @@
     { "date": "2026-07-07", "pnlPct": 0.25 },
     { "date": "2026-07-08", "pnlPct": 1.27 },
     { "date": "2026-07-09", "pnlPct": -4.01 },
-    { "date": "2026-07-10", "pnlPct": -0.17 }
+    { "date": "2026-07-10", "pnlPct": -0.48 }
   ]
 }
