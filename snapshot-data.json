@@ -1,60 +1,36 @@
 {
-  "generatedAt": "2026-07-10 8:26 AM CT",
+  "generatedAt": "2026-07-10 9:25 AM CT",
   "portfolio": {
-    "totalValue": 592.10,
-    "equityValue": 263.92,
-    "cash": 328.18,
-    "buyingPower": 328.18
+    "totalValue": 590.50362257,
+    "equityValue": 82.78362257,
+    "cash": 507.72,
+    "buyingPower": 246.18
   },
-  "totalPnl": 1.9153,
-  "totalPnlPct": 0.731,
-  "realizedAllTime": 42.81,
-  "realizedRate": 0.9838,
+  "totalPnl": 0.84,
+  "totalPnlPct": 1.03,
+  "realizedAllTime": 42.36,
+  "realizedRate": 0.92,
   "positions": [
     {
-      "symbol": "NUGT",
-      "qty": 1.55716,
-      "avgCost": 115.6,
-      "last": 116.5,
-      "pnl": 1.4014,
-      "pnlPct": 0.7785,
+      "symbol": "KOLD",
+      "qty": 2.957086,
+      "avgCost": 27.73,
+      "last": 28.015,
+      "pnl": 0.84,
+      "pnlPct": 1.03,
       "isLev": true,
-      "stopLabel": "Unprotected",
-      "stopTone": "danger",
-      "triggerVal": null,
-      "triggerReal": false,
-      "triggerNote": ""
-    },
-    {
-      "symbol": "MSTX",
-      "qty": 0.784644,
-      "avgCost": 8.91,
-      "last": 9.3,
-      "pnl": 0.306,
-      "pnlPct": 4.3771,
-      "isLev": true,
-      "stopLabel": "Synthetic",
-      "stopTone": "info",
-      "triggerVal": 9.16,
-      "triggerReal": false,
-      "triggerNote": "synthetic watch (est.)"
-    },
-    {
-      "symbol": "TNA",
-      "qty": 1.033129,
-      "avgCost": 72.6,
-      "last": 72.8012,
-      "pnl": 0.2079,
-      "pnlPct": 0.2771,
-      "isLev": true,
-      "stopLabel": "Unprotected",
-      "stopTone": "danger",
-      "triggerVal": null,
-      "triggerReal": false,
+      "stopLabel": "Stop $26.62",
+      "stopTone": "success",
+      "triggerVal": 26.62,
+      "triggerReal": true,
       "triggerNote": ""
     }
   ],
-  "intraday": [],
+  "intraday": [
+    { "time": "8:13 AM", "pnlPct": 0.73, "totalValue": 592.20 },
+    { "time": "8:40 AM", "pnlPct": 0, "totalValue": 589.72 },
+    { "time": "9:10 AM", "pnlPct": 0, "totalValue": 589.72 }
+  ],
   "history": [
     { "date": "2026-06-26", "pnlPct": 3.87 },
     { "date": "2026-06-29", "pnlPct": 6.6 },
@@ -65,6 +41,7 @@
     { "date": "2026-07-06", "pnlPct": 2.0 },
     { "date": "2026-07-07", "pnlPct": 0.25 },
     { "date": "2026-07-08", "pnlPct": 1.27 },
-    { "date": "2026-07-09", "pnlPct": -4.01 }
+    { "date": "2026-07-09", "pnlPct": -4.01 },
+    { "date": "2026-07-10", "pnlPct": -0.17 }
   ]
 }
