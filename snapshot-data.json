@@ -1,45 +1,16 @@
 {
-  "generatedAt": "2026-07-10 11:26 AM CT",
+  "generatedAt": "2026-07-10 12:25 PM CT",
   "portfolio": {
-    "totalValue": 589.601733767,
-    "equityValue": 221.881733767,
-    "cash": 367.72,
+    "totalValue": 587.87,
+    "equityValue": 0,
+    "cash": 587.87,
     "buyingPower": 106.18
   },
-  "totalPnl": -0.0858,
-  "totalPnlPct": -0.0386,
-  "realizedAllTime": 42.36,
-  "realizedRate": 0.9182,
-  "positions": [
-    {
-      "symbol": "KOLD",
-      "qty": 2.957086,
-      "avgCost": 27.73,
-      "last": 27.515,
-      "pnl": -0.6358,
-      "pnlPct": -0.7753,
-      "isLev": true,
-      "stopLabel": "Stop $26.62",
-      "stopTone": "success",
-      "triggerVal": 26.62,
-      "triggerReal": true,
-      "triggerNote": ""
-    },
-    {
-      "symbol": "NVDL",
-      "qty": 4.273517,
-      "avgCost": 32.76,
-      "last": 32.8887,
-      "pnl": 0.55,
-      "pnlPct": 0.3929,
-      "isLev": true,
-      "stopLabel": "Stop $31.45",
-      "stopTone": "success",
-      "triggerVal": 31.45,
-      "triggerReal": true,
-      "triggerNote": ""
-    }
-  ],
+  "totalPnl": 0,
+  "totalPnlPct": null,
+  "realizedAllTime": 40.51,
+  "realizedRate": 0.8378,
+  "positions": [],
   "intraday": [
     { "time": "8:13 AM", "pnlPct": 0.73, "totalValue": 592.20 },
     { "time": "8:40 AM", "pnlPct": 0, "totalValue": 589.72 },
