@@ -1,18 +1,19 @@
 {
-  "generatedAt": "2026-07-13 1:26 PM CT",
-  "portfolio": {"totalValue": 590.21, "equityValue": 149.51, "cash": 440.7, "buyingPower": 3.25},
-  "totalPnl": 8.85,
-  "totalPnlPct": 6.3,
-  "realizedAllTime": 33.87,
-  "realizedRate": 0.63,
-  "positions": [
-    {"symbol": "UCO", "qty": 3.788196, "avgCost": 36.96, "last": 39.29, "pnl": 8.83, "pnlPct": 6.3, "isLev": true, "stopLabel": "Stop $38.55", "stopTone": "success", "triggerVal": 38.55, "triggerReal": true, "triggerNote": ""},
-    {"symbol": "BATL", "qty": 0.289246, "avgCost": 1.83, "last": 1.9208, "pnl": 0.03, "pnlPct": 4.96, "isLev": false, "stopLabel": "Synthetic", "stopTone": "info", "triggerVal": 1.86, "triggerReal": false, "triggerNote": "synthetic watch (est.)"}
-  ],
+  "generatedAt": "2026-07-13 2:25 PM CT",
+  "portfolio": {"totalValue": 588.48, "equityValue": 0, "cash": 588.48, "buyingPower": 3.25},
+  "totalPnl": 0,
+  "totalPnlPct": null,
+  "realizedAllTime": 41.12,
+  "realizedRate": 0.7443598270159901,
+  "positions": [],
   "intraday": [
     {"time": "8:10 AM", "pnlPct": 0, "totalValue": 587.16},
     {"time": "8:40 AM", "pnlPct": 0, "totalValue": 587.16},
-    {"time": "9:15 AM", "pnlPct": 2.24, "totalValue": 592.25}
+    {"time": "9:15 AM", "pnlPct": 2.24, "totalValue": 592.25},
+    {"time": "1:22 PM", "pnlPct": 6.38, "totalValue": 590.29},
+    {"time": "1:40 PM", "pnlPct": 5.48, "totalValue": 588.94},
+    {"time": "1:50 PM", "pnlPct": 7.65, "totalValue": 588.53},
+    {"time": "2:10 PM", "pnlPct": 0, "totalValue": 588.48}
   ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
@@ -26,6 +27,6 @@
     {"date": "2026-07-08", "pnlPct": 1.27},
     {"date": "2026-07-09", "pnlPct": -4.01},
     {"date": "2026-07-10", "pnlPct": -0.51},
-    {"date": "2026-07-13", "pnlPct": 0}
+    {"date": "2026-07-13", "pnlPct": 0.23}
   ]
 }
