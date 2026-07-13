@@ -1,43 +1,29 @@
 {
-  "generatedAt": "2026-07-13 9:26 AM CT",
+  "generatedAt": "2026-07-13 10:26 AM CT",
   "portfolio": {
-    "totalValue": 591.47535693,
-    "equityValue": 231.22535693,
-    "cash": 360.25,
+    "totalValue": 584.33,
+    "equityValue": 6.03,
+    "cash": 578.3,
     "buyingPower": 360.25
   },
-  "totalPnl": 5.5558,
-  "totalPnlPct": 2.448,
-  "realizedAllTime": 39.8,
-  "realizedRate": 0.8056,
+  "totalPnl": -0.96,
+  "totalPnlPct": -13.76,
+  "realizedAllTime": 37.94,
+  "realizedRate": 0.74,
   "positions": [
     {
       "symbol": "AGEN",
-      "qty": 14.891558,
-      "avgCost": 7.86,
-      "last": 7.94,
-      "pnl": 1.1913,
-      "pnlPct": 1.0178,
+      "qty": 0.891558,
+      "avgCost": 7.85,
+      "last": 6.77,
+      "pnl": -0.96,
+      "pnlPct": -13.76,
       "isLev": false,
-      "stopLabel": "Stop $7.46",
-      "stopTone": "success",
-      "triggerVal": 7.46,
-      "triggerReal": true,
-      "triggerNote": ""
-    },
-    {
-      "symbol": "SKYQ",
-      "qty": 29.0,
-      "avgCost": 3.79,
-      "last": 3.9405,
-      "pnl": 4.3645,
-      "pnlPct": 3.971,
-      "isLev": false,
-      "stopLabel": "Stop $3.60",
-      "stopTone": "success",
-      "triggerVal": 3.6,
-      "triggerReal": true,
-      "triggerNote": ""
+      "stopLabel": "Synthetic",
+      "stopTone": "info",
+      "triggerVal": 6.57,
+      "triggerReal": false,
+      "triggerNote": "synthetic watch (est.)"
     }
   ],
   "intraday": [
@@ -55,6 +41,16 @@
       "time": "9:15 AM",
       "pnlPct": 2.24,
       "totalValue": 592.25
+    },
+    {
+      "time": "9:37 AM",
+      "pnlPct": -3.44,
+      "totalValue": 585.06
+    },
+    {
+      "time": "10:26 AM",
+      "pnlPct": -13.76,
+      "totalValue": 584.33
     }
   ],
   "history": [
@@ -104,7 +100,7 @@
     },
     {
       "date": "2026-07-13",
-      "pnlPct": 0
+      "pnlPct": -13.76
     }
   ]
 }
