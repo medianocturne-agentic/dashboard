@@ -1,13 +1,44 @@
 {
-  "generatedAt": "2026-07-13 11:26 AM CT",
-  "portfolio": {"totalValue": 582.72, "equityValue": 260.10, "cash": 322.62, "buyingPower": 3.25},
-  "totalPnl": 3.08,
-  "totalPnlPct": 1.20,
-  "realizedAllTime": 32.26,
-  "realizedRate": 0.61,
+  "generatedAt": "2026-07-13 12:25 PM CT",
+  "portfolio": {
+    "totalValue": 580.32,
+    "equityValue": 230.34,
+    "cash": 349.98,
+    "buyingPower": 3.25
+  },
+  "totalPnl": 2.45,
+  "totalPnlPct": 1.0747,
+  "realizedAllTime": 30.5,
+  "realizedRate": 0.5759,
   "positions": [
-    {"symbol": "UCO", "qty": 3.788196, "avgCost": 36.96, "last": 37.095, "pnl": 0.51, "pnlPct": 0.37, "isLev": true, "stopLabel": "Stop $34.90", "stopTone": "success", "triggerVal": 34.90, "triggerReal": true, "triggerNote": ""},
-    {"symbol": "BATL", "qty": 64.289246, "avgCost": 1.82, "last": 1.8599, "pnl": 2.57, "pnlPct": 2.19, "isLev": false, "stopLabel": "Stop $1.70", "stopTone": "success", "triggerVal": 1.70, "triggerReal": true, "triggerNote": ""}
+    {
+      "symbol": "UCO",
+      "qty": 3.788196,
+      "avgCost": 36.96,
+      "last": 37.72,
+      "pnl": 2.879,
+      "pnlPct": 2.0563,
+      "isLev": true,
+      "stopLabel": "Stop $34.90",
+      "stopTone": "success",
+      "triggerVal": 34.90,
+      "triggerReal": true,
+      "triggerNote": ""
+    },
+    {
+      "symbol": "BATL",
+      "qty": 48.289246,
+      "avgCost": 1.82,
+      "last": 1.8111,
+      "pnl": -0.4298,
+      "pnlPct": -0.489,
+      "isLev": false,
+      "stopLabel": "Pending Renewal",
+      "stopTone": "warning",
+      "triggerVal": 1.7568,
+      "triggerReal": false,
+      "triggerNote": "renews automatically next run (est.)"
+    }
   ],
   "intraday": [
     {"time": "8:10 AM", "pnlPct": 0, "totalValue": 587.16},
