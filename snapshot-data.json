@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-07-14 11:26 AM CT",
+  "generatedAt": "2026-07-14 12:25 PM CT",
   "portfolio": {
-    "totalValue": 583.35,
-    "equityValue": 98.96,
+    "totalValue": 584.25938316,
+    "equityValue": 99.86938316,
     "cash": 484.39,
     "buyingPower": 314.93
   },
-  "totalPnl": -1.02,
-  "totalPnlPct": -1.02,
+  "totalPnl": -0.068,
+  "totalPnlPct": -0.068,
   "realizedAllTime": 37.03,
-  "realizedRate": 0.65,
+  "realizedRate": 0.649905,
   "positions": [
     {
       "symbol": "SOXL",
       "qty": 0.552956,
       "avgCost": 180.85,
-      "last": 179.00,
-      "pnl": -1.02,
-      "pnlPct": -1.02,
+      "last": 180.727,
+      "pnl": -0.068,
+      "pnlPct": -0.068,
       "isLev": true,
       "stopLabel": "Synthetic",
       "stopTone": "info",
-      "triggerVal": 176.31,
+      "triggerVal": 178.02,
       "triggerReal": false,
       "triggerNote": "synthetic watch (est.)"
     }
@@ -32,7 +32,10 @@
     {"time": "9:55 AM", "pnlPct": -0.88, "totalValue": 586.95},
     {"time": "10:15 AM", "pnlPct": -1.03, "totalValue": 586.93},
     {"time": "10:40 AM", "pnlPct": 0.07, "totalValue": 584.59},
-    {"time": "11:19 AM", "pnlPct": -1.53, "totalValue": 582.48}
+    {"time": "11:19 AM", "pnlPct": -1.53, "totalValue": 582.48},
+    {"time": "11:40 AM", "pnlPct": -1.48, "totalValue": 582.79},
+    {"time": "11:55 AM", "pnlPct": -0.92, "totalValue": 583.39},
+    {"time": "12:10 PM", "pnlPct": -0.30, "totalValue": 583.97}
   ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
