@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-07-14 9:25 AM CT",
+  "generatedAt": "2026-07-14 10:25 AM CT",
   "portfolio": {
-    "totalValue": 586.785,
-    "equityValue": 171.855,
+    "totalValue": 585.181,
+    "equityValue": 170.251,
     "cash": 414.93,
     "buyingPower": 414.93
   },
-  "totalPnl": -1.695,
-  "totalPnlPct": -0.9766637,
+  "totalPnl": -3.299,
+  "totalPnlPct": -1.9009,
   "realizedAllTime": 41.12,
-  "realizedRate": 0.74435982701599,
+  "realizedRate": 0.7444,
   "positions": [
     {
       "symbol": "FAS",
       "qty": 1.0,
       "avgCost": 173.55,
-      "last": 171.855,
-      "pnl": -1.695,
-      "pnlPct": -0.9766637,
+      "last": 170.251,
+      "pnl": -3.299,
+      "pnlPct": -1.9009,
       "isLev": true,
       "stopLabel": "Stop $164.87",
       "stopTone": "success",
@@ -28,7 +28,9 @@
   ],
   "intraday": [
     {"time": "8:33 AM", "pnlPct": 0, "totalValue": 588.48},
-    {"time": "9:10 AM", "pnlPct": 0, "totalValue": 588.48}
+    {"time": "9:10 AM", "pnlPct": 0, "totalValue": 588.48},
+    {"time": "9:55 AM", "pnlPct": -0.88, "totalValue": 586.95},
+    {"time": "10:15 AM", "pnlPct": -1.03, "totalValue": 586.93}
   ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
