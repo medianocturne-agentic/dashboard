@@ -71,9 +71,7 @@
 
 <!-- The daily-report task replaces ONLY the JSON in this block: an array of
      {date, pnlPct, totalValue}, one per report, any order (sorted client-side, newest first). -->
-<script type="application/json" id="reports-list">
-[{"date":"2026-06-29","pnlPct":6.6,"totalValue":568.84},{"date":"2026-06-30","pnlPct":4.6,"totalValue":603.58},{"date":"2026-07-01","pnlPct":-1.35,"totalValue":595.4},{"date":"2026-07-02","pnlPct":-1.91,"totalValue":584.04},{"date":"2026-07-06","pnlPct":2.0,"totalValue":595.72},{"date":"2026-07-07","pnlPct":0.25,"totalValue":596.18},{"date":"2026-07-08","pnlPct":1.27,"totalValue":603.73},{"date":"2026-07-09","pnlPct":-4.01,"totalValue":592.58},{"date":"2026-07-10","pnlPct":-0.51,"totalValue":587.16},{"date":"2026-07-13","pnlPct":0.23,"totalValue":588.48}]
-</script>
+<script type="application/json" id="reports-list">[{"date":"2026-06-29","pnlPct":6.6,"totalValue":568.84},{"date":"2026-06-30","pnlPct":4.6,"totalValue":603.58},{"date":"2026-07-01","pnlPct":-1.35,"totalValue":595.4},{"date":"2026-07-02","pnlPct":-1.91,"totalValue":584.04},{"date":"2026-07-06","pnlPct":2.0,"totalValue":595.72},{"date":"2026-07-07","pnlPct":0.25,"totalValue":596.18},{"date":"2026-07-08","pnlPct":1.27,"totalValue":603.73},{"date":"2026-07-09","pnlPct":-4.01,"totalValue":592.58},{"date":"2026-07-10","pnlPct":-0.51,"totalValue":587.16},{"date":"2026-07-13","pnlPct":0.23,"totalValue":588.48},{"date":"2026-07-14","pnlPct":-0.8,"totalValue":583.95}]</script>
 
 <script>
 function fmtUsd(n){ if(n===null||n===undefined||isNaN(n))return '—'; var s=n<0?'-':''; return s+'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
