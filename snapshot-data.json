@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-14 12:25 PM CT",
+  "generatedAt": "2026-07-14 1:26 PM CT",
   "portfolio": {
-    "totalValue": 584.25938316,
-    "equityValue": 99.86938316,
-    "cash": 484.39,
-    "buyingPower": 314.93
+    "totalValue": 584.62828064,
+    "equityValue": 288.32828064,
+    "cash": 296.3,
+    "buyingPower": 126.84
   },
-  "totalPnl": -0.068,
-  "totalPnlPct": -0.068,
+  "totalPnl": 0.35,
+  "totalPnlPct": 0.1216,
   "realizedAllTime": 37.03,
   "realizedRate": 0.649905,
   "positions": [
@@ -15,15 +15,29 @@
       "symbol": "SOXL",
       "qty": 0.552956,
       "avgCost": 180.85,
-      "last": 180.727,
-      "pnl": -0.068,
-      "pnlPct": -0.068,
+      "last": 180.76,
+      "pnl": -0.05,
+      "pnlPct": -0.0498,
       "isLev": true,
       "stopLabel": "Synthetic",
       "stopTone": "info",
-      "triggerVal": 178.02,
+      "triggerVal": 178.05,
       "triggerReal": false,
       "triggerNote": "synthetic watch (est.)"
+    },
+    {
+      "symbol": "SKHY",
+      "qty": 1,
+      "avgCost": 188.09,
+      "last": 188.49,
+      "pnl": 0.4,
+      "pnlPct": 0.2127,
+      "isLev": false,
+      "stopLabel": "Pending Renewal",
+      "stopTone": "warning",
+      "triggerVal": 189.03,
+      "triggerReal": false,
+      "triggerNote": "renews automatically next run (est.)"
     }
   ],
   "intraday": [
@@ -35,7 +49,8 @@
     {"time": "11:19 AM", "pnlPct": -1.53, "totalValue": 582.48},
     {"time": "11:40 AM", "pnlPct": -1.48, "totalValue": 582.79},
     {"time": "11:55 AM", "pnlPct": -0.92, "totalValue": 583.39},
-    {"time": "12:10 PM", "pnlPct": -0.30, "totalValue": 583.97}
+    {"time": "12:10 PM", "pnlPct": -0.30, "totalValue": 583.97},
+    {"time": "1:26 PM", "pnlPct": 0.12, "totalValue": 584.63}
   ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
