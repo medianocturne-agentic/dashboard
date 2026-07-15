@@ -1,25 +1,58 @@
 {
-  "generatedAt": "2026-07-15 8:22 AM CT",
-  "portfolio": {"totalValue": 583.95, "equityValue": 0, "cash": 583.95, "buyingPower": 583.95},
-  "totalPnl": 0,
-  "totalPnlPct": null,
+  "generatedAt": "2026-07-15 9:25 AM CT",
+  "portfolio": {"totalValue": 582.525, "equityValue": 158.625, "cash": 423.9, "buyingPower": 423.9},
+  "totalPnl": -1.4,
+  "totalPnlPct": -0.8747266479225242,
   "realizedAllTime": 36.59,
   "realizedRate": 0.60077563927848,
-  "positions": [],
-  "intraday": [],
+  "positions": [
+    {
+      "symbol": "FNGU",
+      "qty": 3,
+      "avgCost": 29.75,
+      "last": 29.45,
+      "pnl": -0.9,
+      "pnlPct": -1.0084033613445378,
+      "isLev": true,
+      "stopLabel": "Stop $28.26",
+      "stopTone": "success",
+      "triggerVal": 28.26,
+      "triggerReal": true,
+      "triggerNote": ""
+    },
+    {
+      "symbol": "XPEV",
+      "qty": 5,
+      "avgCost": 14.16,
+      "last": 14.06,
+      "pnl": -0.5,
+      "pnlPct": -0.7062146892655368,
+      "isLev": false,
+      "stopLabel": "Stop $13.45",
+      "stopTone": "success",
+      "triggerVal": 13.45,
+      "triggerReal": true,
+      "triggerNote": ""
+    }
+  ],
+  "intraday": [
+    {"time": "8:35 AM", "pnlPct": 0, "totalValue": 583.95},
+    {"time": "9:05 AM", "pnlPct": 0, "totalValue": 583.95}
+  ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
-    {"date": "2026-06-29", "pnlPct": 6.60},
+    {"date": "2026-06-29", "pnlPct": 6.6},
     {"date": "2026-06-30", "pnlPct": 4.6},
     {"date": "2026-07-01", "pnlPct": -1.35},
     {"date": "2026-07-02", "pnlPct": -1.91},
     {"date": "2026-07-03", "pnlPct": 0},
-    {"date": "2026-07-06", "pnlPct": 2.00},
+    {"date": "2026-07-06", "pnlPct": 2.0},
     {"date": "2026-07-07", "pnlPct": 0.25},
     {"date": "2026-07-08", "pnlPct": 1.27},
     {"date": "2026-07-09", "pnlPct": -4.01},
     {"date": "2026-07-10", "pnlPct": -0.51},
     {"date": "2026-07-13", "pnlPct": 0.23},
-    {"date": "2026-07-14", "pnlPct": -0.80}
+    {"date": "2026-07-14", "pnlPct": -0.8},
+    {"date": "2026-07-15", "pnlPct": 0}
   ]
 }
