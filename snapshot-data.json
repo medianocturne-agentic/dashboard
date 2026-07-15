@@ -1,73 +1,16 @@
 {
-  "generatedAt": "2026-07-15 2:24 PM CT",
+  "generatedAt": "2026-07-15 3:24 PM CT",
   "portfolio": {
-    "totalValue": 586.72998529,
-    "equityValue": 281.99998529,
-    "cash": 304.73,
+    "totalValue": 587.33,
+    "equityValue": 0.0,
+    "cash": 587.33,
     "buyingPower": 0.46
   },
-  "totalPnl": -5.72,
-  "totalPnlPct": -1.99,
-  "realizedAllTime": 45.07,
-  "realizedRate": 0.71,
-  "positions": [
-    {
-      "symbol": "FNGU",
-      "qty": 3.0,
-      "avgCost": 29.75,
-      "last": 29.52,
-      "pnl": -0.69,
-      "pnlPct": -0.77,
-      "isLev": true,
-      "stopLabel": "Stop $28.26",
-      "stopTone": "success",
-      "triggerVal": 28.26,
-      "triggerReal": true,
-      "triggerNote": ""
-    },
-    {
-      "symbol": "RKT",
-      "qty": 4.0,
-      "avgCost": 15.0,
-      "last": 14.655,
-      "pnl": -1.38,
-      "pnlPct": -2.3,
-      "isLev": false,
-      "stopLabel": "Stop $14.41",
-      "stopTone": "success",
-      "triggerVal": 14.41,
-      "triggerReal": true,
-      "triggerNote": ""
-    },
-    {
-      "symbol": "DUST",
-      "qty": 2.0,
-      "avgCost": 66.69,
-      "last": 64.72,
-      "pnl": -3.94,
-      "pnlPct": -2.95,
-      "isLev": true,
-      "stopLabel": "Stop $63.36",
-      "stopTone": "success",
-      "triggerVal": 63.36,
-      "triggerReal": true,
-      "triggerNote": ""
-    },
-    {
-      "symbol": "LCID",
-      "qty": 0.910319,
-      "avgCost": 5.55,
-      "last": 5.865,
-      "pnl": 0.29,
-      "pnlPct": 5.68,
-      "isLev": false,
-      "stopLabel": "Synthetic",
-      "stopTone": "info",
-      "triggerVal": 5.689,
-      "triggerReal": false,
-      "triggerNote": "synthetic watch (est.)"
-    }
-  ],
+  "totalPnl": 0,
+  "totalPnlPct": null,
+  "realizedAllTime": 39.97,
+  "realizedRate": 0.6,
+  "positions": [],
   "intraday": [
     {
       "time": "8:35 AM",
@@ -128,6 +71,21 @@
       "time": "1:12 PM",
       "pnlPct": -1.14,
       "totalValue": 583.64
+    },
+    {
+      "time": "2:13 PM",
+      "pnlPct": -2.06,
+      "totalValue": 586.45
+    },
+    {
+      "time": "2:39 PM",
+      "pnlPct": -1.8,
+      "totalValue": 587.27
+    },
+    {
+      "time": "2:46 PM",
+      "pnlPct": 0,
+      "totalValue": 587.33
     }
   ],
   "history": [
@@ -185,7 +143,7 @@
     },
     {
       "date": "2026-07-15",
-      "pnlPct": 2.56
+      "pnlPct": 0.58
     }
   ]
 }
