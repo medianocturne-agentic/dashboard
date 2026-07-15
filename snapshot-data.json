@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-15 12:25 PM CT",
+  "generatedAt": "2026-07-15 1:17 PM CT",
   "portfolio": {
-    "totalValue": 585.15137364,
-    "equityValue": 395.67137364,
+    "totalValue": 582.573234805,
+    "equityValue": 393.093234805,
     "cash": 189.48,
     "buyingPower": 21.96
   },
-  "totalPnl": -3.09,
-  "totalPnlPct": -0.78,
+  "totalPnl": -5.59,
+  "totalPnlPct": -1.4,
   "realizedAllTime": 40.77,
   "realizedRate": 0.65,
   "positions": [
@@ -15,9 +15,9 @@
       "symbol": "FNGU",
       "qty": 3.0,
       "avgCost": 29.75,
-      "last": 29.48,
-      "pnl": -0.81,
-      "pnlPct": -0.91,
+      "last": 29.8,
+      "pnl": 0.15,
+      "pnlPct": 0.17,
       "isLev": true,
       "stopLabel": "Stop $28.26",
       "stopTone": "success",
@@ -29,9 +29,9 @@
       "symbol": "RKT",
       "qty": 4.0,
       "avgCost": 15.0,
-      "last": 14.7638,
-      "pnl": -0.94,
-      "pnlPct": -1.57,
+      "last": 14.545,
+      "pnl": -1.82,
+      "pnlPct": -3.03,
       "isLev": false,
       "stopLabel": "Stop $14.41",
       "stopTone": "success",
@@ -43,9 +43,9 @@
       "symbol": "DUST",
       "qty": 2.0,
       "avgCost": 66.69,
-      "last": 65.97,
-      "pnl": -1.44,
-      "pnlPct": -1.08,
+      "last": 64.26,
+      "pnl": -4.86,
+      "pnlPct": -3.64,
       "isLev": true,
       "stopLabel": "Stop $63.36",
       "stopTone": "success",
@@ -57,9 +57,9 @@
       "symbol": "LCID",
       "qty": 20.910319,
       "avgCost": 5.55,
-      "last": 5.555,
-      "pnl": 0.1,
-      "pnlPct": 0.09,
+      "last": 5.595,
+      "pnl": 0.94,
+      "pnlPct": 0.81,
       "isLev": false,
       "stopLabel": "Stop $5.27",
       "stopTone": "success",
@@ -118,6 +118,16 @@
       "time": "11:47 AM",
       "pnlPct": -0.51,
       "totalValue": 586.7
+    },
+    {
+      "time": "12:39 PM",
+      "pnlPct": -1.18,
+      "totalValue": 583.43
+    },
+    {
+      "time": "1:12 PM",
+      "pnlPct": -1.14,
+      "totalValue": 583.64
     }
   ],
   "history": [
