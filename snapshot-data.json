@@ -1,31 +1,159 @@
 {
-  "generatedAt": "2026-07-16 8:24 AM CT",
+  "generatedAt": "2026-07-16 9:26 AM CT",
   "portfolio": {
-    "totalValue": 587.33,
-    "equityValue": 0.0,
-    "cash": 587.33,
-    "buyingPower": 587.33
+    "totalValue": 583.52,
+    "equityValue": 583.07,
+    "cash": 0.45,
+    "buyingPower": 0.45
   },
-  "totalPnl": 0,
-  "totalPnlPct": null,
+  "totalPnl": -3.81,
+  "totalPnlPct": -0.65,
   "realizedAllTime": 39.97,
   "realizedRate": 0.6,
-  "positions": [],
-  "intraday": [],
+  "positions": [
+    {
+      "symbol": "IOVA",
+      "qty": 23.308002,
+      "avgCost": 5.04,
+      "last": 4.875,
+      "pnl": -3.85,
+      "pnlPct": -3.27,
+      "isLev": false,
+      "stopLabel": "Stop $4.79",
+      "stopTone": "success",
+      "triggerVal": 4.79,
+      "triggerReal": true,
+      "triggerNote": ""
+    },
+    {
+      "symbol": "GEVO",
+      "qty": 69.1,
+      "avgCost": 1.7,
+      "last": 1.72,
+      "pnl": 1.38,
+      "pnlPct": 1.18,
+      "isLev": false,
+      "stopLabel": "Stop $1.62",
+      "stopTone": "success",
+      "triggerVal": 1.62,
+      "triggerReal": true,
+      "triggerNote": ""
+    },
+    {
+      "symbol": "ABT",
+      "qty": 1.170486,
+      "avgCost": 100.36,
+      "last": 100.08,
+      "pnl": -0.33,
+      "pnlPct": -0.28,
+      "isLev": false,
+      "stopLabel": "Pending Renewal",
+      "stopTone": "warning",
+      "triggerVal": 97.08,
+      "triggerReal": false,
+      "triggerNote": "renews automatically next run (est.)"
+    },
+    {
+      "symbol": "CFG",
+      "qty": 1.579961,
+      "avgCost": 74.35,
+      "last": 73.91,
+      "pnl": -0.7,
+      "pnlPct": -0.59,
+      "isLev": false,
+      "stopLabel": "Pending Renewal",
+      "stopTone": "warning",
+      "triggerVal": 71.69,
+      "triggerReal": false,
+      "triggerNote": "renews automatically next run (est.)"
+    },
+    {
+      "symbol": "HELP",
+      "qty": 16.071649,
+      "avgCost": 7.28,
+      "last": 7.26,
+      "pnl": -0.32,
+      "pnlPct": -0.27,
+      "isLev": false,
+      "stopLabel": "Stop $6.92",
+      "stopTone": "success",
+      "triggerVal": 6.92,
+      "triggerReal": true,
+      "triggerNote": ""
+    }
+  ],
+  "intraday": [
+    {
+      "time": "9:01 AM",
+      "pnlPct": 0.06,
+      "totalValue": 587.62
+    },
+    {
+      "time": "9:05 AM",
+      "pnlPct": -0.19,
+      "totalValue": 586.42
+    }
+  ],
   "history": [
-    {"date": "2026-06-26", "pnlPct": 3.87},
-    {"date": "2026-06-29", "pnlPct": 6.6},
-    {"date": "2026-06-30", "pnlPct": 4.6},
-    {"date": "2026-07-01", "pnlPct": -1.35},
-    {"date": "2026-07-02", "pnlPct": -1.91},
-    {"date": "2026-07-03", "pnlPct": 0},
-    {"date": "2026-07-06", "pnlPct": 2.0},
-    {"date": "2026-07-07", "pnlPct": 0.25},
-    {"date": "2026-07-08", "pnlPct": 1.27},
-    {"date": "2026-07-09", "pnlPct": -4.01},
-    {"date": "2026-07-10", "pnlPct": -0.51},
-    {"date": "2026-07-13", "pnlPct": 0.23},
-    {"date": "2026-07-14", "pnlPct": -0.8},
-    {"date": "2026-07-15", "pnlPct": 0.58}
+    {
+      "date": "2026-06-26",
+      "pnlPct": 3.87
+    },
+    {
+      "date": "2026-06-29",
+      "pnlPct": 6.6
+    },
+    {
+      "date": "2026-06-30",
+      "pnlPct": 4.6
+    },
+    {
+      "date": "2026-07-01",
+      "pnlPct": -1.35
+    },
+    {
+      "date": "2026-07-02",
+      "pnlPct": -1.91
+    },
+    {
+      "date": "2026-07-03",
+      "pnlPct": 0
+    },
+    {
+      "date": "2026-07-06",
+      "pnlPct": 2.0
+    },
+    {
+      "date": "2026-07-07",
+      "pnlPct": 0.25
+    },
+    {
+      "date": "2026-07-08",
+      "pnlPct": 1.27
+    },
+    {
+      "date": "2026-07-09",
+      "pnlPct": -4.01
+    },
+    {
+      "date": "2026-07-10",
+      "pnlPct": -0.51
+    },
+    {
+      "date": "2026-07-13",
+      "pnlPct": 0.23
+    },
+    {
+      "date": "2026-07-14",
+      "pnlPct": -0.8
+    },
+    {
+      "date": "2026-07-15",
+      "pnlPct": 0.58
+    },
+    {
+      "date": "2026-07-16",
+      "pnlPct": 0.0
+    }
   ]
 }
