@@ -1,149 +1,31 @@
 {
-  "generatedAt": "2026-07-15 3:24 PM CT",
+  "generatedAt": "2026-07-16 8:24 AM CT",
   "portfolio": {
     "totalValue": 587.33,
     "equityValue": 0.0,
     "cash": 587.33,
-    "buyingPower": 0.46
+    "buyingPower": 587.33
   },
   "totalPnl": 0,
   "totalPnlPct": null,
   "realizedAllTime": 39.97,
   "realizedRate": 0.6,
   "positions": [],
-  "intraday": [
-    {
-      "time": "8:35 AM",
-      "pnlPct": 0,
-      "totalValue": 583.95
-    },
-    {
-      "time": "9:05 AM",
-      "pnlPct": 0,
-      "totalValue": 583.95
-    },
-    {
-      "time": "9:30 AM",
-      "pnlPct": -0.29,
-      "totalValue": 583.42
-    },
-    {
-      "time": "9:42 AM",
-      "pnlPct": 0.38,
-      "totalValue": 585.15
-    },
-    {
-      "time": "10:04 AM",
-      "pnlPct": 0.21,
-      "totalValue": 584.04
-    },
-    {
-      "time": "10:49 AM",
-      "pnlPct": 0.78,
-      "totalValue": 585.54
-    },
-    {
-      "time": "11:15 AM",
-      "pnlPct": 0.52,
-      "totalValue": 587.19
-    },
-    {
-      "time": "11:21 AM",
-      "pnlPct": 0.63,
-      "totalValue": 587.61
-    },
-    {
-      "time": "11:39 AM",
-      "pnlPct": 0.72,
-      "totalValue": 587.69
-    },
-    {
-      "time": "11:47 AM",
-      "pnlPct": -0.51,
-      "totalValue": 586.7
-    },
-    {
-      "time": "12:39 PM",
-      "pnlPct": -1.18,
-      "totalValue": 583.43
-    },
-    {
-      "time": "1:12 PM",
-      "pnlPct": -1.14,
-      "totalValue": 583.64
-    },
-    {
-      "time": "2:13 PM",
-      "pnlPct": -2.06,
-      "totalValue": 586.45
-    },
-    {
-      "time": "2:39 PM",
-      "pnlPct": -1.8,
-      "totalValue": 587.27
-    },
-    {
-      "time": "2:46 PM",
-      "pnlPct": 0,
-      "totalValue": 587.33
-    }
-  ],
+  "intraday": [],
   "history": [
-    {
-      "date": "2026-06-26",
-      "pnlPct": 3.87
-    },
-    {
-      "date": "2026-06-29",
-      "pnlPct": 6.6
-    },
-    {
-      "date": "2026-06-30",
-      "pnlPct": 4.6
-    },
-    {
-      "date": "2026-07-01",
-      "pnlPct": -1.35
-    },
-    {
-      "date": "2026-07-02",
-      "pnlPct": -1.91
-    },
-    {
-      "date": "2026-07-03",
-      "pnlPct": 0
-    },
-    {
-      "date": "2026-07-06",
-      "pnlPct": 2.0
-    },
-    {
-      "date": "2026-07-07",
-      "pnlPct": 0.25
-    },
-    {
-      "date": "2026-07-08",
-      "pnlPct": 1.27
-    },
-    {
-      "date": "2026-07-09",
-      "pnlPct": -4.01
-    },
-    {
-      "date": "2026-07-10",
-      "pnlPct": -0.51
-    },
-    {
-      "date": "2026-07-13",
-      "pnlPct": 0.23
-    },
-    {
-      "date": "2026-07-14",
-      "pnlPct": -0.8
-    },
-    {
-      "date": "2026-07-15",
-      "pnlPct": 0.58
-    }
+    {"date": "2026-06-26", "pnlPct": 3.87},
+    {"date": "2026-06-29", "pnlPct": 6.6},
+    {"date": "2026-06-30", "pnlPct": 4.6},
+    {"date": "2026-07-01", "pnlPct": -1.35},
+    {"date": "2026-07-02", "pnlPct": -1.91},
+    {"date": "2026-07-03", "pnlPct": 0},
+    {"date": "2026-07-06", "pnlPct": 2.0},
+    {"date": "2026-07-07", "pnlPct": 0.25},
+    {"date": "2026-07-08", "pnlPct": 1.27},
+    {"date": "2026-07-09", "pnlPct": -4.01},
+    {"date": "2026-07-10", "pnlPct": -0.51},
+    {"date": "2026-07-13", "pnlPct": 0.23},
+    {"date": "2026-07-14", "pnlPct": -0.8},
+    {"date": "2026-07-15", "pnlPct": 0.58}
   ]
 }
