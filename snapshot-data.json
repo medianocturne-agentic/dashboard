@@ -1,45 +1,16 @@
 {
-  "generatedAt": "2026-07-16 10:24 AM CT",
+  "generatedAt": "2026-07-16 11:24 AM CT",
   "portfolio": {
-    "totalValue": 581.18175419,
-    "equityValue": 233.57175419,
-    "cash": 347.61,
+    "totalValue": 579.78,
+    "equityValue": 0,
+    "cash": 579.78,
     "buyingPower": 0.45
   },
-  "totalPnl": -0.8999,
-  "totalPnlPct": -0.3838,
-  "realizedAllTime": 34.72,
-  "realizedRate": 0.4941,
-  "positions": [
-    {
-      "symbol": "GEVO",
-      "qty": 69.1,
-      "avgCost": 1.7,
-      "last": 1.68,
-      "pnl": -1.382,
-      "pnlPct": -1.1765,
-      "isLev": false,
-      "stopLabel": "Stop $1.62",
-      "stopTone": "success",
-      "triggerVal": 1.62,
-      "triggerReal": true,
-      "triggerNote": ""
-    },
-    {
-      "symbol": "HELP",
-      "qty": 16.071649,
-      "avgCost": 7.28,
-      "last": 7.31,
-      "pnl": 0.4821,
-      "pnlPct": 0.4121,
-      "isLev": false,
-      "stopLabel": "Stop $6.92",
-      "stopTone": "success",
-      "triggerVal": 6.92,
-      "triggerReal": true,
-      "triggerNote": ""
-    }
-  ],
+  "totalPnl": 0,
+  "totalPnlPct": null,
+  "realizedAllTime": 32.43,
+  "realizedRate": 0.4466,
+  "positions": [],
   "intraday": [
     {
       "time": "9:01 AM",
@@ -52,24 +23,19 @@
       "totalValue": 586.42
     },
     {
-      "time": "9:25 AM",
-      "pnlPct": -0.72,
-      "totalValue": 583.34
+      "time": "10:37 AM",
+      "pnlPct": -1.12,
+      "totalValue": 580.75
     },
     {
-      "time": "9:42 AM",
-      "pnlPct": 0.24,
-      "totalValue": 582.65
+      "time": "10:47 AM",
+      "pnlPct": 0,
+      "totalValue": 579.78
     },
     {
-      "time": "10:03 AM",
-      "pnlPct": 0.83,
-      "totalValue": 584.03
-    },
-    {
-      "time": "10:16 AM",
-      "pnlPct": -0.35,
-      "totalValue": 581.26
+      "time": "11:09 AM",
+      "pnlPct": 0,
+      "totalValue": 579.78
     }
   ],
   "history": [
@@ -131,7 +97,7 @@
     },
     {
       "date": "2026-07-16",
-      "pnlPct": -1.49
+      "pnlPct": -1.28
     }
   ]
 }
