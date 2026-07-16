@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Agentic EOD Report</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PG1hc2sgaWQ9ImMiPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iIzAwMCIvPjxjaXJjbGUgY3g9IjI3IiBjeT0iMzIiIHI9IjIwIiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iMzciIGN5PSIyOSIgcj0iMTgiIGZpbGw9IiMwMDAiLz48L21hc2s+PC9kZWZzPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSIjMDYwODBhIi8+PGNpcmNsZSBjeD0iMjciIGN5PSIzMiIgcj0iMjAiIGZpbGw9IiMyYmZmOWEiIG1hc2s9InVybCgjYykiLz48ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyNWUwZmYiIHN0cm9rZS13aWR0aD0iMS41Ij48Y2lyY2xlIGN4PSIzNiIgY3k9IjMyIiByPSI4Ii8+PGNpcmNsZSBjeD0iNDQiIGN5PSIzMiIgcj0iOCIvPjxjaXJjbGUgY3g9IjI4IiBjeT0iMzIiIHI9IjgiLz48Y2lyY2xlIGN4PSI0MCIgY3k9IjM4LjkzIiByPSI4Ii8+PGNpcmNsZSBjeD0iMzIiIGN5PSIzOC45MyIgcj0iOCIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iMjUuMDciIHI9IjgiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjI1LjA3IiByPSI4Ii8+PC9nPjwvc3ZnPg==" />
+<style>
+  :root {
+    color-scheme: dark;
+    --bg:#05080a; --panel:#0a1014; --panel-line:#15321f; --grid-line:rgba(0,255,140,0.05);
+    --green:#2bff9a; --green-dim:#1f8f5c; --cyan:#25e0ff; --red:#ff4d6d; --amber:#ffcf4a;
+    --text:#b9f3d2; --text-dim:#5f8f78;
+    --mono:"SF Mono","JetBrains Mono","Fira Code",Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:var(--mono); background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased;
+    background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px); background-size:28px 28px; }
+  body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:9999; background:repeating-linear-gradient(0deg,rgba(0,0,0,0.16) 0px,rgba(0,0,0,0.16) 1px,transparent 1px,transparent 3px); opacity:0.35; }
+  .wrap { max-width:900px; margin:0 auto; padding:22px 16px 48px; position:relative; z-index:1; }
+  .nav { display:flex; gap:16px; margin-bottom:14px; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; }
+  .nav a { color:var(--cyan); text-decoration:none; } .nav a:hover { text-shadow:0 0 6px rgba(37,224,255,0.5); }
+  .nav a::before { content:"‹ "; }
+  .title { font-size:17px; font-weight:700; margin:0; color:var(--green); text-transform:uppercase; letter-spacing:0.12em; text-shadow:0 0 6px rgba(43,255,154,0.55); }
+  .title::before { content:"▌ "; }
+  .sub { font-size:11px; color:var(--text-dim); margin:3px 0 16px; letter-spacing:0.04em; text-transform:uppercase; }
+  .alert { background:rgba(255,77,109,0.08); border:1px solid rgba(255,77,109,0.45); border-radius:4px; padding:10px 13px; margin:0 0 16px; font-size:11.5px; color:#ffb3c1; letter-spacing:0.02em; line-height:1.5; }
+  .alert b { color:var(--red); }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:18px; }
+  .card { background:var(--panel); border:1px solid var(--panel-line); border-radius:4px; padding:12px 14px; box-shadow:inset 0 0 22px rgba(0,255,140,0.04); }
+  .card .label { font-size:10px; color:var(--text-dim); margin:0 0 5px; text-transform:uppercase; letter-spacing:0.12em; }
+  .card .value { font-size:21px; font-weight:700; margin:0; color:var(--green); font-variant-numeric:tabular-nums; text-shadow:0 0 8px rgba(43,255,154,0.4); }
+  .overall { background:linear-gradient(90deg,rgba(43,255,154,0.09),rgba(37,224,255,0.04)); border:1px solid rgba(43,255,154,0.38); border-radius:5px; padding:14px 16px; margin-bottom:12px; box-shadow:inset 0 0 28px rgba(43,255,154,0.06); }
+  .overall .ov-label { font-size:10px; text-transform:uppercase; letter-spacing:0.14em; color:var(--text-dim); margin-bottom:4px; }
+  .overall .ov-value { font-size:27px; font-weight:700; font-variant-numeric:tabular-nums; text-shadow:0 0 11px rgba(43,255,154,0.4); }
+  .plgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(165px,1fr)); gap:10px; margin-bottom:18px; }
+  .plcard { background:var(--panel); border:1px solid rgba(43,255,154,0.22); border-radius:4px; padding:13px 15px; box-shadow:inset 0 0 22px rgba(0,255,140,0.05); }
+  .plcard .label { font-size:10px; color:var(--text-dim); margin:0 0 5px; text-transform:uppercase; letter-spacing:0.12em; }
+  .plcard .value { font-size:22px; font-weight:700; margin:0; font-variant-numeric:tabular-nums; text-shadow:0 0 8px rgba(43,255,154,0.3); }
+  .plcard .sub2 { font-size:10.5px; color:var(--text-dim); margin:4px 0 0; letter-spacing:0.04em; }
+  .section-title { font-size:11px; font-weight:700; color:var(--green-dim); margin:24px 0 8px; text-transform:uppercase; letter-spacing:0.12em; }
+  .section-title::before { content:"// "; color:var(--green); }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; font-variant-numeric:tabular-nums; }
+  thead th { text-align:right; padding:8px 7px; color:var(--green-dim); font-weight:600; text-transform:uppercase; letter-spacing:0.08em; font-size:10px; border-bottom:1px solid var(--panel-line); }
+  thead th:first-child { text-align:left; }
+  tbody td { padding:9px 7px; text-align:right; border-bottom:1px solid rgba(21,50,31,0.6); color:var(--text); }
+  tbody td:first-child { text-align:left; font-weight:700; color:var(--green); letter-spacing:0.04em; }
+  tbody tr:last-child td { border-bottom:none; }
+  .pos { color:var(--green)!important; text-shadow:0 0 6px rgba(43,255,154,0.35); }
+  .neg { color:var(--red)!important; text-shadow:0 0 6px rgba(255,77,109,0.35); }
+  .tag { display:inline-block; font-size:9px; padding:1px 5px; border-radius:2px; text-transform:uppercase; letter-spacing:0.05em; border:1px solid transparent; }
+  .tag.buy { background:rgba(43,255,154,0.08); color:var(--green); border-color:rgba(43,255,154,0.4); }
+  .tag.sell { background:rgba(255,77,109,0.08); color:var(--red); border-color:rgba(255,77,109,0.4); }
+  .lev-tag { display:inline-block; font-size:8px; font-weight:700; letter-spacing:0.1em; padding:1px 5px; margin-left:6px; border-radius:2px; background:rgba(37,224,255,0.1); color:var(--cyan); border:1px solid rgba(37,224,255,0.35); vertical-align:1px; }
+  .note { font-size:11px; color:var(--text-dim); margin-top:10px; }
+  .loading { font-size:12px; color:var(--text-dim); }
+  .foot { font-size:10px; color:var(--text-dim); margin-top:28px; border-top:1px solid var(--panel-line); padding-top:12px; line-height:1.7; }
+
+  /* ===== iPhone 16 Pro (and similar phones, <= 440px) ===== */
+  @media (max-width: 440px) {
+    body { background-size:22px 22px; }
+    .wrap { padding:14px 11px 34px; }
+    .title { font-size:14px; letter-spacing:0.08em; }
+    .sub { font-size:10px; }
+    .overall { padding:11px 13px; }
+    .overall .ov-value { font-size:22px; }
+    .plgrid { grid-template-columns:1fr; gap:8px; }
+    .plcard { padding:11px 13px; }
+    .plcard .value { font-size:19px; }
+    .cards { grid-template-columns:repeat(2,1fr); gap:8px; }
+    .card { padding:10px 11px; }
+    .card .value { font-size:18px; }
+    .section-title { font-size:10px; margin:18px 0 6px; }
+    #report { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    #report table { min-width:480px; }
+    table { font-size:11.5px; }
+    thead th, tbody td { padding:7px 5px; }
+    .foot { font-size:10px; }
+  }
+
+  /* ===== iPad Pro 12.9" and larger (>= 1024px) ===== */
+  @media (min-width: 1024px) {
+    .wrap { max-width:1060px; padding:30px 26px 56px; }
+    .title { font-size:20px; }
+    .sub { font-size:12px; }
+    .cards { grid-template-columns:repeat(3,1fr); gap:12px; }
+    .plgrid { grid-template-columns:repeat(3,1fr); gap:12px; }
+    .plcard { padding:14px 16px; }
+    .plcard .value { font-size:24px; }
+    .card { padding:14px 16px; }
+    .card .value { font-size:24px; }
+    table { font-size:13.5px; }
+    thead th { font-size:11px; }
+    thead th, tbody td { padding:10px 9px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="nav"><a href="index.html">All reports</a><a href="../index.html">Live dashboard</a></div>
+  <div id="report"><p class="loading">Loading report…</p></div>
+  <div class="foot">Agentic momentum strategy &mdash; automated end-of-day report. Informational only, not investment advice. Leveraged/inverse ETFs carry substantial risk of loss.</div>
+</div>
+
+<!-- The daily-report task replaces ONLY the JSON in this block. Shape:
+     { date, generatedAt, account:{totalValue,equityValue,cash,buyingPower},
+       unrealizedPnl, unrealizedPnlPct, realizedToday, realizedAllTime, realizedRate,
+       trades:[{side,symbol,detail,price,agentic,note}], positions:[{symbol,qty,avgCost,last,pnlPct,isLev}],
+       intraday:[{time,pnlPct,totalValue}] } -->
+<script type="application/json" id="report-data">
+{"date":"2026-07-16","generatedAt":"2026-07-16 3:31 PM CT","account":{"totalValue":579.78,"equityValue":0.0,"cash":579.78,"buyingPower":0.45},"unrealizedPnl":0,"unrealizedPnlPct":null,"realizedToday":-7.54,"realizedAllTime":32.43,"realizedRate":0.4466,"trades":[{"side":"buy","symbol":"IOVA","detail":"$117.47","price":5.0399,"agentic":true,"note":"AM deploy"},{"side":"buy","symbol":"GEVO","detail":"$117.47","price":1.7,"agentic":true,"note":"AM deploy"},{"side":"buy","symbol":"ABT","detail":"$117.47","price":100.36,"agentic":true,"note":"AM deploy"},{"side":"buy","symbol":"CFG","detail":"$117.47","price":74.3499,"agentic":true,"note":"AM deploy"},{"side":"buy","symbol":"HELP","detail":"$117.00","price":7.2799,"agentic":true,"note":"AM deploy"},{"side":"sell","symbol":"IOVA","detail":"23.308 sh","price":4.895,"agentic":true,"note":""},{"side":"sell","symbol":"ABT","detail":"1.1705 sh","price":99.828,"agentic":true,"note":""},{"side":"sell","symbol":"CFG","detail":"1.58 sh","price":73.5601,"agentic":true,"note":""},{"side":"sell","symbol":"GEVO","detail":"69.1 sh","price":1.675,"agentic":true,"note":""},{"side":"sell","symbol":"HELP","detail":"8 sh","price":7.3,"agentic":true,"note":"stop hit"},{"side":"sell","symbol":"HELP","detail":"8.0716 sh","price":7.1882,"agentic":true,"note":""}],"positions":[],"intraday":[{"time":"9:01 AM","pnlPct":0.06,"totalValue":587.62},{"time":"9:05 AM","pnlPct":-0.19,"totalValue":586.42},{"time":"10:37 AM","pnlPct":-1.12,"totalValue":580.75},{"time":"10:47 AM","pnlPct":0,"totalValue":579.78},{"time":"11:09 AM","pnlPct":0,"totalValue":579.78},{"time":"11:24 AM","pnlPct":0,"totalValue":579.78},{"time":"11:39 AM","pnlPct":0,"totalValue":579.78},{"time":"11:54 AM","pnlPct":0,"totalValue":579.78},{"time":"12:09 PM","pnlPct":0,"totalValue":579.78},{"time":"12:16 PM","pnlPct":0,"totalValue":579.78},{"time":"12:54 PM","pnlPct":0,"totalValue":579.78},{"time":"1:54 PM","pnlPct":0,"totalValue":579.78},{"time":"2:09 PM","pnlPct":0,"totalValue":579.78},{"time":"2:24 PM","pnlPct":0,"totalValue":579.78},{"time":"2:39 PM","pnlPct":0,"totalValue":579.78},{"time":"2:54 PM","pnlPct":0,"totalValue":579.78}]}
+</script>
+
+<script>
+function fmtUsd(n){ if(n===null||n===undefined||isNaN(n))return '—'; var s=n<0?'-':''; return s+'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function fmtPct(n){ if(n===null||n===undefined||isNaN(n))return ''; var s=n>=0?'+':''; return ' ('+s+n.toFixed(1)+'%)'; }
+function fmtPctOnly(n){ if(n===null||n===undefined||isNaN(n))return '—'; var s=n>=0?'+':''; return s+n.toFixed(2)+'%'; }
+
+function render(d){
+  var a=d.account||{}, el=document.getElementById('report');
+  var realized=(d.realizedAllTime==null)?null:d.realizedAllTime, unreal=(d.unrealizedPnl==null)?0:d.unrealizedPnl;
+  var overall=(realized==null?0:realized)+unreal;
+  var html='<p class="title">EOD Report &middot; '+(d.date||'—')+'</p>'
+    + '<p class="sub">Agentic Account &middot; generated '+(d.generatedAt||'—')+'</p>';
+  if(d.alert){ html+='<div class="alert">'+d.alert+'</div>'; }
+
+  // Hero: overall all-time P/L (realized + unrealized)
+  html+='<div class="overall"><div class="ov-label">Overall P/L &middot; realized + unrealized, all-time</div>'
+    + '<div class="ov-value '+(overall>=0?'pos':'neg')+'">'+fmtUsd(overall)+'</div></div>';
+
+  // Headline P/L breakdown — each figure gets its own panel rather than crammed corner text
+  var realizedRateStr = (d.realizedRate==null)?'':((d.realizedRate>=0?'+':'')+d.realizedRate.toFixed(2)+'% on cost');
+  var unrealPctStr = (d.unrealizedPnlPct==null)?'':((d.unrealizedPnlPct>=0?'+':'')+d.unrealizedPnlPct.toFixed(2)+'% vs cost');
+  html+='<div class="plgrid">'
+    + '<div class="plcard"><p class="label">Realized &middot; all-time</p><p class="value '+((realized==null||realized>=0)?'pos':'neg')+'">'+fmtUsd(realized)+'</p>'+(realizedRateStr?'<p class="sub2">'+realizedRateStr+'</p>':'')+'</div>'
+    + '<div class="plcard"><p class="label">Realized &middot; today</p><p class="value '+((d.realizedToday==null||d.realizedToday>=0)?'pos':'neg')+'">'+fmtUsd(d.realizedToday)+'</p></div>'
+    + '<div class="plcard"><p class="label">Open unrealized</p><p class="value '+((unreal>=0)?'pos':'neg')+'">'+fmtUsd(unreal)+'</p>'+(unrealPctStr?'<p class="sub2">'+unrealPctStr+'</p>':'')+'</div>'
+    + '</div>';
+
+  // Account snapshot
+  html+='<div class="cards">'
+    + '<div class="card"><p class="label">Account value</p><p class="value">'+fmtUsd(a.totalValue)+'</p></div>'
+    + '<div class="card"><p class="label">Cash</p><p class="value">'+fmtUsd(a.cash)+'</p></div>'
+    + '<div class="card"><p class="label">Equity held</p><p class="value">'+fmtUsd(a.equityValue)+'</p></div>'
+    + '</div>';
+
+  // Trades
+  html+='<p class="section-title">Trades today</p>';
+  if(d.trades && d.trades.length){
+    var tr='';
+    d.trades.forEach(function(t){
+      tr+='<tr><td>'+t.symbol+'</td><td style="text-align:left"><span class="tag '+(t.side==='buy'?'buy':'sell')+'">'+t.side+'</span></td>'
+        +'<td>'+(t.detail||'')+'</td><td>'+(t.price==null?'—':fmtUsd(t.price))+'</td>'
+        +'<td style="text-align:left">'+(t.note||'')+(t.agentic?' <span class="lev-tag">AUTO</span>':'')+'</td></tr>';
+    });
+    html+='<table><thead><tr><th>Symbol</th><th style="text-align:left">Side</th><th>Detail</th><th>Fill</th><th style="text-align:left">Note</th></tr></thead><tbody>'+tr+'</tbody></table>';
+  } else { html+='<p class="note">No trades executed today.</p>'; }
+
+  // EOD positions
+  html+='<p class="section-title">Positions at close</p>';
+  if(d.positions && d.positions.length){
+    var pr='';
+    d.positions.forEach(function(p){
+      pr+='<tr><td>'+p.symbol+(p.isLev?'<span class="lev-tag">LEV</span>':'')+'</td><td>'+Number(p.qty).toFixed(2)+'</td>'
+        +'<td>'+fmtUsd(p.avgCost)+'</td><td>'+fmtUsd(p.last)+'</td><td class="'+(p.pnlPct>=0?'pos':'neg')+'">'+fmtPctOnly(p.pnlPct)+'</td></tr>';
+    });
+    html+='<table><thead><tr><th>Symbol</th><th>Qty</th><th>Avg</th><th>Last</th><th>P/L %</th></tr></thead><tbody>'+pr+'</tbody></table>';
+  } else { html+='<p class="note">Flat &mdash; all positions closed to cash for overnight (no gap risk).</p>'; }
+
+  // Intraday arc
+  if(d.intraday && d.intraday.length){
+    html+='<p class="section-title">Intraday P/L arc</p><table><thead><tr><th>Time (CT)</th><th>P/L %</th><th>Account value</th></tr></thead><tbody>';
+    d.intraday.forEach(function(e){ html+='<tr><td>'+e.time+'</td><td class="'+(e.pnlPct>=0?'pos':'neg')+'">'+fmtPctOnly(e.pnlPct)+'</td><td>'+fmtUsd(e.totalValue)+'</td></tr>'; });
+    html+='</tbody></table>';
+  }
+
+  el.innerHTML=html;
+}
+try { render(JSON.parse(document.getElementById('report-data').textContent)||{}); }
+catch(e){ document.getElementById('report').innerHTML='<p class="loading">Report data unavailable.</p>'; }
+</script>
+</body>
+</html>
