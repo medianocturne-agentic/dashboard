@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-17 12:25 PM CT",
+ "generatedAt": "2026-07-17 1:25 PM CT",
  "portfolio": {
   "totalValue": 567.39,
   "equityValue": 0.0,
@@ -74,6 +74,11 @@
   },
   {
    "time": "11:17 AM",
+   "pnlPct": -2.14,
+   "totalValue": 567.39
+  },
+  {
+   "time": "1:10 PM",
    "pnlPct": -2.14,
    "totalValue": 567.39
   }
