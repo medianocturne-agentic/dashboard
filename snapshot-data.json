@@ -1,47 +1,147 @@
 {
-  "generatedAt": "2026-07-17 11:27 AM CT",
-  "portfolio": {
-    "totalValue": 567.39,
-    "equityValue": 0,
-    "cash": 567.39,
-    "buyingPower": 0.0
+ "generatedAt": "2026-07-17 12:25 PM CT",
+ "portfolio": {
+  "totalValue": 567.39,
+  "equityValue": 0.0,
+  "cash": 567.39,
+  "buyingPower": 0.0
+ },
+ "totalPnl": 0,
+ "totalPnlPct": null,
+ "realizedAllTime": 20.02,
+ "realizedRate": 0.2553,
+ "positions": [],
+ "intraday": [
+  {
+   "time": "8:25 AM",
+   "pnlPct": 0,
+   "totalValue": 579.78
   },
-  "totalPnl": 0,
-  "totalPnlPct": null,
-  "realizedAllTime": 20.02,
-  "realizedRate": 0.25533727605378,
-  "positions": [],
-  "intraday": [
-    {"time": "8:25 AM", "pnlPct": 0, "totalValue": 579.78},
-    {"time": "8:32 AM", "pnlPct": 0, "totalValue": 579.78},
-    {"time": "8:55 AM", "pnlPct": 0, "totalValue": 579.78},
-    {"time": "9:03 AM", "pnlPct": 0, "totalValue": 579.78},
-    {"time": "9:26 AM", "pnlPct": 0.85, "totalValue": 584.7},
-    {"time": "9:38 AM", "pnlPct": 0.51, "totalValue": 582.76},
-    {"time": "9:55 AM", "pnlPct": -1.49, "totalValue": 571.16},
-    {"time": "10:03 AM", "pnlPct": -1.85, "totalValue": 569.36},
-    {"time": "10:25 AM", "pnlPct": -1.64, "totalValue": 570.29},
-    {"time": "10:33 AM", "pnlPct": -1.72, "totalValue": 569.79},
-    {"time": "10:48 AM", "pnlPct": -2.15, "totalValue": 567.33},
-    {"time": "11:10 AM", "pnlPct": -2.14, "totalValue": 567.39},
-    {"time": "11:17 AM", "pnlPct": -2.14, "totalValue": 567.39}
-  ],
-  "history": [
-    {"date": "2026-06-26", "pnlPct": 3.87},
-    {"date": "2026-06-29", "pnlPct": 6.6},
-    {"date": "2026-06-30", "pnlPct": 4.6},
-    {"date": "2026-07-01", "pnlPct": -1.35},
-    {"date": "2026-07-02", "pnlPct": -1.91},
-    {"date": "2026-07-03", "pnlPct": 0},
-    {"date": "2026-07-06", "pnlPct": 2.0},
-    {"date": "2026-07-07", "pnlPct": 0.25},
-    {"date": "2026-07-08", "pnlPct": 1.27},
-    {"date": "2026-07-09", "pnlPct": -4.01},
-    {"date": "2026-07-10", "pnlPct": -0.51},
-    {"date": "2026-07-13", "pnlPct": 0.23},
-    {"date": "2026-07-14", "pnlPct": -0.8},
-    {"date": "2026-07-15", "pnlPct": 0.58},
-    {"date": "2026-07-16", "pnlPct": -1.28},
-    {"date": "2026-07-17", "pnlPct": -2.14}
-  ]
+  {
+   "time": "8:32 AM",
+   "pnlPct": 0,
+   "totalValue": 579.78
+  },
+  {
+   "time": "8:55 AM",
+   "pnlPct": 0,
+   "totalValue": 579.78
+  },
+  {
+   "time": "9:03 AM",
+   "pnlPct": 0,
+   "totalValue": 579.78
+  },
+  {
+   "time": "9:26 AM",
+   "pnlPct": 0.85,
+   "totalValue": 584.7
+  },
+  {
+   "time": "9:38 AM",
+   "pnlPct": 0.51,
+   "totalValue": 582.76
+  },
+  {
+   "time": "9:55 AM",
+   "pnlPct": -1.49,
+   "totalValue": 571.16
+  },
+  {
+   "time": "10:03 AM",
+   "pnlPct": -1.85,
+   "totalValue": 569.36
+  },
+  {
+   "time": "10:25 AM",
+   "pnlPct": -1.64,
+   "totalValue": 570.29
+  },
+  {
+   "time": "10:33 AM",
+   "pnlPct": -1.72,
+   "totalValue": 569.79
+  },
+  {
+   "time": "10:48 AM",
+   "pnlPct": -2.15,
+   "totalValue": 567.33
+  },
+  {
+   "time": "11:10 AM",
+   "pnlPct": -2.14,
+   "totalValue": 567.39
+  },
+  {
+   "time": "11:17 AM",
+   "pnlPct": -2.14,
+   "totalValue": 567.39
+  }
+ ],
+ "history": [
+  {
+   "date": "2026-06-26",
+   "pnlPct": 3.87
+  },
+  {
+   "date": "2026-06-29",
+   "pnlPct": 6.6
+  },
+  {
+   "date": "2026-06-30",
+   "pnlPct": 4.6
+  },
+  {
+   "date": "2026-07-01",
+   "pnlPct": -1.35
+  },
+  {
+   "date": "2026-07-02",
+   "pnlPct": -1.91
+  },
+  {
+   "date": "2026-07-03",
+   "pnlPct": 0
+  },
+  {
+   "date": "2026-07-06",
+   "pnlPct": 2.0
+  },
+  {
+   "date": "2026-07-07",
+   "pnlPct": 0.25
+  },
+  {
+   "date": "2026-07-08",
+   "pnlPct": 1.27
+  },
+  {
+   "date": "2026-07-09",
+   "pnlPct": -4.01
+  },
+  {
+   "date": "2026-07-10",
+   "pnlPct": -0.51
+  },
+  {
+   "date": "2026-07-13",
+   "pnlPct": 0.23
+  },
+  {
+   "date": "2026-07-14",
+   "pnlPct": -0.8
+  },
+  {
+   "date": "2026-07-15",
+   "pnlPct": 0.58
+  },
+  {
+   "date": "2026-07-16",
+   "pnlPct": -1.28
+  },
+  {
+   "date": "2026-07-17",
+   "pnlPct": -2.14
+  }
+ ]
 }
