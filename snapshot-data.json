@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-17 1:25 PM CT",
+ "generatedAt": "2026-07-17 2:25 PM CT",
  "portfolio": {
   "totalValue": 567.39,
   "equityValue": 0.0,
@@ -9,7 +9,7 @@
  "totalPnl": 0,
  "totalPnlPct": null,
  "realizedAllTime": 20.02,
- "realizedRate": 0.2553,
+ "realizedRate": 0.25533727605378004,
  "positions": [],
  "intraday": [
   {
@@ -79,6 +79,11 @@
   },
   {
    "time": "1:10 PM",
+   "pnlPct": -2.14,
+   "totalValue": 567.39
+  },
+  {
+   "time": "1:55 PM",
    "pnlPct": -2.14,
    "totalValue": 567.39
   }
