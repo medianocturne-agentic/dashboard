@@ -1,31 +1,16 @@
 {
-  "generatedAt": "2026-07-17 10:25 AM CT",
+  "generatedAt": "2026-07-17 11:27 AM CT",
   "portfolio": {
-    "totalValue": 570.2276797,
-    "equityValue": 114.2776797,
-    "cash": 455.95,
-    "buyingPower": 9.78
+    "totalValue": 567.39,
+    "equityValue": 0,
+    "cash": 567.39,
+    "buyingPower": 0.0
   },
-  "totalPnl": -0.6979,
-  "totalPnlPct": -0.607,
-  "realizedAllTime": 23.58,
-  "realizedRate": 0.30560548897526,
-  "positions": [
-    {
-      "symbol": "TRVI",
-      "qty": 5.815658,
-      "avgCost": 19.77,
-      "last": 19.65,
-      "pnl": -0.6979,
-      "pnlPct": -0.607,
-      "isLev": false,
-      "stopLabel": "Stop $18.78",
-      "stopTone": "success",
-      "triggerVal": 18.78,
-      "triggerReal": true,
-      "triggerNote": ""
-    }
-  ],
+  "totalPnl": 0,
+  "totalPnlPct": null,
+  "realizedAllTime": 20.02,
+  "realizedRate": 0.25533727605378,
+  "positions": [],
   "intraday": [
     {"time": "8:25 AM", "pnlPct": 0, "totalValue": 579.78},
     {"time": "8:32 AM", "pnlPct": 0, "totalValue": 579.78},
@@ -34,7 +19,12 @@
     {"time": "9:26 AM", "pnlPct": 0.85, "totalValue": 584.7},
     {"time": "9:38 AM", "pnlPct": 0.51, "totalValue": 582.76},
     {"time": "9:55 AM", "pnlPct": -1.49, "totalValue": 571.16},
-    {"time": "10:03 AM", "pnlPct": -1.85, "totalValue": 569.36}
+    {"time": "10:03 AM", "pnlPct": -1.85, "totalValue": 569.36},
+    {"time": "10:25 AM", "pnlPct": -1.64, "totalValue": 570.29},
+    {"time": "10:33 AM", "pnlPct": -1.72, "totalValue": 569.79},
+    {"time": "10:48 AM", "pnlPct": -2.15, "totalValue": 567.33},
+    {"time": "11:10 AM", "pnlPct": -2.14, "totalValue": 567.39},
+    {"time": "11:17 AM", "pnlPct": -2.14, "totalValue": 567.39}
   ],
   "history": [
     {"date": "2026-06-26", "pnlPct": 3.87},
@@ -52,6 +42,6 @@
     {"date": "2026-07-14", "pnlPct": -0.8},
     {"date": "2026-07-15", "pnlPct": 0.58},
     {"date": "2026-07-16", "pnlPct": -1.28},
-    {"date": "2026-07-17", "pnlPct": -1.94}
+    {"date": "2026-07-17", "pnlPct": -2.14}
   ]
 }
