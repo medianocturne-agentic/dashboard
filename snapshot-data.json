@@ -1,59 +1,16 @@
 {
-  "generatedAt": "2026-07-20 2:24 PM CT",
+  "generatedAt": "2026-07-20 3:25 PM CT",
   "portfolio": {
-    "totalValue": 579.91,
-    "equityValue": 122.64,
-    "cash": 457.27,
+    "totalValue": 580.11,
+    "equityValue": 0,
+    "cash": 580.11,
     "buyingPower": 0.04
   },
-  "totalPnl": 5.03,
-  "totalPnlPct": 4.273,
-  "realizedAllTime": 7.49,
-  "realizedRate": 1.6654,
-  "positions": [
-    {
-      "symbol": "CIFR",
-      "qty": 5,
-      "avgCost": 19.82,
-      "last": 20.755,
-      "pnl": 4.68,
-      "pnlPct": 4.7175,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 19.92,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "NUAI",
-      "qty": 3,
-      "avgCost": 4.9,
-      "last": 5.035,
-      "pnl": 0.41,
-      "pnlPct": 2.7551,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 4.83,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "AMC",
-      "qty": 1.560126,
-      "avgCost": 2.44,
-      "last": 2.405,
-      "pnl": -0.05,
-      "pnlPct": -1.4344,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 2.34,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    }
-  ],
+  "totalPnl": 0,
+  "totalPnlPct": null,
+  "realizedAllTime": 12.71,
+  "realizedRate": 2.2402,
+  "positions": [],
   "intraday": [
     { "time": "08:05", "pnlPct": 0.0, "totalValue": 567.39 },
     { "time": "08:38", "pnlPct": 0.0, "totalValue": 563.36 },
@@ -77,9 +34,12 @@
     { "time": "13:16", "pnlPct": 1.1649, "totalValue": 584.08 },
     { "time": "13:24", "pnlPct": 1.1649, "totalValue": 583.83 },
     { "time": "13:55", "pnlPct": 1.1649, "totalValue": 581.55 },
-    { "time": "14:11", "pnlPct": 1.6654, "totalValue": 579.7 }
+    { "time": "14:11", "pnlPct": 1.6654, "totalValue": 579.7 },
+    { "time": "14:27", "pnlPct": 1.6654, "totalValue": 579.83 },
+    { "time": "14:40", "pnlPct": 2.2402, "totalValue": 580.11 },
+    { "time": "14:55", "pnlPct": 2.2402, "totalValue": 580.11 }
   ],
   "history": [
-    { "date": "2026-07-20", "pnlPct": 1.6654 }
+    { "date": "2026-07-20", "pnlPct": 2.2402 }
   ]
 }
