@@ -1,120 +1,77 @@
 {
-  "generatedAt": "2026-07-20 11:26 AM CT",
+  "generatedAt": "2026-07-20 12:25 PM CT",
   "portfolio": {
-    "totalValue": 575.1408,
-    "equityValue": 346.7708,
-    "cash": 228.37,
+    "totalValue": 582.1953,
+    "equityValue": 240.5253,
+    "cash": 341.67,
     "buyingPower": 3.84
   },
-  "totalPnl": 8.2678,
-  "totalPnlPct": 2.4425,
-  "realizedAllTime": -0.49,
-  "realizedRate": -0.2178,
+  "totalPnl": 10.88,
+  "totalPnlPct": 4.7401,
+  "realizedAllTime": 3.89,
+  "realizedRate": 1.1649,
   "positions": [
     {
       "symbol": "IREN",
-      "qty": 3.0,
+      "qty": 3,
       "avgCost": 38.6,
-      "last": 40.0561,
-      "pnl": 4.3683,
-      "pnlPct": 3.7723,
+      "last": 40.6,
+      "pnl": 6.0,
+      "pnlPct": 5.1813,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 38.4539,
+      "triggerVal": 38.98,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     },
     {
       "symbol": "CIFR",
-      "qty": 10.0,
+      "qty": 5,
       "avgCost": 19.82,
-      "last": 20.17,
-      "pnl": 3.5,
-      "pnlPct": 1.7659,
+      "last": 20.68,
+      "pnl": 4.3,
+      "pnlPct": 4.339,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 19.3632,
+      "triggerVal": 19.85,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     },
     {
       "symbol": "NUAI",
-      "qty": 5.0,
+      "qty": 3,
       "avgCost": 4.9,
-      "last": 4.9799,
-      "pnl": 0.3995,
-      "pnlPct": 1.6306,
+      "last": 5.0944,
+      "pnl": 0.58,
+      "pnlPct": 3.9673,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 4.7807,
+      "triggerVal": 4.89,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     }
   ],
   "intraday": [
-    {
-      "time": "08:05",
-      "pnlPct": 0.0,
-      "totalValue": 567.39
-    },
-    {
-      "time": "08:38",
-      "pnlPct": 0.0,
-      "totalValue": 563.36
-    },
-    {
-      "time": "08:56",
-      "pnlPct": 0.0,
-      "totalValue": 570.95
-    },
-    {
-      "time": "09:13",
-      "pnlPct": 0.0,
-      "totalValue": 561.48
-    },
-    {
-      "time": "09:36",
-      "pnlPct": -2.4286,
-      "totalValue": 562.27
-    },
-    {
-      "time": "09:52",
-      "pnlPct": -2.4286,
-      "totalValue": 562.02
-    },
-    {
-      "time": "10:03",
-      "pnlPct": -2.4286,
-      "totalValue": 561.95
-    },
-    {
-      "time": "10:20",
-      "pnlPct": -2.4286,
-      "totalValue": 567.295
-    },
-    {
-      "time": "10:36",
-      "pnlPct": -2.4286,
-      "totalValue": 570.32
-    },
-    {
-      "time": "10:57",
-      "pnlPct": -2.4286,
-      "totalValue": 573.57
-    },
-    {
-      "time": "11:03",
-      "pnlPct": -2.4286,
-      "totalValue": 575.42
-    }
+    { "time": "08:05", "pnlPct": 0.0, "totalValue": 567.39 },
+    { "time": "08:38", "pnlPct": 0.0, "totalValue": 563.36 },
+    { "time": "08:56", "pnlPct": 0.0, "totalValue": 570.95 },
+    { "time": "09:13", "pnlPct": 0.0, "totalValue": 561.48 },
+    { "time": "09:36", "pnlPct": -2.4286, "totalValue": 562.27 },
+    { "time": "09:52", "pnlPct": -2.4286, "totalValue": 562.02 },
+    { "time": "10:03", "pnlPct": -2.4286, "totalValue": 561.95 },
+    { "time": "10:20", "pnlPct": -2.4286, "totalValue": 567.295 },
+    { "time": "10:36", "pnlPct": -2.4286, "totalValue": 570.32 },
+    { "time": "10:57", "pnlPct": -2.4286, "totalValue": 573.57 },
+    { "time": "11:03", "pnlPct": -2.4286, "totalValue": 575.42 },
+    { "time": "11:26", "pnlPct": -0.2178, "totalValue": 575.325 },
+    { "time": "11:33", "pnlPct": -0.2178, "totalValue": 576.42 },
+    { "time": "11:57", "pnlPct": -0.0383, "totalValue": 576.7 },
+    { "time": "12:12", "pnlPct": 1.1649, "totalValue": 581.74 }
   ],
   "history": [
-    {
-      "date": "2026-07-20",
-      "pnlPct": -2.4286
-    }
+    { "date": "2026-07-20", "pnlPct": 1.1649 }
   ]
 }
