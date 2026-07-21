@@ -1,159 +1,34 @@
 {
-  "generatedAt": "2026-07-21 2:25 PM CT",
-  "portfolio": {
-    "totalValue": 604.66265,
-    "equityValue": 193.53265,
-    "cash": 411.13,
-    "buyingPower": 0.05
-  },
-  "totalPnl": 8.862,
-  "totalPnlPct": 4.7967,
-  "realizedAllTime": 28.48,
-  "realizedRate": 2.9584,
-  "positions": [
-    {
-      "symbol": "SOXL",
-      "qty": 0.095,
-      "avgCost": 158.11,
-      "last": 157.71,
-      "pnl": -0.038,
-      "pnlPct": -0.253,
-      "isLev": true,
-      "stopLabel": "Synthetic",
-      "stopTone": "info",
-      "triggerVal": 151.7856,
-      "triggerReal": false,
-      "triggerNote": "4% trailing on closes (est.)"
-    },
-    {
-      "symbol": "AMDL",
-      "qty": 1.0,
-      "avgCost": 65.8,
-      "last": 69.0,
-      "pnl": 3.2,
-      "pnlPct": 4.8632,
-      "isLev": true,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 66.24,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "NUAI",
-      "qty": 19.0,
-      "avgCost": 5.47,
-      "last": 5.77,
-      "pnl": 5.7,
-      "pnlPct": 5.4845,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 5.5392,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    }
-  ],
+  "generatedAt": "2026-07-21 3:24 PM CT",
+  "portfolio": {"totalValue": 604.43, "equityValue": 0, "cash": 604.43, "buyingPower": 0.05},
+  "totalPnl": 0, "totalPnlPct": null,
+  "realizedAllTime": 37.03, "realizedRate": 3.23,
+  "positions": [],
   "intraday": [
-    {
-      "time": "08:12",
-      "pnlPct": 0.0,
-      "totalValue": 580.11
-    },
-    {
-      "time": "08:26",
-      "pnlPct": 0.0,
-      "totalValue": 580.11
-    },
-    {
-      "time": "08:42",
-      "pnlPct": 0.0,
-      "totalValue": 581.91
-    },
-    {
-      "time": "08:56",
-      "pnlPct": 0.0,
-      "totalValue": 590.23
-    },
-    {
-      "time": "09:29",
-      "pnlPct": 4.0329,
-      "totalValue": 603.17
-    },
-    {
-      "time": "09:31",
-      "pnlPct": 4.0329,
-      "totalValue": 601.88
-    },
-    {
-      "time": "09:54",
-      "pnlPct": 4.0329,
-      "totalValue": 599.53
-    },
-    {
-      "time": "11:20",
-      "pnlPct": 4.0329,
-      "totalValue": 603.01
-    },
-    {
-      "time": "11:52",
-      "pnlPct": 4.0244,
-      "totalValue": 604.01
-    },
-    {
-      "time": "12:10",
-      "pnlPct": 4.0244,
-      "totalValue": 608.28
-    },
-    {
-      "time": "12:25",
-      "pnlPct": 4.0244,
-      "totalValue": 607.71
-    },
-    {
-      "time": "12:40",
-      "pnlPct": 4.0244,
-      "totalValue": 607.38
-    },
-    {
-      "time": "12:55",
-      "pnlPct": 4.0244,
-      "totalValue": 606.58
-    },
-    {
-      "time": "13:09",
-      "pnlPct": 4.0244,
-      "totalValue": 606.47
-    },
-    {
-      "time": "13:25",
-      "pnlPct": 4.0244,
-      "totalValue": 606.18
-    },
-    {
-      "time": "13:40",
-      "pnlPct": 4.0244,
-      "totalValue": 605.38
-    },
-    {
-      "time": "13:55",
-      "pnlPct": 4.0244,
-      "totalValue": 605.3
-    },
-    {
-      "time": "14:10",
-      "pnlPct": 3.9866,
-      "totalValue": 606.14
-    }
+    {"time": "08:12", "pnlPct": 0.0, "totalValue": 580.11},
+    {"time": "08:26", "pnlPct": 0.0, "totalValue": 580.11},
+    {"time": "08:42", "pnlPct": 0.0, "totalValue": 581.91},
+    {"time": "08:56", "pnlPct": 0.0, "totalValue": 590.23},
+    {"time": "09:29", "pnlPct": 4.0329, "totalValue": 603.17},
+    {"time": "09:31", "pnlPct": 4.0329, "totalValue": 601.88},
+    {"time": "09:54", "pnlPct": 4.0329, "totalValue": 599.53},
+    {"time": "11:20", "pnlPct": 4.0329, "totalValue": 603.01},
+    {"time": "11:52", "pnlPct": 4.0244, "totalValue": 604.01},
+    {"time": "12:10", "pnlPct": 4.0244, "totalValue": 608.28},
+    {"time": "12:25", "pnlPct": 4.0244, "totalValue": 607.71},
+    {"time": "12:40", "pnlPct": 4.0244, "totalValue": 607.38},
+    {"time": "12:55", "pnlPct": 4.0244, "totalValue": 606.58},
+    {"time": "13:09", "pnlPct": 4.0244, "totalValue": 606.47},
+    {"time": "13:25", "pnlPct": 4.0244, "totalValue": 606.18},
+    {"time": "13:40", "pnlPct": 4.0244, "totalValue": 605.38},
+    {"time": "13:55", "pnlPct": 4.0244, "totalValue": 605.3},
+    {"time": "14:10", "pnlPct": 3.9866, "totalValue": 606.14},
+    {"time": "14:25", "pnlPct": 3.9866, "totalValue": 604.6},
+    {"time": "14:40", "pnlPct": 4.1909, "totalValue": 604.43},
+    {"time": "14:54", "pnlPct": 4.1909, "totalValue": 604.43}
   ],
   "history": [
-    {
-      "date": "2026-07-20",
-      "pnlPct": 2.2402
-    },
-    {
-      "date": "2026-07-21",
-      "pnlPct": 3.9866
-    }
+    {"date": "2026-07-20", "pnlPct": 2.2402},
+    {"date": "2026-07-21", "pnlPct": 4.1909}
   ]
 }
