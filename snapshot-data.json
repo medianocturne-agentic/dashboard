@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-21 12:25 PM CT",
+  "generatedAt": "2026-07-21 1:25 PM CT",
   "portfolio": {
-    "totalValue": 607.33,
-    "equityValue": 316.23,
+    "totalValue": 606.4728,
+    "equityValue": 315.3728,
     "cash": 291.1,
     "buyingPower": 0.05
   },
-  "totalPnl": 15.88,
-  "totalPnlPct": 5.2871,
+  "totalPnl": 15.0202,
+  "totalPnlPct": 5.0009,
   "realizedAllTime": 23.98,
   "realizedRate": 2.8307,
   "positions": [
@@ -15,13 +15,13 @@
       "symbol": "SOXL",
       "qty": 0.095,
       "avgCost": 158.11,
-      "last": 159.635,
-      "pnl": 0.14,
-      "pnlPct": 0.9645,
+      "last": 159.27,
+      "pnl": 0.1102,
+      "pnlPct": 0.7337,
       "isLev": true,
       "stopLabel": "Synthetic",
       "stopTone": "info",
-      "triggerVal": 153.25,
+      "triggerVal": 152.8992,
       "triggerReal": false,
       "triggerNote": "4% trailing on closes (est.)"
     },
@@ -29,13 +29,13 @@
       "symbol": "AMDL",
       "qty": 1.0,
       "avgCost": 65.8,
-      "last": 69.05,
-      "pnl": 3.25,
-      "pnlPct": 4.9392,
+      "last": 69.445,
+      "pnl": 3.645,
+      "pnlPct": 5.5395,
       "isLev": true,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 66.29,
+      "triggerVal": 66.6672,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     },
@@ -43,13 +43,13 @@
       "symbol": "CONL",
       "qty": 20.0,
       "avgCost": 5.78,
-      "last": 6.2,
-      "pnl": 8.4,
-      "pnlPct": 7.2664,
+      "last": 6.12,
+      "pnl": 6.8,
+      "pnlPct": 5.8824,
       "isLev": true,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 5.95,
+      "triggerVal": 5.8752,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     },
@@ -57,13 +57,13 @@
       "symbol": "NUAI",
       "qty": 19.0,
       "avgCost": 5.47,
-      "last": 5.685,
-      "pnl": 4.08,
-      "pnlPct": 3.9305,
+      "last": 5.705,
+      "pnl": 4.465,
+      "pnlPct": 4.2962,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 5.46,
+      "triggerVal": 5.4768,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     }
@@ -118,6 +118,26 @@
       "time": "12:10",
       "pnlPct": 4.0244,
       "totalValue": 608.28
+    },
+    {
+      "time": "12:25",
+      "pnlPct": 4.0244,
+      "totalValue": 607.71
+    },
+    {
+      "time": "12:40",
+      "pnlPct": 4.0244,
+      "totalValue": 607.38
+    },
+    {
+      "time": "12:55",
+      "pnlPct": 4.0244,
+      "totalValue": 606.58
+    },
+    {
+      "time": "13:09",
+      "pnlPct": 4.0244,
+      "totalValue": 606.47
     }
   ],
   "history": [
