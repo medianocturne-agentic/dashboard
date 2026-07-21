@@ -1,18 +1,64 @@
 {
-  "generatedAt": "2026-07-21 8:24 AM CT",
+  "generatedAt": "2026-07-21 9:25 AM CT",
   "portfolio": {
-    "totalValue": 580.11,
-    "equityValue": 0,
-    "cash": 580.11,
-    "buyingPower": 580.11
+    "totalValue": 599.045,
+    "equityValue": 361.355,
+    "cash": 237.69,
+    "buyingPower": 15.07
   },
-  "totalPnl": 0,
-  "totalPnlPct": null,
-  "realizedAllTime": 12.72,
-  "realizedRate": 2.242,
-  "positions": [],
+  "totalPnl": 10.61,
+  "totalPnlPct": 3.0217,
+  "realizedAllTime": 21.35,
+  "realizedRate": 2.7325,
+  "positions": [
+    {
+      "symbol": "AMDL",
+      "qty": 2,
+      "avgCost": 65.8,
+      "last": 65.93,
+      "pnl": 0.26,
+      "pnlPct": 0.1976,
+      "isLev": true,
+      "stopLabel": "Trailing (est.)",
+      "stopTone": "success",
+      "triggerVal": 63.29,
+      "triggerReal": false,
+      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
+    },
+    {
+      "symbol": "CONL",
+      "qty": 20,
+      "avgCost": 5.78,
+      "last": 6.155,
+      "pnl": 7.5,
+      "pnlPct": 6.4879,
+      "isLev": true,
+      "stopLabel": "Trailing (est.)",
+      "stopTone": "success",
+      "triggerVal": 5.9088,
+      "triggerReal": false,
+      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
+    },
+    {
+      "symbol": "NUAI",
+      "qty": 19,
+      "avgCost": 5.47,
+      "last": 5.62,
+      "pnl": 2.85,
+      "pnlPct": 2.7422,
+      "isLev": false,
+      "stopLabel": "Trailing (est.)",
+      "stopTone": "success",
+      "triggerVal": 5.3952,
+      "triggerReal": false,
+      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
+    }
+  ],
   "intraday": [
-    { "time": "08:12", "pnlPct": 0.0, "totalValue": 580.11 }
+    { "time": "08:12", "pnlPct": 0.0, "totalValue": 580.11 },
+    { "time": "08:26", "pnlPct": 0.0, "totalValue": 580.11 },
+    { "time": "08:42", "pnlPct": 0.0, "totalValue": 581.91 },
+    { "time": "08:56", "pnlPct": 0.0, "totalValue": 590.23 }
   ],
   "history": [
     { "date": "2026-07-20", "pnlPct": 2.2402 },
