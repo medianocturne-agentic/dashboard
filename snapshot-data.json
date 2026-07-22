@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-07-22 10:26 AM CT",
+  "generatedAt": "2026-07-22 11:26 AM CT",
   "portfolio": {
-    "totalValue": 607.71,
-    "equityValue": 277.05,
-    "cash": 330.66,
+    "totalValue": 614.36,
+    "equityValue": 123.19,
+    "cash": 491.17,
     "buyingPower": 1.17
   },
-  "totalPnl": 2.63,
-  "totalPnlPct": 0.96,
-  "realizedAllTime": 37.4,
-  "realizedRate": 2.53,
+  "totalPnl": 5.06,
+  "totalPnlPct": 4.29,
+  "realizedAllTime": 41.74,
+  "realizedRate": 2.56,
   "positions": [
     {
       "symbol": "ONDG",
-      "qty": 40.0,
+      "qty": 20.0,
       "avgCost": 3.14,
-      "last": 3.1,
-      "pnl": -1.6,
-      "pnlPct": -1.27,
+      "last": 3.2403,
+      "pnl": 2.01,
+      "pnlPct": 3.19,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 3.01,
+      "triggerVal": 3.11,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     },
@@ -29,41 +29,13 @@
       "symbol": "SMCX",
       "qty": 6.0,
       "avgCost": 9.21,
-      "last": 9.585,
-      "pnl": 2.25,
-      "pnlPct": 4.07,
-      "isLev": true,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 9.2,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "ARWR",
-      "qty": 1.0,
-      "avgCost": 89.48,
-      "last": 91.31,
-      "pnl": 1.83,
-      "pnlPct": 2.05,
+      "last": 9.7198,
+      "pnl": 3.06,
+      "pnlPct": 5.54,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 87.66,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "KSCP",
-      "qty": 2.0,
-      "avgCost": 1.99,
-      "last": 2.066,
-      "pnl": 0.15,
-      "pnlPct": 3.82,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 1.98,
+      "triggerVal": 9.33,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     }
@@ -108,6 +80,16 @@
       "time": "10:17",
       "pnlPct": 0.1094,
       "totalValue": 606.1914
+    },
+    {
+      "time": "10:48",
+      "pnlPct": 0.1261,
+      "totalValue": 611.4201
+    },
+    {
+      "time": "11:06",
+      "pnlPct": 0.9685,
+      "totalValue": 615.692
     }
   ],
   "history": [
@@ -121,7 +103,7 @@
     },
     {
       "date": "2026-07-22",
-      "pnlPct": 0.1094
+      "pnlPct": 0.9685
     }
   ]
 }
