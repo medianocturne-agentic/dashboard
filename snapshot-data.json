@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-07-23 1:25 PM CT",
+  "generatedAt": "2026-07-23 2:25 PM CT",
   "portfolio": {
-    "totalValue": 602.9494,
-    "equityValue": 154.5594,
-    "cash": 448.39,
+    "totalValue": 603.16,
+    "equityValue": 118.77,
+    "cash": 484.39,
     "buyingPower": 0.43
   },
-  "totalPnl": 3.69,
-  "totalPnlPct": 2.4458,
-  "realizedAllTime": 31.88,
-  "realizedRate": 1.4436,
+  "totalPnl": 3.05,
+  "totalPnlPct": 2.64,
+  "realizedAllTime": 32.75,
+  "realizedRate": 1.46,
   "positions": [
     {
       "symbol": "TSLQ",
       "qty": 2.0,
       "avgCost": 24.69,
-      "last": 25.71,
-      "pnl": 2.04,
-      "pnlPct": 4.1312,
+      "last": 25.78,
+      "pnl": 2.18,
+      "pnlPct": 4.41,
       "isLev": true,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 24.6816,
+      "triggerVal": 24.75,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     },
@@ -29,27 +29,13 @@
       "symbol": "CLF",
       "qty": 6.0,
       "avgCost": 11.06,
-      "last": 11.09,
-      "pnl": 0.18,
-      "pnlPct": 0.2712,
+      "last": 11.205,
+      "pnl": 0.87,
+      "pnlPct": 1.31,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 10.6464,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "MSTZ",
-      "qty": 3.0,
-      "avgCost": 11.71,
-      "last": 12.2,
-      "pnl": 1.47,
-      "pnlPct": 4.1845,
-      "isLev": true,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 11.712,
+      "triggerVal": 10.76,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     }
@@ -174,6 +160,26 @@
       "time": "13:11",
       "pnlPct": -2.1237,
       "totalValue": 603.0342
+    },
+    {
+      "time": "13:25",
+      "pnlPct": -2.1237,
+      "totalValue": 602.99
+    },
+    {
+      "time": "13:39",
+      "pnlPct": -2.1237,
+      "totalValue": 602.3603
+    },
+    {
+      "time": "13:56",
+      "pnlPct": -1.7958,
+      "totalValue": 601.94
+    },
+    {
+      "time": "14:11",
+      "pnlPct": -1.7958,
+      "totalValue": 602.75
     }
   ],
   "history": [
@@ -191,7 +197,7 @@
     },
     {
       "date": "2026-07-23",
-      "pnlPct": -2.1237
+      "pnlPct": -1.7958
     }
   ]
 }
