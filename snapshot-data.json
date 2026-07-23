@@ -1,39 +1,31 @@
 {
-  "generatedAt": "2026-07-23 8:24 AM CT",
-  "portfolio": {
-    "totalValue": 608.99,
-    "equityValue": 0.0,
-    "cash": 608.99,
-    "buyingPower": 608.99
-  },
-  "totalPnl": 0,
-  "totalPnlPct": null,
-  "realizedAllTime": 41.60,
-  "realizedRate": 2.3762,
-  "positions": [],
+  "generatedAt": "2026-07-23 9:26 AM CT",
+  "portfolio": {"totalValue": 605.89, "equityValue": 394.56, "cash": 211.33, "buyingPower": 0.43},
+  "totalPnl": 4.44,
+  "totalPnlPct": 1.14,
+  "realizedAllTime": 34.29,
+  "realizedRate": 1.74,
+  "positions": [
+    {"symbol": "TSLQ", "qty": 3, "avgCost": 24.69, "last": 25.37, "pnl": 2.04, "pnlPct": 2.75, "isLev": true, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 24.36, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
+    {"symbol": "SKYQ", "qty": 8, "avgCost": 5.33, "last": 4.9897, "pnl": -2.72, "pnlPct": -6.38, "isLev": false, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 5.12, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
+    {"symbol": "BATL", "qty": 21, "avgCost": 1.66, "last": 1.6889, "pnl": 0.61, "pnlPct": 1.74, "isLev": false, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 1.62, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
+    {"symbol": "ADVB", "qty": 2, "avgCost": 16.25, "last": 18.0755, "pnl": 3.65, "pnlPct": 11.23, "isLev": false, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 17.35, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
+    {"symbol": "CLF", "qty": 6, "avgCost": 11.06, "last": 11.195, "pnl": 0.81, "pnlPct": 1.22, "isLev": false, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 10.75, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
+    {"symbol": "HYLN", "qty": 15, "avgCost": 4.52, "last": 4.4457, "pnl": -1.11, "pnlPct": -1.64, "isLev": false, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 4.34, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
+    {"symbol": "MSTZ", "qty": 6, "avgCost": 11.71, "last": 11.88, "pnl": 1.02, "pnlPct": 1.45, "isLev": true, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 11.40, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
+    {"symbol": "VIVK", "qty": 1, "avgCost": 1.89, "last": 2.04, "pnl": 0.15, "pnlPct": 7.94, "isLev": false, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 1.96, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"}
+  ],
   "intraday": [
-    {
-      "time": "08:09",
-      "pnlPct": 0.0,
-      "totalValue": 608.99
-    }
+    {"time": "08:09", "pnlPct": 0.0, "totalValue": 608.99},
+    {"time": "08:25", "pnlPct": 0.0, "totalValue": 608.99},
+    {"time": "08:52", "pnlPct": 4.0724, "totalValue": 615.9142},
+    {"time": "09:00", "pnlPct": -3.416, "totalValue": 614.7394},
+    {"time": "09:04", "pnlPct": -3.416, "totalValue": 617.5805}
   ],
   "history": [
-    {
-      "date": "2026-07-20",
-      "pnlPct": 2.2402
-    },
-    {
-      "date": "2026-07-21",
-      "pnlPct": 4.1909
-    },
-    {
-      "date": "2026-07-22",
-      "pnlPct": 0.7542
-    },
-    {
-      "date": "2026-07-23",
-      "pnlPct": 0.0
-    }
+    {"date": "2026-07-20", "pnlPct": 2.2402},
+    {"date": "2026-07-21", "pnlPct": 4.1909},
+    {"date": "2026-07-22", "pnlPct": 0.7542},
+    {"date": "2026-07-23", "pnlPct": -3.416}
   ]
 }
