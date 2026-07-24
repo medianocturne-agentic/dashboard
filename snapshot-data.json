@@ -1,45 +1,16 @@
 {
-  "generatedAt": "2026-07-24 2:24 PM CT",
+  "generatedAt": "2026-07-24 3:24 PM CT",
   "portfolio": {
-    "totalValue": 598.71,
-    "equityValue": 67.84,
-    "cash": 530.87,
+    "totalValue": 598.47,
+    "equityValue": 0.0,
+    "cash": 598.47,
     "buyingPower": 0.92
   },
-  "totalPnl": 1.65,
-  "totalPnlPct": 2.49,
-  "realizedAllTime": 29.68,
-  "realizedRate": 1.03,
-  "positions": [
-    {
-      "symbol": "LABD",
-      "qty": 6.0,
-      "avgCost": 8.66,
-      "last": 8.7901,
-      "pnl": 0.78,
-      "pnlPct": 1.50,
-      "isLev": true,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 8.44,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "SKDD",
-      "qty": 1.0,
-      "avgCost": 14.21,
-      "last": 15.08,
-      "pnl": 0.87,
-      "pnlPct": 6.12,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 14.48,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    }
-  ],
+  "totalPnl": 0.0,
+  "totalPnlPct": null,
+  "realizedAllTime": 31.11,
+  "realizedRate": 1.05,
+  "positions": [],
   "intraday": [
     {
       "time": "08:09",
