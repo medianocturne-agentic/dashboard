@@ -1,44 +1,13 @@
 {
-  "generatedAt": "2026-07-24 11:24 AM CT",
-  "portfolio": {
-    "totalValue": 596.13,
-    "equityValue": 80.04,
-    "cash": 516.09,
-    "buyingPower": 0.92
-  },
-  "totalPnl": -0.34,
-  "totalPnlPct": -0.423,
+  "generatedAt": "2026-07-24 12:24 PM CT",
+  "portfolio": {"totalValue": 596.87, "equityValue": 80.78, "cash": 516.09, "buyingPower": 0.92},
+  "totalPnl": 0.40,
+  "totalPnlPct": 0.50,
   "realizedAllTime": 29.11,
-  "realizedRate": 1.0104,
+  "realizedRate": 1.01,
   "positions": [
-    {
-      "symbol": "LABD",
-      "qty": 6.0,
-      "avgCost": 8.66,
-      "last": 8.56,
-      "pnl": -0.6,
-      "pnlPct": -1.1547,
-      "isLev": true,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 8.3136,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "SKDD",
-      "qty": 2.0,
-      "avgCost": 14.21,
-      "last": 14.34,
-      "pnl": 0.26,
-      "pnlPct": 0.9148,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 13.7664,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    }
+    {"symbol": "LABD", "qty": 6, "avgCost": 8.66, "last": 8.57, "pnl": -0.54, "pnlPct": -1.04, "isLev": true, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 8.31, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
+    {"symbol": "SKDD", "qty": 2, "avgCost": 14.21, "last": 14.68, "pnl": 0.94, "pnlPct": 3.31, "isLev": false, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 14.09, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"}
   ],
   "intraday": [
     {"time": "08:09", "pnlPct": 0.0, "totalValue": 603.09},
@@ -70,7 +39,11 @@
     {"time": "10:47", "pnlPct": -1.2158, "totalValue": 597.1094},
     {"time": "10:54", "pnlPct": -1.2158, "totalValue": 596.195},
     {"time": "10:58", "pnlPct": -1.2649, "totalValue": 595.73},
-    {"time": "11:01", "pnlPct": -1.2649, "totalValue": 596.2}
+    {"time": "11:01", "pnlPct": -1.2649, "totalValue": 596.2},
+    {"time": "11:25", "pnlPct": -1.2649, "totalValue": 596.05},
+    {"time": "11:39", "pnlPct": -1.2649, "totalValue": 596.42},
+    {"time": "11:56", "pnlPct": -1.2649, "totalValue": 596.77},
+    {"time": "12:09", "pnlPct": -1.2649, "totalValue": 597.3544}
   ],
   "history": [
     {"date": "2026-07-20", "pnlPct": 2.2402},
