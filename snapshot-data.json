@@ -1,55 +1,27 @@
 {
-  "generatedAt": "2026-07-24 10:24 AM CT",
+  "generatedAt": "2026-07-24 11:24 AM CT",
   "portfolio": {
-    "totalValue": 597.7401,
-    "equityValue": 162.1001,
-    "cash": 435.64,
+    "totalValue": 596.13,
+    "equityValue": 80.04,
+    "cash": 516.09,
     "buyingPower": 0.92
   },
-  "totalPnl": 0.47,
-  "totalPnlPct": 0.2907,
-  "realizedAllTime": 29.94,
-  "realizedRate": 1.0694,
+  "totalPnl": -0.34,
+  "totalPnlPct": -0.423,
+  "realizedAllTime": 29.11,
+  "realizedRate": 1.0104,
   "positions": [
-    {
-      "symbol": "SOXS",
-      "qty": 1.0,
-      "avgCost": 49.66,
-      "last": 49.64,
-      "pnl": -0.02,
-      "pnlPct": -0.0403,
-      "isLev": true,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 47.6736,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
     {
       "symbol": "LABD",
       "qty": 6.0,
       "avgCost": 8.66,
-      "last": 8.67,
-      "pnl": 0.06,
-      "pnlPct": 0.1155,
+      "last": 8.56,
+      "pnl": -0.6,
+      "pnlPct": -1.1547,
       "isLev": true,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 8.3232,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "SNDQ",
-      "qty": 1.0,
-      "avgCost": 31.62,
-      "last": 31.83,
-      "pnl": 0.21,
-      "pnlPct": 0.6641,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 30.5568,
+      "triggerVal": 8.3136,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     },
@@ -57,154 +29,54 @@
       "symbol": "SKDD",
       "qty": 2.0,
       "avgCost": 14.21,
-      "last": 14.32,
-      "pnl": 0.22,
-      "pnlPct": 0.7741,
+      "last": 14.34,
+      "pnl": 0.26,
+      "pnlPct": 0.9148,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 13.7472,
+      "triggerVal": 13.7664,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     }
   ],
   "intraday": [
-    {
-      "time": "08:09",
-      "pnlPct": 0.0,
-      "totalValue": 603.09
-    },
-    {
-      "time": "08:12",
-      "pnlPct": 0.0,
-      "totalValue": 603.09
-    },
-    {
-      "time": "08:24",
-      "pnlPct": 0.0,
-      "totalValue": 603.09
-    },
-    {
-      "time": "08:26",
-      "pnlPct": 0.0,
-      "totalValue": 603.09
-    },
-    {
-      "time": "08:42",
-      "pnlPct": 0.0,
-      "totalValue": 603.09
-    },
-    {
-      "time": "08:47",
-      "pnlPct": 0.0,
-      "totalValue": 603.56
-    },
-    {
-      "time": "08:54",
-      "pnlPct": -8.9057,
-      "totalValue": 595.2725
-    },
-    {
-      "time": "08:57",
-      "pnlPct": -8.9057,
-      "totalValue": 595.6227
-    },
-    {
-      "time": "09:02",
-      "pnlPct": -8.9057,
-      "totalValue": 592.2002
-    },
-    {
-      "time": "09:09",
-      "pnlPct": -6.7207,
-      "totalValue": 591.6852
-    },
-    {
-      "time": "09:16",
-      "pnlPct": -6.7207,
-      "totalValue": 598.0816
-    },
-    {
-      "time": "09:26",
-      "pnlPct": -3.8506,
-      "totalValue": 608.8668
-    },
-    {
-      "time": "09:30",
-      "pnlPct": -3.8506,
-      "totalValue": 604.8532
-    },
-    {
-      "time": "09:39",
-      "pnlPct": -1.371,
-      "totalValue": 603.6811
-    },
-    {
-      "time": "09:42",
-      "pnlPct": -1.371,
-      "totalValue": 604.1062
-    },
-    {
-      "time": "09:48",
-      "pnlPct": -1.371,
-      "totalValue": 605.04
-    },
-    {
-      "time": "09:52",
-      "pnlPct": -1.371,
-      "totalValue": 602.8201
-    },
-    {
-      "time": "09:55",
-      "pnlPct": -1.371,
-      "totalValue": 601.28
-    },
-    {
-      "time": "09:56",
-      "pnlPct": -1.371,
-      "totalValue": 600.465
-    },
-    {
-      "time": "10:10",
-      "pnlPct": -1.371,
-      "totalValue": 602.1964
-    },
-    {
-      "time": "10:12",
-      "pnlPct": -1.371,
-      "totalValue": 599.6291
-    },
-    {
-      "time": "10:18",
-      "pnlPct": -1.3098,
-      "totalValue": 598.0454
-    },
-    {
-      "time": "10:22",
-      "pnlPct": -1.3098,
-      "totalValue": 597.4552
-    }
+    {"time": "08:09", "pnlPct": 0.0, "totalValue": 603.09},
+    {"time": "08:12", "pnlPct": 0.0, "totalValue": 603.09},
+    {"time": "08:24", "pnlPct": 0.0, "totalValue": 603.09},
+    {"time": "08:26", "pnlPct": 0.0, "totalValue": 603.09},
+    {"time": "08:42", "pnlPct": 0.0, "totalValue": 603.09},
+    {"time": "08:47", "pnlPct": 0.0, "totalValue": 603.56},
+    {"time": "08:54", "pnlPct": -8.9057, "totalValue": 595.2725},
+    {"time": "08:57", "pnlPct": -8.9057, "totalValue": 595.6227},
+    {"time": "09:02", "pnlPct": -8.9057, "totalValue": 592.2002},
+    {"time": "09:09", "pnlPct": -6.7207, "totalValue": 591.6852},
+    {"time": "09:16", "pnlPct": -6.7207, "totalValue": 598.0816},
+    {"time": "09:26", "pnlPct": -3.8506, "totalValue": 608.8668},
+    {"time": "09:30", "pnlPct": -3.8506, "totalValue": 604.8532},
+    {"time": "09:39", "pnlPct": -1.371, "totalValue": 603.6811},
+    {"time": "09:42", "pnlPct": -1.371, "totalValue": 604.1062},
+    {"time": "09:48", "pnlPct": -1.371, "totalValue": 605.04},
+    {"time": "09:52", "pnlPct": -1.371, "totalValue": 602.8201},
+    {"time": "09:55", "pnlPct": -1.371, "totalValue": 601.28},
+    {"time": "09:56", "pnlPct": -1.371, "totalValue": 600.465},
+    {"time": "10:10", "pnlPct": -1.371, "totalValue": 602.1964},
+    {"time": "10:12", "pnlPct": -1.371, "totalValue": 599.6291},
+    {"time": "10:18", "pnlPct": -1.3098, "totalValue": 598.0454},
+    {"time": "10:22", "pnlPct": -1.3098, "totalValue": 597.4552},
+    {"time": "10:27", "pnlPct": -1.2158, "totalValue": 597.5511},
+    {"time": "10:39", "pnlPct": -1.2158, "totalValue": 596.6299},
+    {"time": "10:43", "pnlPct": -1.2158, "totalValue": 597.3918},
+    {"time": "10:47", "pnlPct": -1.2158, "totalValue": 597.1094},
+    {"time": "10:54", "pnlPct": -1.2158, "totalValue": 596.195},
+    {"time": "10:58", "pnlPct": -1.2649, "totalValue": 595.73},
+    {"time": "11:01", "pnlPct": -1.2649, "totalValue": 596.2}
   ],
   "history": [
-    {
-      "date": "2026-07-20",
-      "pnlPct": 2.2402
-    },
-    {
-      "date": "2026-07-21",
-      "pnlPct": 4.1909
-    },
-    {
-      "date": "2026-07-22",
-      "pnlPct": 0.7542
-    },
-    {
-      "date": "2026-07-23",
-      "pnlPct": -0.9679
-    },
-    {
-      "date": "2026-07-24",
-      "pnlPct": -1.3098
-    }
+    {"date": "2026-07-20", "pnlPct": 2.2402},
+    {"date": "2026-07-21", "pnlPct": 4.1909},
+    {"date": "2026-07-22", "pnlPct": 0.7542},
+    {"date": "2026-07-23", "pnlPct": -0.9679},
+    {"date": "2026-07-24", "pnlPct": -1.2649}
   ]
 }
