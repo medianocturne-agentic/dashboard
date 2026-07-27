@@ -1,34 +1,194 @@
 {
-  "generatedAt": "2026-07-27 9:24 AM CT",
-  "portfolio": {"totalValue": 583.12, "equityValue": 316.08, "cash": 267.04, "buyingPower": 6.54},
-  "totalPnl": -3.70,
-  "totalPnlPct": -1.16,
-  "realizedAllTime": 19.95,
-  "realizedRate": 0.62,
+  "generatedAt": "2026-07-27 10:26 AM CT",
+  "portfolio": {
+    "totalValue": 585.8352,
+    "equityValue": 165.7352,
+    "cash": 420.1,
+    "buyingPower": 1.08
+  },
+  "totalPnl": 2.3955,
+  "totalPnlPct": 1.4665,
+  "realizedAllTime": 16.07,
+  "realizedRate": 0.4733,
   "positions": [
-    {"symbol": "MSTX", "qty": 6, "avgCost": 8.90, "last": 8.8711, "pnl": -0.17, "pnlPct": -0.32, "isLev": true, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 8.54, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
-    {"symbol": "PTIR", "qty": 5, "avgCost": 11.05, "last": 10.91, "pnl": -0.70, "pnlPct": -1.27, "isLev": true, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 10.61, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
-    {"symbol": "SCO", "qty": 2, "avgCost": 27.43, "last": 27.61, "pnl": 0.36, "pnlPct": 0.66, "isLev": true, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 26.51, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
-    {"symbol": "MSFU", "qty": 2, "avgCost": 23.89, "last": 23.98, "pnl": 0.18, "pnlPct": 0.38, "isLev": false, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 23.02, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
-    {"symbol": "QBTX", "qty": 6, "avgCost": 9.00, "last": 8.555, "pnl": -2.67, "pnlPct": -4.94, "isLev": false, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 8.64, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"},
-    {"symbol": "BMNU", "qty": 5, "avgCost": 11.00, "last": 10.86, "pnl": -0.70, "pnlPct": -1.27, "isLev": false, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 10.56, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"}
+    {
+      "symbol": "PTIR",
+      "qty": 5.0,
+      "avgCost": 11.05,
+      "last": 11.265,
+      "pnl": 1.075,
+      "pnlPct": 1.9457,
+      "isLev": true,
+      "stopLabel": "Trailing (est.)",
+      "stopTone": "success",
+      "triggerVal": 10.8144,
+      "triggerReal": false,
+      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
+    },
+    {
+      "symbol": "SCO",
+      "qty": 2.0,
+      "avgCost": 27.43,
+      "last": 27.6901,
+      "pnl": 0.5202,
+      "pnlPct": 0.9482,
+      "isLev": true,
+      "stopLabel": "Trailing (est.)",
+      "stopTone": "success",
+      "triggerVal": 26.5825,
+      "triggerReal": false,
+      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
+    },
+    {
+      "symbol": "MSFU",
+      "qty": 2.0,
+      "avgCost": 23.89,
+      "last": 24.29,
+      "pnl": 0.8,
+      "pnlPct": 1.6743,
+      "isLev": false,
+      "stopLabel": "Trailing (est.)",
+      "stopTone": "success",
+      "triggerVal": 23.3184,
+      "triggerReal": false,
+      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
+    },
+    {
+      "symbol": "DAMD",
+      "qty": 3.0,
+      "avgCost": 1.82,
+      "last": 1.8201,
+      "pnl": 0.0003,
+      "pnlPct": 0.0055,
+      "isLev": false,
+      "stopLabel": "Trailing (est.)",
+      "stopTone": "success",
+      "triggerVal": 1.7473,
+      "triggerReal": false,
+      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
+    }
   ],
   "intraday": [
-    {"time": "08:09", "pnlPct": 0.0, "totalValue": 598.47},
-    {"time": "08:14", "pnlPct": 0.0, "totalValue": 598.47},
-    {"time": "08:24", "pnlPct": 0.0, "totalValue": 598.47},
-    {"time": "08:47", "pnlPct": 5.2255, "totalValue": 601.5176},
-    {"time": "08:50", "pnlPct": -9.2419, "totalValue": 604.1842},
-    {"time": "08:52", "pnlPct": -9.2419, "totalValue": 603.496},
-    {"time": "09:07", "pnlPct": -0.2134, "totalValue": 591.4595},
-    {"time": "09:15", "pnlPct": -3.8559, "totalValue": 587.9734}
+    {
+      "time": "08:09",
+      "pnlPct": 0.0,
+      "totalValue": 598.47
+    },
+    {
+      "time": "08:14",
+      "pnlPct": 0.0,
+      "totalValue": 598.47
+    },
+    {
+      "time": "08:24",
+      "pnlPct": 0.0,
+      "totalValue": 598.47
+    },
+    {
+      "time": "08:47",
+      "pnlPct": 5.2255,
+      "totalValue": 601.5176
+    },
+    {
+      "time": "08:50",
+      "pnlPct": -9.2419,
+      "totalValue": 604.1842
+    },
+    {
+      "time": "08:52",
+      "pnlPct": -9.2419,
+      "totalValue": 603.496
+    },
+    {
+      "time": "09:07",
+      "pnlPct": -0.2134,
+      "totalValue": 591.4595
+    },
+    {
+      "time": "09:15",
+      "pnlPct": -3.8559,
+      "totalValue": 587.9734
+    },
+    {
+      "time": "09:24",
+      "pnlPct": -4.1045,
+      "totalValue": 583.0904
+    },
+    {
+      "time": "09:29",
+      "pnlPct": -3.8692,
+      "totalValue": 582.552
+    },
+    {
+      "time": "09:41",
+      "pnlPct": -3.8093,
+      "totalValue": 581.9906
+    },
+    {
+      "time": "09:43",
+      "pnlPct": -3.8093,
+      "totalValue": 581.4942
+    },
+    {
+      "time": "09:50",
+      "pnlPct": -3.4627,
+      "totalValue": 582.48
+    },
+    {
+      "time": "09:54",
+      "pnlPct": -3.4627,
+      "totalValue": 583.01
+    },
+    {
+      "time": "09:55",
+      "pnlPct": -3.4627,
+      "totalValue": 582.975
+    },
+    {
+      "time": "10:13",
+      "pnlPct": -3.4627,
+      "totalValue": 584.6825
+    },
+    {
+      "time": "10:14",
+      "pnlPct": -3.4627,
+      "totalValue": 584.8812
+    },
+    {
+      "time": "10:15",
+      "pnlPct": -3.4627,
+      "totalValue": 585.0902
+    },
+    {
+      "time": "10:19",
+      "pnlPct": -3.4627,
+      "totalValue": 585.3113
+    }
   ],
   "history": [
-    {"date": "2026-07-20", "pnlPct": 2.2402},
-    {"date": "2026-07-21", "pnlPct": 4.1909},
-    {"date": "2026-07-22", "pnlPct": 0.7542},
-    {"date": "2026-07-23", "pnlPct": -0.9679},
-    {"date": "2026-07-24", "pnlPct": -0.7639},
-    {"date": "2026-07-27", "pnlPct": -3.8559}
+    {
+      "date": "2026-07-20",
+      "pnlPct": 2.2402
+    },
+    {
+      "date": "2026-07-21",
+      "pnlPct": 4.1909
+    },
+    {
+      "date": "2026-07-22",
+      "pnlPct": 0.7542
+    },
+    {
+      "date": "2026-07-23",
+      "pnlPct": -0.9679
+    },
+    {
+      "date": "2026-07-24",
+      "pnlPct": -0.7639
+    },
+    {
+      "date": "2026-07-27",
+      "pnlPct": -3.4627
+    }
   ]
 }
