@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-27 12:24 PM CT",
+  "generatedAt": "2026-07-27 1:26 PM CT",
   "portfolio": {
-    "totalValue": 587.39,
-    "equityValue": 144.31,
+    "totalValue": 587.3347,
+    "equityValue": 144.2547,
     "cash": 443.08,
     "buyingPower": 1.08
   },
-  "totalPnl": 3.09,
-  "totalPnlPct": 2.19,
+  "totalPnl": 3.06,
+  "totalPnlPct": 2.17,
   "realizedAllTime": 16.95,
   "realizedRate": 0.5,
   "positions": [
@@ -15,13 +15,13 @@
       "symbol": "PTIR",
       "qty": 3,
       "avgCost": 11.05,
-      "last": 11.67,
-      "pnl": 1.86,
-      "pnlPct": 5.61,
+      "last": 11.5799,
+      "pnl": 1.59,
+      "pnlPct": 4.8,
       "isLev": true,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 11.2032,
+      "triggerVal": 11.12,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     },
@@ -29,13 +29,13 @@
       "symbol": "SCO",
       "qty": 2,
       "avgCost": 27.43,
-      "last": 27.83,
-      "pnl": 0.8,
-      "pnlPct": 1.46,
+      "last": 27.81,
+      "pnl": 0.76,
+      "pnlPct": 1.39,
       "isLev": true,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 26.7168,
+      "triggerVal": 26.7,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     },
@@ -43,13 +43,13 @@
       "symbol": "MSFU",
       "qty": 2,
       "avgCost": 23.89,
-      "last": 24.075,
-      "pnl": 0.37,
-      "pnlPct": 0.77,
+      "last": 24.245,
+      "pnl": 0.71,
+      "pnlPct": 1.49,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 23.112,
+      "triggerVal": 23.28,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     },
@@ -57,13 +57,13 @@
       "symbol": "DAMD",
       "qty": 3,
       "avgCost": 1.82,
-      "last": 1.84,
-      "pnl": 0.06,
-      "pnlPct": 1.1,
+      "last": 1.8199,
+      "pnl": -0.0,
+      "pnlPct": -0.01,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 1.7664,
+      "triggerVal": 1.75,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     }
@@ -223,6 +223,26 @@
       "time": "12:11",
       "pnlPct": -3.4627,
       "totalValue": 586.6226
+    },
+    {
+      "time": "12:24",
+      "pnlPct": -3.102,
+      "totalValue": 587.3898
+    },
+    {
+      "time": "12:41",
+      "pnlPct": -3.102,
+      "totalValue": 587.6
+    },
+    {
+      "time": "12:55",
+      "pnlPct": -3.102,
+      "totalValue": 587.7897
+    },
+    {
+      "time": "13:11",
+      "pnlPct": -3.102,
+      "totalValue": 587.9724
     }
   ],
   "history": [
@@ -248,7 +268,7 @@
     },
     {
       "date": "2026-07-27",
-      "pnlPct": -3.4627
+      "pnlPct": -3.102
     }
   ]
 }
