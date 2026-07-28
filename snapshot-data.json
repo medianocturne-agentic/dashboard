@@ -1,180 +1,51 @@
 {
-  "generatedAt": "2026-07-28 10:24 AM CT",
-  "portfolio": {
-    "totalValue": 576.1502,
-    "equityValue": 52.8402,
-    "cash": 523.31,
-    "buyingPower": 2.96
-  },
-  "totalPnl": 2.4802,
-  "totalPnlPct": 4.9074,
-  "realizedAllTime": 6.47,
-  "realizedRate": 0.1581,
+  "generatedAt": "2026-07-28 11:24 AM CT",
+  "portfolio": {"totalValue": 576.31, "equityValue": 33.2, "cash": 543.11, "buyingPower": 2.96},
+  "totalPnl": 3.30,
+  "totalPnlPct": 11.01,
+  "realizedAllTime": 5.73,
+  "realizedRate": 0.14,
   "positions": [
-    {
-      "symbol": "OPK",
-      "qty": 20.0,
-      "avgCost": 1.5,
-      "last": 1.65,
-      "pnl": 3.0,
-      "pnlPct": 10.0,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 1.584,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "CORD",
-      "qty": 2.0,
-      "avgCost": 10.27,
-      "last": 10.0101,
-      "pnl": -0.5198,
-      "pnlPct": -2.5307,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 9.8592,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    }
+    {"symbol": "OPK", "qty": 20.0, "avgCost": 1.5, "last": 1.6652, "pnl": 3.30, "pnlPct": 11.01, "isLev": false, "stopLabel": "Trailing (est.)", "stopTone": "success", "triggerVal": 1.5986, "triggerReal": false, "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"}
   ],
   "intraday": [
-    {
-      "time": "08:09",
-      "pnlPct": 0.0,
-      "totalValue": 586.75
-    },
-    {
-      "time": "08:12",
-      "pnlPct": 0.0,
-      "totalValue": 586.75
-    },
-    {
-      "time": "08:16",
-      "pnlPct": 0.0,
-      "totalValue": 586.75
-    },
-    {
-      "time": "08:25",
-      "pnlPct": 0.0,
-      "totalValue": 586.75
-    },
-    {
-      "time": "08:27",
-      "pnlPct": 0.0,
-      "totalValue": 586.75
-    },
-    {
-      "time": "08:39",
-      "pnlPct": 0.0,
-      "totalValue": 582.52
-    },
-    {
-      "time": "08:45",
-      "pnlPct": -9.1677,
-      "totalValue": 581.3227
-    },
-    {
-      "time": "08:58",
-      "pnlPct": -5.7989,
-      "totalValue": 587.513
-    },
-    {
-      "time": "09:12",
-      "pnlPct": -3.3871,
-      "totalValue": 590.089
-    },
-    {
-      "time": "09:14",
-      "pnlPct": 0.306,
-      "totalValue": 595.7615
-    },
-    {
-      "time": "09:24",
-      "pnlPct": 0.306,
-      "totalValue": 593.8367
-    },
-    {
-      "time": "09:31",
-      "pnlPct": 0.306,
-      "totalValue": 591.2521
-    },
-    {
-      "time": "09:39",
-      "pnlPct": 0.306,
-      "totalValue": 586.6555
-    },
-    {
-      "time": "09:41",
-      "pnlPct": -2.3622,
-      "totalValue": 584.9498
-    },
-    {
-      "time": "09:49",
-      "pnlPct": -2.1037,
-      "totalValue": 576.49
-    },
-    {
-      "time": "09:55",
-      "pnlPct": -2.421,
-      "totalValue": 576.47
-    },
-    {
-      "time": "09:59",
-      "pnlPct": -2.421,
-      "totalValue": 576.63
-    },
-    {
-      "time": "10:12",
-      "pnlPct": -2.421,
-      "totalValue": 577.288
-    },
-    {
-      "time": "10:13",
-      "pnlPct": -2.421,
-      "totalValue": 576.866
-    },
-    {
-      "time": "10:16",
-      "pnlPct": -2.421,
-      "totalValue": 577.184
-    },
-    {
-      "time": "10:18",
-      "pnlPct": -2.421,
-      "totalValue": 576.954
-    }
+    {"time": "08:09", "pnlPct": 0.0, "totalValue": 586.75},
+    {"time": "08:12", "pnlPct": 0.0, "totalValue": 586.75},
+    {"time": "08:16", "pnlPct": 0.0, "totalValue": 586.75},
+    {"time": "08:25", "pnlPct": 0.0, "totalValue": 586.75},
+    {"time": "08:27", "pnlPct": 0.0, "totalValue": 586.75},
+    {"time": "08:39", "pnlPct": 0.0, "totalValue": 582.52},
+    {"time": "08:45", "pnlPct": -9.1677, "totalValue": 581.3227},
+    {"time": "08:58", "pnlPct": -5.7989, "totalValue": 587.513},
+    {"time": "09:12", "pnlPct": -3.3871, "totalValue": 590.089},
+    {"time": "09:14", "pnlPct": 0.306, "totalValue": 595.7615},
+    {"time": "09:24", "pnlPct": 0.306, "totalValue": 593.8367},
+    {"time": "09:31", "pnlPct": 0.306, "totalValue": 591.2521},
+    {"time": "09:39", "pnlPct": 0.306, "totalValue": 586.6555},
+    {"time": "09:41", "pnlPct": -2.3622, "totalValue": 584.9498},
+    {"time": "09:49", "pnlPct": -2.1037, "totalValue": 576.49},
+    {"time": "09:55", "pnlPct": -2.421, "totalValue": 576.47},
+    {"time": "09:59", "pnlPct": -2.421, "totalValue": 576.63},
+    {"time": "10:12", "pnlPct": -2.421, "totalValue": 577.288},
+    {"time": "10:13", "pnlPct": -2.421, "totalValue": 576.866},
+    {"time": "10:16", "pnlPct": -2.421, "totalValue": 577.184},
+    {"time": "10:18", "pnlPct": -2.421, "totalValue": 576.954},
+    {"time": "10:27", "pnlPct": -2.421, "totalValue": 575.91},
+    {"time": "10:30", "pnlPct": -2.421, "totalValue": 576.304},
+    {"time": "10:39", "pnlPct": -2.421, "totalValue": 576.264},
+    {"time": "10:44", "pnlPct": -2.421, "totalValue": 576.19},
+    {"time": "10:46", "pnlPct": -2.421, "totalValue": 575.7102},
+    {"time": "10:56", "pnlPct": -2.4648, "totalValue": 575.61},
+    {"time": "10:58", "pnlPct": -2.4648, "totalValue": 575.954},
+    {"time": "11:10", "pnlPct": -2.4648, "totalValue": 576.21}
   ],
   "history": [
-    {
-      "date": "2026-07-20",
-      "pnlPct": 2.2402
-    },
-    {
-      "date": "2026-07-21",
-      "pnlPct": 4.1909
-    },
-    {
-      "date": "2026-07-22",
-      "pnlPct": 0.7542
-    },
-    {
-      "date": "2026-07-23",
-      "pnlPct": -0.9679
-    },
-    {
-      "date": "2026-07-24",
-      "pnlPct": -0.7639
-    },
-    {
-      "date": "2026-07-27",
-      "pnlPct": -1.9635
-    },
-    {
-      "date": "2026-07-28",
-      "pnlPct": -2.421
-    }
+    {"date": "2026-07-20", "pnlPct": 2.2402},
+    {"date": "2026-07-21", "pnlPct": 4.1909},
+    {"date": "2026-07-22", "pnlPct": 0.7542},
+    {"date": "2026-07-23", "pnlPct": -0.9679},
+    {"date": "2026-07-24", "pnlPct": -0.7639},
+    {"date": "2026-07-27", "pnlPct": -1.9635},
+    {"date": "2026-07-28", "pnlPct": -2.4648}
   ]
 }
