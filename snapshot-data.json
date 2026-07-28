@@ -1,97 +1,41 @@
 {
-  "generatedAt": "2026-07-28 9:24 AM CT",
+  "generatedAt": "2026-07-28 10:24 AM CT",
   "portfolio": {
-    "totalValue": 594.9225,
-    "equityValue": 269.4125,
-    "cash": 325.51,
-    "buyingPower": 138.69
+    "totalValue": 576.1502,
+    "equityValue": 52.8402,
+    "cash": 523.31,
+    "buyingPower": 2.96
   },
-  "totalPnl": 7.06,
-  "totalPnlPct": 2.7,
-  "realizedAllTime": 19.95,
-  "realizedRate": 0.53,
+  "totalPnl": 2.4802,
+  "totalPnlPct": 4.9074,
+  "realizedAllTime": 6.47,
+  "realizedRate": 0.1581,
   "positions": [
     {
       "symbol": "OPK",
-      "qty": 20,
+      "qty": 20.0,
       "avgCost": 1.5,
-      "last": 1.625,
-      "pnl": 2.5,
-      "pnlPct": 8.33,
+      "last": 1.65,
+      "pnl": 3.0,
+      "pnlPct": 10.0,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 1.56,
+      "triggerVal": 1.584,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     },
     {
-      "symbol": "MUZ",
-      "qty": 2,
-      "avgCost": 16.12,
-      "last": 16.86,
-      "pnl": 1.48,
-      "pnlPct": 4.59,
+      "symbol": "CORD",
+      "qty": 2.0,
+      "avgCost": 10.27,
+      "last": 10.0101,
+      "pnl": -0.5198,
+      "pnlPct": -2.5307,
       "isLev": false,
       "stopLabel": "Trailing (est.)",
       "stopTone": "success",
-      "triggerVal": 16.19,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "QBTZ",
-      "qty": 11,
-      "avgCost": 5.05,
-      "last": 5.045,
-      "pnl": -0.05,
-      "pnlPct": -0.1,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 4.85,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "INLF",
-      "qty": 5,
-      "avgCost": 5.77,
-      "last": 6.5473,
-      "pnl": 3.89,
-      "pnlPct": 13.47,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 6.29,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "RKLZ",
-      "qty": 10,
-      "avgCost": 5.76,
-      "last": 5.8203,
-      "pnl": 0.6,
-      "pnlPct": 1.05,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 5.59,
-      "triggerReal": false,
-      "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
-    },
-    {
-      "symbol": "CNET",
-      "qty": 45,
-      "avgCost": 1.28,
-      "last": 1.25,
-      "pnl": -1.35,
-      "pnlPct": -2.34,
-      "isLev": false,
-      "stopLabel": "Trailing (est.)",
-      "stopTone": "success",
-      "triggerVal": 1.23,
+      "triggerVal": 9.8592,
       "triggerReal": false,
       "triggerNote": "4% trailing stop, evaluated on 5-min closes each run (est.)"
     }
@@ -146,6 +90,61 @@
       "time": "09:14",
       "pnlPct": 0.306,
       "totalValue": 595.7615
+    },
+    {
+      "time": "09:24",
+      "pnlPct": 0.306,
+      "totalValue": 593.8367
+    },
+    {
+      "time": "09:31",
+      "pnlPct": 0.306,
+      "totalValue": 591.2521
+    },
+    {
+      "time": "09:39",
+      "pnlPct": 0.306,
+      "totalValue": 586.6555
+    },
+    {
+      "time": "09:41",
+      "pnlPct": -2.3622,
+      "totalValue": 584.9498
+    },
+    {
+      "time": "09:49",
+      "pnlPct": -2.1037,
+      "totalValue": 576.49
+    },
+    {
+      "time": "09:55",
+      "pnlPct": -2.421,
+      "totalValue": 576.47
+    },
+    {
+      "time": "09:59",
+      "pnlPct": -2.421,
+      "totalValue": 576.63
+    },
+    {
+      "time": "10:12",
+      "pnlPct": -2.421,
+      "totalValue": 577.288
+    },
+    {
+      "time": "10:13",
+      "pnlPct": -2.421,
+      "totalValue": 576.866
+    },
+    {
+      "time": "10:16",
+      "pnlPct": -2.421,
+      "totalValue": 577.184
+    },
+    {
+      "time": "10:18",
+      "pnlPct": -2.421,
+      "totalValue": 576.954
     }
   ],
   "history": [
@@ -175,7 +174,7 @@
     },
     {
       "date": "2026-07-28",
-      "pnlPct": 0.306
+      "pnlPct": -2.421
     }
   ]
 }
