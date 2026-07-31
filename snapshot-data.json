@@ -1,1 +1,82 @@
-{"generatedAt": "2026-07-30 9:30 AM CT", "portfolio": {"totalValue": 563.4, "equityValue": 0.0, "cash": 563.4, "buyingPower": 0.25}, "totalPnl": 0, "totalPnlPct": null, "realizedAllTime": -3.96, "realizedRate": -0.07522124734304, "positions": [], "intraday": [{"time": "07:06", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:01", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:03", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:07", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:09", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:11", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:13", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:15", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:17", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:21", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:23", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:25", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:29", "pnlPct": 0.0, "totalValue": 549.6}, {"time": "08:41", "pnlPct": 0.0, "totalValue": 551.89}, {"time": "09:09", "pnlPct": 2.5109, "totalValue": 563.4}], "history": [{"date": "2026-07-20", "pnlPct": 2.2402}, {"date": "2026-07-21", "pnlPct": 4.1909}, {"date": "2026-07-22", "pnlPct": 0.7542}, {"date": "2026-07-23", "pnlPct": -0.9679}, {"date": "2026-07-24", "pnlPct": -0.7639}, {"date": "2026-07-27", "pnlPct": -1.9635}, {"date": "2026-07-28", "pnlPct": -2.2258}, {"date": "2026-07-29", "pnlPct": -4.8}, {"date": "2026-07-30", "pnlPct": 2.5109}]}
+{
+  "generatedAt": "2026-07-31 9:30 AM CT",
+  "portfolio": {
+    "totalValue": 526.83,
+    "equityValue": 46.85,
+    "cash": 479.98,
+    "buyingPower": 0.5
+  },
+  "totalPnl": 1.04,
+  "totalPnlPct": 2.2688,
+  "realizedAllTime": -41.55,
+  "realizedRate": -0.71866789586839,
+  "positions": [
+    {
+      "symbol": "AMZU",
+      "qty": 1.131833,
+      "avgCost": 40.5,
+      "last": 41.419,
+      "pnl": 1.04,
+      "pnlPct": 2.2691,
+      "stopLabel": "Dual stop (est.)",
+      "stopTone": "info",
+      "triggerVal": 38.11,
+      "triggerReal": false,
+      "triggerNote": "max(entry \u22126%, peak \u22128%), est."
+    }
+  ],
+  "intraday": [
+    {
+      "time": "07:25",
+      "pnlPct": 0.0,
+      "totalValue": 563.4
+    },
+    {
+      "time": "08:45",
+      "pnlPct": 0.0,
+      "totalValue": 542.27
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-07-20",
+      "pnlPct": 2.2402
+    },
+    {
+      "date": "2026-07-21",
+      "pnlPct": 4.1909
+    },
+    {
+      "date": "2026-07-22",
+      "pnlPct": 0.7542
+    },
+    {
+      "date": "2026-07-23",
+      "pnlPct": -0.9679
+    },
+    {
+      "date": "2026-07-24",
+      "pnlPct": -0.7639
+    },
+    {
+      "date": "2026-07-27",
+      "pnlPct": -1.9635
+    },
+    {
+      "date": "2026-07-28",
+      "pnlPct": -2.2258
+    },
+    {
+      "date": "2026-07-29",
+      "pnlPct": -4.8
+    },
+    {
+      "date": "2026-07-30",
+      "pnlPct": 2.5109
+    },
+    {
+      "date": "2026-07-31",
+      "pnlPct": 0.0
+    }
+  ]
+}
