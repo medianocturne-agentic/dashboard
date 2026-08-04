@@ -1,40 +1,86 @@
 {
-  "generatedAt": "2026-07-31 9:30 AM CT",
+  "generatedAt": "2026-08-04 12:24 PM CT",
   "portfolio": {
-    "totalValue": 526.83,
-    "equityValue": 46.85,
-    "cash": 479.98,
-    "buyingPower": 0.5
+    "totalValue": 539.21,
+    "equityValue": 0.0,
+    "cash": 539.21,
+    "buyingPower": 0.51
   },
-  "totalPnl": 1.04,
-  "totalPnlPct": 2.2688,
-  "realizedAllTime": -41.55,
-  "realizedRate": -0.71866789586839,
-  "positions": [
-    {
-      "symbol": "AMZU",
-      "qty": 1.131833,
-      "avgCost": 40.5,
-      "last": 41.419,
-      "pnl": 1.04,
-      "pnlPct": 2.2691,
-      "stopLabel": "Dual stop (est.)",
-      "stopTone": "info",
-      "triggerVal": 38.11,
-      "triggerReal": false,
-      "triggerNote": "max(entry \u22126%, peak \u22128%), est."
-    }
-  ],
+  "totalPnl": 0,
+  "totalPnlPct": null,
+  "realizedAllTime": -28.18,
+  "realizedRate": -0.422,
+  "positions": [],
   "intraday": [
     {
-      "time": "07:25",
+      "time": "08:33",
       "pnlPct": 0.0,
-      "totalValue": 563.4
+      "totalValue": 526.11
     },
     {
-      "time": "08:45",
+      "time": "08:35",
+      "pnlPct": 0.43,
+      "totalValue": 529.34
+    },
+    {
+      "time": "09:14",
       "pnlPct": 0.0,
-      "totalValue": 542.27
+      "totalValue": 527.07
+    },
+    {
+      "time": "09:31",
+      "pnlPct": 0.735,
+      "totalValue": 530.94
+    },
+    {
+      "time": "09:20",
+      "pnlPct": 1.2674,
+      "totalValue": 533.75
+    },
+    {
+      "time": "09:47",
+      "pnlPct": 1.3523,
+      "totalValue": 534.2
+    },
+    {
+      "time": "09:57",
+      "pnlPct": 1.2744,
+      "totalValue": 533.79
+    },
+    {
+      "time": "10:07",
+      "pnlPct": 0.9229,
+      "totalValue": 531.93
+    },
+    {
+      "time": "10:27",
+      "pnlPct": 1.4904,
+      "totalValue": 534.93
+    },
+    {
+      "time": "10:47",
+      "pnlPct": 1.3835,
+      "totalValue": 534.36
+    },
+    {
+      "time": "11:07",
+      "pnlPct": 1.4495,
+      "totalValue": 534.71
+    },
+    {
+      "time": "11:27",
+      "pnlPct": 1.628,
+      "totalValue": 535.65
+    },
+    {
+      "time": "11:47",
+      "pnlPct": 1.8402,
+      "totalValue": 536.77
+    },
+    {
+      "time": "12:07",
+      "pnlPct": 2.3033,
+      "totalValue": 539.21
     }
   ],
   "history": [
@@ -77,6 +123,14 @@
     {
       "date": "2026-07-31",
       "pnlPct": 0.0
+    },
+    {
+      "date": "2026-08-03",
+      "pnlPct": -0.2228
+    },
+    {
+      "date": "2026-08-04",
+      "pnlPct": 2.3033
     }
   ]
 }
