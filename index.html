@@ -413,10 +413,12 @@
       .catch(function () {
         btn.disabled = true;
         setState("error");
-        say("Refresh helper isn’t running on this machine.");
+        // A failed fetch is opaque in JS — "not running" and "browser blocked it" look
+        // identical here — so don't assert which one it was.
+        say("Couldn’t reach the local helper.");
         // Deliberately vague: this page is publicly served, so it names no local paths.
-        // The exact command is in deploy/SETUP.md on the machine that publishes it.
-        hint("Refreshing only works on the Mac that publishes this page, with the local helper running. See <code>install-refresh.sh</code> in the deploy folder.");
+        // The exact commands are in deploy/SETUP.md on the machine that publishes it.
+        hint("Either the helper isn’t running, or this browser blocked the call to it. Refreshing only works on the Mac that publishes this page. Check <code>curl 127.0.0.1:8787/health</code> there.");
       });
   }
 
