@@ -1,386 +1,393 @@
 <!DOCTYPE html>
-<html lang="en" data-generated="78c7b3822ed2">
+<html lang="en" data-generated="2a78502b5f0d">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Holdings</title>
 <style>
-  :root{
-    --bg:#0b0f14; --panel:#121820; --panel2:#171f29; --line:#232c38;
-    --fg:#e6edf3; --mut:#8b98a8; --grn:#3fb950; --red:#f85149; --amb:#d29922; --opt:#1b2430;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg)}
-  body{
-    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
-    font-size:15px; line-height:1.45; font-variant-numeric:tabular-nums;
-    -webkit-text-size-adjust:100%;
-  }
-  .wrap{max-width:760px;margin:0 auto;padding:14px 12px 40px}
-  .hdr{border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:16px}
-  .hdr h1{font-size:23px;margin:0 0 6px;letter-spacing:.2px}
-  .stamp{font-size:15px;color:var(--fg);font-weight:600}
-  .sub{font-size:12px;color:var(--mut);margin-top:4px}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
-  .cell{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:10px 11px}
-  .cell .k{font-size:10.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.7px}
-  .cell .v{font-size:19px;font-weight:600;margin-top:3px}
-  .cell .s{font-size:11.5px;color:var(--mut);margin-top:3px;line-height:1.35}
-  .rec{background:var(--panel2);border:1px solid var(--line);border-radius:9px;
-       padding:9px 11px;font-size:12px;color:var(--mut);margin-bottom:18px}
-  .rec b{color:var(--fg);font-weight:600}
-  .sec{margin:22px 0 0}
-  .sec h2{font-size:12px;text-transform:uppercase;letter-spacing:1.1px;color:var(--mut);
-          margin:0 0 9px;padding-bottom:6px;border-bottom:1px solid var(--line)}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-        padding:11px 12px;margin-bottom:10px}
-  .card.opt{background:var(--opt)}
-  .t{display:flex;justify-content:space-between;align-items:baseline;gap:8px;
-     margin-bottom:8px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-  .t .nm{font-size:16px;font-weight:650}
-  .t .px{font-size:15px;font-weight:600;text-align:right}
-  .t .px small{display:block;font-size:11px;font-weight:400;color:var(--mut)}
-  .row{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:2.5px 0}
-  .row .l{color:var(--mut);flex:0 0 auto}
-  .row .r{text-align:right}
-  .pos{color:var(--grn)}
-  .neg{color:var(--red)}
-  .mut{color:var(--mut)}
-  .amb{color:var(--amb)}
-  .primary{background:#0f1a12;border:1px solid #1f3a26;border-radius:7px;
-           padding:7px 9px;margin:8px 0 4px}
-  .primary .row{font-size:13.5px}
-  .primary .r{font-weight:650}
-  .secondary{padding:2px 9px 6px;margin-bottom:6px}
-  .note{font-size:11.5px;color:var(--mut);margin-top:8px;line-height:1.45;
-        border-top:1px solid var(--line);padding-top:7px}
-  .warn{font-size:12px;color:var(--amb);margin-top:8px;line-height:1.45;
-        border-top:1px solid var(--line);padding-top:7px}
-  .chart{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-         padding:11px 8px 8px;margin-bottom:10px}
-  .chart svg{display:block;width:100%;height:auto}
-  .legend{font-size:11px;color:var(--mut);padding:8px 4px 0;line-height:1.5}
-  .sub2{font-size:11.5px;color:var(--mut);margin:-2px 0 8px}
-  .tbl{width:100%;border-collapse:collapse;font-size:12.5px}
-  .tbl th{text-align:left;color:var(--mut);font-weight:500;font-size:10.5px;
-          text-transform:uppercase;letter-spacing:.6px;padding:5px 6px 5px 0;
-          border-bottom:1px solid var(--line)}
-  .tbl td{padding:6px 6px 6px 0;border-bottom:1px solid var(--line)}
-  .tbl td.n{text-align:right;padding-right:0}
-  .tbl th.n{text-align:right;padding-right:0}
-  .tbl tr:last-child td{border-bottom:none}
-  .dust{background:var(--panel2);border:1px solid var(--line);border-radius:8px;
-        padding:9px 11px;font-size:12px;color:var(--mut);line-height:1.5}
-  .dust b{color:var(--fg);font-weight:600}
-  .none{font-size:13px;color:var(--mut);background:var(--panel);
-        border:1px solid var(--line);border-radius:9px;padding:10px 12px}
-  .foot{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);
-        font-size:11.5px;color:var(--mut);line-height:1.6}
-  @media (max-width:760px){
-    .grid{grid-template-columns:1fr}
-    .wrap{padding:12px 10px 36px}
-  }
+:root{--bg:#0b0f14;--pan:#131a22;--pan2:#0f151c;--ln:#1e2936;--fg:#e6edf3;--mu:#8b98a5;--up:#3fb950;--dn:#f85149;--ac:#58a6ff}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#0b0f14;color:#e6edf3}
+body{font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+font-variant-numeric:tabular-nums;-webkit-text-size-adjust:100%;padding:14px 12px 40px;max-width:760px;margin:0 auto}
+h1{font-size:22px;margin:0 0 2px;letter-spacing:-.02em}
+h2{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--mu);
+margin:26px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--ln)}
+.hdr{border-bottom:1px solid var(--ln);padding-bottom:12px}
+.gen{display:inline-block;margin:6px 0 4px;padding:5px 10px;background:#17222e;border:1px solid #27394d;
+border-radius:6px;font-size:15px;font-weight:600;color:var(--ac)}
+.meta{color:var(--mu);font-size:12.5px;margin:4px 0 0;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cell{background:var(--pan);border:1px solid var(--ln);border-radius:8px;padding:10px}
+.cell .k{color:var(--mu);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase}
+.cell .v{font-size:19px;font-weight:650;margin-top:3px;letter-spacing:-.01em}
+.cell .s{color:var(--mu);font-size:12px;margin-top:4px;line-height:1.4}
+.wide{grid-column:1 / -1}
+.recon{font-size:12.5px;color:var(--mu);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+word-break:break-word;margin-top:4px;line-height:1.55}
+.recon b{color:var(--fg)}
+.card{background:var(--pan);border:1px solid var(--ln);border-radius:8px;padding:12px;margin-bottom:10px}
+.chead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+padding-bottom:8px;margin-bottom:8px;border-bottom:1px solid var(--ln)}
+.tick{font-weight:700;font-size:16px}
+.tick2{font-weight:650}
+.chv{font-weight:700;font-size:15px;text-align:right;white-space:nowrap}
+.chv small{display:block;font-size:12px;font-weight:600;opacity:.85}
+.kv{display:flex;justify-content:space-between;gap:10px;padding:3px 0;font-size:13.5px;align-items:baseline}
+.kv span{color:var(--mu);flex:0 0 auto}
+.kv b{font-weight:600;text-align:right}
+.kv b small{display:block;font-weight:500;font-size:11.5px}
+.sec{margin-top:12px;padding-top:9px;border-top:1px solid var(--ln)}
+.sec .st{font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--mu);margin-bottom:6px}
+.be{background:#15222c;border:1px solid #27394d;border-radius:7px;padding:9px;margin:10px 0}
+.be .p{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.be .p span{color:var(--ac);font-size:12px;font-weight:600;letter-spacing:.03em;text-transform:uppercase}
+.be .p b{font-size:20px;font-weight:700}
+.be .q{display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-top:7px;
+padding-top:7px;border-top:1px solid #23323f}
+.be .q span{color:var(--mu);font-size:12px}
+.be .q b{font-size:14px;font-weight:600;color:var(--mu)}
+.be .n{color:var(--mu);font-size:11.5px;margin-top:7px;line-height:1.5}
+.flag{background:#241c10;border:1px solid #4a3a1c;border-left:3px solid #d29922;border-radius:6px;
+padding:8px 9px;font-size:12.5px;color:#e3c37e;margin:8px 0;line-height:1.45}
+.warn{background:#26161a;border:1px solid #58252c;border-left:3px solid var(--dn);border-radius:6px;
+padding:8px 9px;font-size:12.5px;color:#f0a8a2;margin:8px 0;line-height:1.45}
+.note{color:var(--mu);font-size:12.5px;line-height:1.5;margin:8px 0 0}
+.note b{color:var(--fg)}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:left;color:var(--mu);font-weight:500;font-size:11px;letter-spacing:.05em;
+text-transform:uppercase;padding:5px 5px 5px 0;border-bottom:1px solid var(--ln);white-space:nowrap}
+td{padding:6px 5px 6px 0;border-bottom:1px solid #182029;white-space:nowrap}
+td:last-child,th:last-child{text-align:right;padding-right:0}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.up{color:var(--up)} .dn{color:var(--dn)} .muted{color:var(--mu)}
+.chart{width:100%;height:auto;display:block;margin:4px 0 2px}
+.chart text{font:11px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+fill:#e6edf3;font-variant-numeric:tabular-nums}
+.axg{stroke:#1e2936;stroke-width:1;stroke-dasharray:3 3}
+.axz{stroke:#3d4d5e;stroke-width:1.5}
+.axt{fill:#8b98a5;font-size:10px}
+.lbl{font-size:12px;font-weight:650}
+.sub{fill:#8b98a5;font-size:10px}
+.bup{fill:#3fb950;opacity:.75} .bdn{fill:#f85149;opacity:.75}
+.mko{fill:none;stroke:#8b98a5;stroke-width:1.5}
+.mkup{fill:#3fb950} .mkdn{fill:#f85149}
+.vup{fill:#3fb950;font-size:11px;font-weight:650}
+.vdn{fill:#f85149;font-size:11px;font-weight:650}
+.optrow{fill:#182430}
+.itm{fill:#1f3a2a}
+.tkl{stroke:#5b6d80;stroke-width:1.5}
+.tkb{stroke:#58a6ff;stroke-width:2.5}
+.tkspot{stroke:#e6edf3;stroke-width:2}
+.tk{font-size:10.5px;font-weight:650}
+.tks{fill:#8b98a5;font-size:10px}
+.pin{fill:#2a6b3c} .pex{fill:#8a6a1f} .pcost{fill:#33404e}
+.dash{stroke:#e6edf3;stroke-width:1.5;stroke-dasharray:4 3}
+.binl{fill:#e6edf3;font-size:10.5px;font-weight:600}
+.leg{color:var(--mu);font-size:11.5px;margin-top:6px;line-height:1.55}
+.leg b{color:var(--fg)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:-1px;margin-right:4px}
+.swo{display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px solid #8b98a5;
+vertical-align:-1px;margin-right:4px}
+.dust{background:var(--pan2);border:1px dashed var(--ln);border-radius:8px;padding:11px;
+font-size:12.5px;color:var(--mu);line-height:1.6}
+.dust b{color:var(--fg);font-weight:650}
+footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--ln);color:var(--mu);
+font-size:12px;line-height:1.6}
+@media (max-width:760px){.grid{grid-template-columns:1fr}body{padding:12px 10px 36px}}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <div class="hdr">
-    <h1>Holdings</h1>
-    <div class="stamp">Snapshot 2026-09-20 12:17 CT</div>
-    <div class="sub">Account ••••6877 &middot; static snapshot — values as of generation, not live.</div>
-    <div class="sub">Markets are closed (Sunday). Equity and option prices are the last prints from the 2026-09-18 session; crypto is continuous and priced at generation time.</div>
+<header class="hdr">
+  <h1>Holdings</h1>
+  <div class="gen">Generated 2026-09-20 13:16 CT</div>
+  <p class="meta">Account &#8226;&#8226;&#8226;&#8226;6877 &#183; static snapshot &mdash; values as of generation, not live.</p>
+  <p class="meta">Markets closed (Sunday). Equity and option prices are the last prints from the
+  2026-09-18 session; crypto quotes are live and continuous.</p>
+</header>
+
+<h2>Summary</h2>
+<div class="grid">
+  <div class="cell">
+    <div class="k">Account value</div>
+    <div class="v">$1,743.56</div>
+    <div class="s">equities $416.32 &#183; options $1,235.00<br>crypto $90.60 &#183; cash $1.64</div>
   </div>
-
-  <!-- ============ SUMMARY ============ -->
-  <div class="grid">
-    <div class="cell">
-      <div class="k">Account value</div>
-      <div class="v">$1,743.67</div>
-      <div class="s">Equities $416.32 &middot; Options $1,235.00<br>Crypto $90.71 &middot; Cash $1.64</div>
-    </div>
-    <div class="cell">
-      <div class="k">Total unrealized vs cost</div>
-      <div class="v neg">&minus;$233.28</div>
-      <div class="s">&minus;12.38% on $1,884.60 cost basis.<br>Equities &plus;$16.72 &middot; Options &minus;$250.00.<br>Excludes crypto — cost basis unavailable.</div>
-    </div>
-    <div class="cell">
-      <div class="k">Day change, open equities</div>
-      <div class="v pos">&plus;$75.12</div>
-      <div class="s">SOXL &plus;$9.11 &middot; MSTU &plus;$66.01.<br>MSTU was opened in that same session, so its share is the ticker's move, not your P/L.</div>
-    </div>
-    <div class="cell">
-      <div class="k">Cash</div>
-      <div class="v">$1.64</div>
-      <div class="s">Buying power $1.64.</div>
-    </div>
+  <div class="cell">
+    <div class="k">Total unrealized vs cost</div>
+    <div class="v dn">-$233.28</div>
+    <div class="s">-12.38% on $1,884.60 of cost basis. Open positions only &mdash;
+    excludes all realized P/L, and excludes crypto (no cost basis reported).</div>
   </div>
-
-  <div class="rec">
-    <b>Reconciliation.</b> Equities $416.32 &plus; Options $1,235.00 &plus; Crypto $90.71 &plus; Cash $1.64
-    = <b>$1,743.67</b> — matches the broker's total account value. All four asset classes appear below.
+  <div class="cell">
+    <div class="k">Day change, open equities</div>
+    <div class="v up">+$75.12</div>
+    <div class="s">Ticker move from the prior close. MSTU was bought during that same session, so
+    +$66.01 of this is the ticker's move and not your P/L.</div>
   </div>
-
-  <!-- ============ REALIZED ============ -->
-  <div class="sec">
-    <h2>Realized P/L — closed positions only</h2>
-    <div class="sub2">Separate from unrealized. Nothing here is folded into the figures above.</div>
-
-    <div class="card">
-      <div class="row"><span class="l">Today's realized (Sun 9/20)</span>
-        <span class="r mut">no closed positions today</span></div>
-      <div class="row"><span class="l">Closing trades today</span><span class="r">0</span></div>
-      <div class="row"><span class="l">Week-to-date realized</span>
-        <span class="r neg">&minus;$48.70</span></div>
-      <div class="row"><span class="l">Closing trades this week</span><span class="r">15</span></div>
-      <div class="note">Week span covers 2026-09-14 through today. Markets were closed Saturday and Sunday.</div>
-    </div>
-
-    <div class="card">
-      <div class="t"><span class="nm">Last session's closes</span><span class="px">Fri 2026-09-18<small>subtotal &plus;$3.92</small></span></div>
-      <table class="tbl">
-        <tr><th>Time CT</th><th>Symbol</th><th>Side</th><th class="n">Qty</th><th class="n">Price</th><th class="n">Realized</th></tr>
-        <tr><td>11:44</td><td>ALAB</td><td>sell</td><td class="n">0.9217</td><td class="n">$297.1791</td><td class="n pos">&plus;$5.09</td></tr>
-        <tr><td>10:40</td><td>STRK</td><td>sell</td><td class="n">1,382.70</td><td class="n">$0.035575</td><td class="n neg">&minus;$0.77</td></tr>
-        <tr><td>10:30</td><td>COIN</td><td>sell</td><td class="n">0.48</td><td class="n">$192.4583</td><td class="n neg">&minus;$0.10</td></tr>
-        <tr><td>09:51</td><td>CAN</td><td>sell</td><td class="n">200</td><td class="n">$0.3703</td><td class="n neg">&minus;$0.56</td></tr>
-        <tr><td>09:31</td><td>AMD</td><td>sell</td><td class="n">0.17</td><td class="n">$547.8824</td><td class="n pos">&plus;$0.26</td></tr>
-      </table>
-      <div class="note">The remaining &minus;$52.62 of the week's realized total came from closes on 9/14–9/17.</div>
-    </div>
+  <div class="cell">
+    <div class="k">Cash</div>
+    <div class="v">$1.64</div>
+    <div class="s">Buying power $1.64.</div>
   </div>
-
-  <!-- ============ CHART ============ -->
-  <div class="sec">
-    <h2>Entry vs current</h2>
-    <div class="chart">
-      <svg viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Percent change from cost by position">
-        <!-- gridlines -->
-        <line x1="84" y1="22" x2="84" y2="138" stroke="#232c38" stroke-width="1" stroke-dasharray="3 3"></line>
-        <line x1="156" y1="22" x2="156" y2="138" stroke="#232c38" stroke-width="1" stroke-dasharray="3 3"></line>
-        <line x1="300" y1="22" x2="300" y2="138" stroke="#232c38" stroke-width="1" stroke-dasharray="3 3"></line>
-        <line x1="228" y1="18" x2="228" y2="142" stroke="#3d4a5c" stroke-width="1.4"></line>
-        <text x="84" y="14" fill="#8b98a8" font-size="8.5" text-anchor="middle" font-family="sans-serif">-20%</text>
-        <text x="156" y="14" fill="#8b98a8" font-size="8.5" text-anchor="middle" font-family="sans-serif">-10%</text>
-        <text x="228" y="14" fill="#8b98a8" font-size="8.5" text-anchor="middle" font-family="sans-serif">0% (entry)</text>
-        <text x="300" y="14" fill="#8b98a8" font-size="8.5" text-anchor="middle" font-family="sans-serif">+10%</text>
-
-        <!-- SOXL +7.14% -->
-        <rect x="228" y="39" width="51.4" height="10" fill="#3fb950" opacity="0.8"></rect>
-        <circle cx="228" cy="44" r="3.6" fill="none" stroke="#8b98a8" stroke-width="1.3"></circle>
-        <circle cx="279.4" cy="44" r="3.6" fill="#3fb950"></circle>
-        <text x="78" y="42" fill="#e6edf3" font-size="10.5" text-anchor="end" font-family="sans-serif">SOXL</text>
-        <text x="78" y="52" fill="#8b98a8" font-size="8" text-anchor="end" font-family="sans-serif">$114.90 &#8594; $123.10</text>
-        <text x="356" y="47" fill="#3fb950" font-size="9.5" text-anchor="end" font-family="sans-serif">+7.14%</text>
-
-        <!-- MSTU +2.82% -->
-        <rect x="228" y="75" width="20.3" height="10" fill="#3fb950" opacity="0.8"></rect>
-        <circle cx="228" cy="80" r="3.6" fill="none" stroke="#8b98a8" stroke-width="1.3"></circle>
-        <circle cx="248.3" cy="80" r="3.6" fill="#3fb950"></circle>
-        <text x="78" y="78" fill="#e6edf3" font-size="10.5" text-anchor="end" font-family="sans-serif">MSTU</text>
-        <text x="78" y="88" fill="#8b98a8" font-size="8" text-anchor="end" font-family="sans-serif">$39.03 &#8594; $40.13</text>
-        <text x="356" y="83" fill="#3fb950" font-size="9.5" text-anchor="end" font-family="sans-serif">+2.82%</text>
-
-        <!-- IREN call -16.84% (option row, tinted) -->
-        <rect x="84" y="105" width="216" height="22" fill="#1b2430"></rect>
-        <rect x="106.8" y="111" width="121.2" height="10" fill="#f85149" opacity="0.8"></rect>
-        <circle cx="228" cy="116" r="3.6" fill="none" stroke="#8b98a8" stroke-width="1.3"></circle>
-        <circle cx="106.8" cy="116" r="3.6" fill="#f85149"></circle>
-        <text x="78" y="114" fill="#e6edf3" font-size="10.5" text-anchor="end" font-family="sans-serif">IREN 35C</text>
-        <text x="78" y="124" fill="#8b98a8" font-size="8" text-anchor="end" font-family="sans-serif">$14.85 &#8594; $12.35</text>
-        <text x="356" y="119" fill="#f85149" font-size="9.5" text-anchor="end" font-family="sans-serif">-16.84%</text>
-      </svg>
-      <div class="legend">
-        % change from cost, so a share, a contract and a coin share one axis. Hollow circle = entry, filled = current.
-        Prices beneath each label are per share for equities and <em>per share of premium</em> for the option
-        (&times;100 for the contract). The shaded row is the option.
-        <br>BTC is held but not plotted: its cost basis is unavailable from the broker, so a % from cost cannot be computed.
-      </div>
-    </div>
+  <div class="cell wide">
+    <div class="k">Reconciliation</div>
+    <div class="recon">$416.32 equities + $1,235.00 options + $90.598514 crypto +
+    $1.64 cash<br>= <b>$1,743.558514</b> &#183; reported total value $1,743.558514 &#183;
+    difference $0.00. All four asset classes accounted for.</div>
   </div>
-
-  <!-- ============ EQUITIES ============ -->
-  <div class="sec">
-    <h2>Equity positions</h2>
-
-    <div class="card">
-      <div class="t">
-        <span class="nm">SOXL &middot; 1.1 sh</span>
-        <span class="px">$123.10<small>bid $123.00 / ask $130.00</small></span>
-      </div>
-      <div class="row"><span class="l">Entry (avg cost)</span><span class="r">$114.90 / sh</span></div>
-      <div class="row"><span class="l">Market value</span><span class="r">$135.41 &middot; 7.77% of account</span></div>
-      <div class="row"><span class="l">Cost basis</span><span class="r">$126.39</span></div>
-      <div class="row"><span class="l">Unrealized</span><span class="r pos">&plus;$9.02 &nbsp;&plus;7.14%</span></div>
-      <div class="row"><span class="l">Day change vs 9/17 close ($114.82)</span><span class="r pos">&plus;$8.28 / sh &nbsp;&plus;7.21% &nbsp;(&plus;$9.11)</span></div>
-      <div class="row"><span class="l">Spread</span><span class="r">553 bp</span></div>
-      <div class="row"><span class="l">Sellable / reserved</span><span class="r">1.1 / 0</span></div>
-      <div class="row"><span class="l">Resting stop</span><span class="r mut">none</span></div>
-      <div class="note">No stop is on the order book — this position has no protection. Held from before the last session, so the day change above is your P/L. The 553 bp spread is a closed-market book, not a tradable quote.</div>
-    </div>
-
-    <div class="card">
-      <div class="t">
-        <span class="nm">MSTU &middot; 7 sh</span>
-        <span class="px">$40.13<small>bid $30.00 / ask $43.45</small></span>
-      </div>
-      <div class="row"><span class="l">Entry (avg cost)</span><span class="r">$39.03 / sh</span></div>
-      <div class="row"><span class="l">Market value</span><span class="r">$280.91 &middot; 16.11% of account</span></div>
-      <div class="row"><span class="l">Cost basis</span><span class="r">$273.21</span></div>
-      <div class="row"><span class="l">Unrealized (your number)</span><span class="r pos">&plus;$7.70 &nbsp;&plus;2.82%</span></div>
-      <div class="row"><span class="l">Day change vs 9/17 close ($30.70)</span><span class="r pos">&plus;$9.43 / sh &nbsp;&plus;30.72% &nbsp;(&plus;$66.01)</span></div>
-      <div class="row"><span class="l">Spread</span><span class="r">3,662 bp</span></div>
-      <div class="row"><span class="l">Sellable / reserved</span><span class="r">7 / 0</span></div>
-      <div class="row"><span class="l">Resting stop</span><span class="r mut">none</span></div>
-      <div class="warn">Opened during the 9/18 session. The &plus;30.72% day change measures the ticker across a day you did not hold it for — <b>your</b> change since entry is &plus;2.82% / &plus;$7.70. No stop on the book.</div>
-      <div class="note">The bid/ask here is a closed-market book and the implied 3,662 bp spread is not a real trading cost.</div>
-    </div>
-  </div>
-
-  <!-- ============ OPTIONS ============ -->
-  <div class="sec">
-    <h2>Option positions</h2>
-
-    <div class="card opt">
-      <div class="t">
-        <span class="nm">IREN $35 Call &middot; 16 Oct 2026 &middot; 1 long</span>
-        <span class="px">$1,235.00<small>$12.35 / sh &middot; mark</small></span>
-      </div>
-      <div class="row"><span class="l">Entry</span><span class="r">$1,485.00 / contract &middot; $14.85 / sh</span></div>
-      <div class="row"><span class="l">Market value vs cost</span><span class="r">$1,235.00 vs $1,485.00</span></div>
-      <div class="row"><span class="l">Unrealized</span><span class="r neg">&minus;$250.00 &nbsp;&minus;16.84%</span></div>
-      <div class="row"><span class="l">Weight</span><span class="r">70.83% of account</span></div>
-      <div class="row"><span class="l">Bid / ask</span><span class="r">$12.25 &times;10 / $12.45 &times;25 &middot; 162 bp</span></div>
-      <div class="row"><span class="l">Day change vs 9/17 close ($9.45)</span><span class="r pos">&plus;$2.90 / sh &nbsp;&plus;$290.00 &nbsp;&plus;30.69%</span></div>
-      <div class="row"><span class="l">Strike vs spot</span><span class="r">$35.00 vs $46.55 &middot; ITM by $11.55</span></div>
-      <div class="row"><span class="l">Days to expiry</span><span class="r">26</span></div>
-      <div class="row"><span class="l">Intrinsic / extrinsic</span><span class="r">$11.55 / $0.80 per sh &nbsp;($1,155 / $80)</span></div>
-
-      <div class="primary">
-        <div class="row"><span class="l">Your breakeven at expiry</span><span class="r">$49.85</span></div>
-        <div class="row"><span class="l">Spot must travel</span><span class="r amb">&plus;$3.30 &nbsp;&plus;7.09%</span></div>
-      </div>
-      <div class="secondary">
-        <div class="row"><span class="l">Market breakeven (a buyer today) — not yours</span><span class="r mut">$47.35</span></div>
-      </div>
-
-      <svg viewBox="0 0 360 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Moneyness: strike, spot and breakevens">
-        <rect x="63.6" y="50" width="276.4" height="16" fill="#1f3a26" opacity="0.55"></rect>
-        <line x1="20" y1="58" x2="340" y2="58" stroke="#3d4a5c" stroke-width="1"></line>
-        <text x="344" y="61" fill="#8b98a8" font-size="8" font-family="sans-serif">IREN</text>
-
-        <line x1="63.6" y1="48" x2="63.6" y2="68" stroke="#8b98a8" stroke-width="1.6"></line>
-        <text x="63.6" y="80" fill="#8b98a8" font-size="8.5" text-anchor="middle" font-family="sans-serif">strike $35.00</text>
-        <text x="63.6" y="90" fill="#8b98a8" font-size="7.5" text-anchor="middle" font-family="sans-serif">ITM region &#8594;</text>
-
-        <line x1="231.6" y1="44" x2="231.6" y2="72" stroke="#e6edf3" stroke-width="1.8"></line>
-        <text x="231.6" y="30" fill="#e6edf3" font-size="9" text-anchor="end" font-family="sans-serif">spot $46.55</text>
-
-        <line x1="243.3" y1="52" x2="243.3" y2="66" stroke="#8b98a8" stroke-width="1.2" stroke-dasharray="2 2"></line>
-        <text x="240" y="90" fill="#8b98a8" font-size="8" text-anchor="start" font-family="sans-serif">market BE $47.35 (not yours)</text>
-
-        <line x1="279.6" y1="44" x2="279.6" y2="72" stroke="#d29922" stroke-width="2"></line>
-        <text x="279.6" y="30" fill="#d29922" font-size="9" text-anchor="start" font-family="sans-serif">your BE $49.85</text>
-
-        <line x1="231.6" y1="38" x2="279.6" y2="38" stroke="#d29922" stroke-width="1"></line>
-        <line x1="231.6" y1="35" x2="231.6" y2="41" stroke="#d29922" stroke-width="1"></line>
-        <line x1="279.6" y1="35" x2="279.6" y2="41" stroke="#d29922" stroke-width="1"></line>
-        <text x="255.6" y="49" fill="#d29922" font-size="7.5" text-anchor="middle" font-family="sans-serif">+7.1%</text>
-      </svg>
-      <div class="legend">Moneyness. Shaded band is where the call is in the money. Your breakeven at expiry (amber) is $2.50 above the market breakeven, because the market's figure is priced off today's mark rather than what you paid.</div>
-
-      <svg viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Premium composition versus cost">
-        <rect x="20" y="30" width="231" height="24" fill="#3fb950" opacity="0.75"></rect>
-        <rect x="251" y="30" width="16" height="24" fill="#d29922" opacity="0.85"></rect>
-        <line x1="317" y1="24" x2="317" y2="60" stroke="#8b98a8" stroke-width="1.4" stroke-dasharray="4 3"></line>
-        <text x="315" y="20" fill="#8b98a8" font-size="9" text-anchor="end" font-family="sans-serif">you paid $14.85 / sh</text>
-        <text x="20" y="68" fill="#3fb950" font-size="9" text-anchor="start" font-family="sans-serif">intrinsic $11.55</text>
-        <text x="150" y="68" fill="#d29922" font-size="9" text-anchor="start" font-family="sans-serif">extrinsic $0.80</text>
-        <text x="260" y="68" fill="#e6edf3" font-size="9" text-anchor="start" font-family="sans-serif">mark $12.35</text>
-      </svg>
-      <div class="legend">Premium composition per share against what you paid (dashed). Almost all of the mark is intrinsic now — only $0.80 of time value is left, 6.5% of the mark.</div>
-
-      <div class="t" style="margin-top:12px"><span class="nm">Greeks</span><span class="px"><small>per share</small></span></div>
-      <div class="row"><span class="l">Delta</span><span class="r">0.9075 &middot; &asymp;90.7 shares equivalent</span></div>
-      <div class="row"><span class="l">Gamma</span><span class="r">0.014664</span></div>
-      <div class="row"><span class="l">Theta</span><span class="r">&minus;0.039142 &middot; &minus;0.317%/day of mark &middot; &minus;$3.91/day</span></div>
-      <div class="row"><span class="l">Vega</span><span class="r">0.020710 &middot; $2.07 per vol point</span></div>
-      <div class="row"><span class="l">Rho</span><span class="r">0.021491</span></div>
-      <div class="row"><span class="l">Implied volatility</span><span class="r">90.47%</span></div>
-      <div class="row"><span class="l">Chance of profit (long)</span><span class="r">43.43%</span></div>
-      <div class="row"><span class="l">Open interest / volume</span><span class="r">1,253 / 23</span></div>
-
-      <div class="t" style="margin-top:12px"><span class="nm">Resting order</span><span class="px"><small>sell to close</small></span></div>
-      <div class="row"><span class="l">Limit</span><span class="r">$17.85 / sh &middot; $1,785.00 / contract</span></div>
-      <div class="row"><span class="l">Time in force</span><span class="r">GTC, regular hours</span></div>
-      <div class="row"><span class="l">Placed</span><span class="r">2026-09-08</span></div>
-      <div class="row"><span class="l">Implied IREN at expiry</span><span class="r">$52.85 &nbsp;(strike &plus; limit)</span></div>
-      <div class="row"><span class="l">Distance from mark</span><span class="r amb">&plus;44.5% above the $12.35 mark</span></div>
-      <div class="warn">
-        <b>This order is not an exit and not protection.</b> The $17.85 limit sits 44.5% above the mark and has not
-        moved since 2026-09-08. For it to fill, IREN would have to reach about $52.85 — roughly &plus;13.5% from
-        $46.55 — inside 26 days. Treat the position as uncovered.
-      </div>
-      <div class="warn">
-        <b>Pending sell quantity: 1.</b> The resting order reserves the contract, so no second sell order can be
-        placed against it while it is on the book.
-      </div>
-    </div>
-  </div>
-
-  <!-- ============ CRYPTO ============ -->
-  <div class="sec">
-    <h2>Crypto positions</h2>
-
-    <div class="card">
-      <div class="t">
-        <span class="nm">BTC &middot; Bitcoin</span>
-        <span class="px">$81,246.19<small>bid $80,482.64 / ask $82,009.74</small></span>
-      </div>
-      <div class="row"><span class="l">Quantity</span><span class="r">0.0011167 BTC</span></div>
-      <div class="row"><span class="l">Average cost / unit</span><span class="r mut">&mdash;</span></div>
-      <div class="row"><span class="l">Market value</span><span class="r">$90.73 &middot; 5.20% of account</span></div>
-      <div class="row"><span class="l">Cost basis</span><span class="r mut">&mdash;</span></div>
-      <div class="row"><span class="l">Unrealized</span><span class="r mut">&mdash;</span></div>
-      <div class="row"><span class="l">Move since prior CT midnight ($80,408.29)</span><span class="r pos">&plus;1.04% &nbsp;(&plus;$0.94 on this size)</span></div>
-      <div class="row"><span class="l">Sellable / held for sell</span><span class="r">0.0011167 / 0</span></div>
-      <div class="row"><span class="l">Resting order</span><span class="r mut">none</span></div>
-      <div class="warn">
-        <b>Cost basis unavailable.</b> The broker reports zero for both the direct and intraday cost-basis fields on
-        this position, so there is no average cost to show and no unrealized P/L can be computed. The figures above
-        are market value and the day's move only — nothing here is your gain or loss.
-      </div>
-      <div class="warn">
-        <b>Spread: 188 bp.</b> On 0.0011167 BTC that is about <b>$1.71</b> to go in and out — larger than the
-        &plus;$0.94 the position moved today. On a position this small the spread dominates any move.
-      </div>
-      <div class="note">Resting order shown as "none" because the crypto order book was read this run and returned no open orders. Crypto trades continuously, so this mark is from 12:15 CT today, not Friday's close. The portfolio snapshot puts crypto at $90.71 against the $90.75 these live marks give — a few cents of drift between the two reads.</div>
-    </div>
-
-    <div class="dust">
-      <b>Dust &mdash; under $1.00.</b> <b>STRK</b> (Starknet Token) &middot; 0.5 units &middot; <b>$0.02</b> market value
-      &middot; $0.047905 / unit &middot; entry &mdash; (cost basis unavailable). Remainder of a position mostly closed
-      on 2026-09-18 at 10:40 CT, when 1,382.70 STRK were sold at $0.035575 for &minus;$0.77 realized.
-      Too small for a card or a chart row; listed so it stays visible.
-    </div>
-  </div>
-
-  <!-- ============ ORDERS ============ -->
-  <div class="sec">
-    <h2>Today's orders</h2>
-    <div class="none">
-      No orders today — markets are closed (Sunday 2026-09-20) and no equity, option or crypto order was
-      created today. The one order on the book is the IREN GTC limit sell detailed above, placed 2026-09-08.
-    </div>
-  </div>
-
-  <div class="foot">
-    Generated 2026-09-20 12:17 CT. Values as of generation, not live.<br>
-    Buying power equals cash — limited margin provides instant settlement, not borrowing.<br>
-    Read-only holdings view of account ••••6877. No orders are placed by this page or the job that writes it.
-  </div>
-
 </div>
+
+<h2>Realized P/L &mdash; closed positions only</h2>
+<div class="grid">
+  <div class="cell">
+    <div class="k">Today's realized</div>
+    <div class="v muted">no closed positions today</div>
+    <div class="s">0 closing trades on 2026-09-20 &mdash; Sunday, markets closed.</div>
+  </div>
+  <div class="cell">
+    <div class="k">Week to date</div>
+    <div class="v dn">-$48.70</div>
+    <div class="s">15 closing trades, 2026-09-14 through 2026-09-20.</div>
+  </div>
+</div>
+<p class="note">This section is <b>closed positions only and excludes open P/L.</b> It is never folded
+into the unrealized figure above or into any position below.</p>
+<div class="tw">
+<table>
+<thead><tr><th>Time (CT)</th><th>Symbol</th><th>Side</th><th>Qty</th><th>Price</th><th>Realized</th></tr></thead>
+<tbody>
+<tr><td>2026-09-18 11:44 CT</td><td class="tick2">ALAB</td><td>sell</td><td>0.9217</td><td>$297.1791</td><td class="up">+$5.09</td></tr>
+<tr><td>2026-09-18 10:40 CT</td><td class="tick2">STRK</td><td>sell</td><td>1,382.70</td><td>$0.035575</td><td class="dn">-$0.77</td></tr>
+<tr><td>2026-09-18 10:30 CT</td><td class="tick2">COIN</td><td>sell</td><td>0.48</td><td>$192.4583</td><td class="dn">-$0.10</td></tr>
+<tr><td>2026-09-18 09:51 CT</td><td class="tick2">CAN</td><td>sell</td><td>200</td><td>$0.3703</td><td class="dn">-$0.56</td></tr>
+<tr><td>2026-09-18 09:31 CT</td><td class="tick2">AMD</td><td>sell</td><td>0.17</td><td>$547.8824</td><td class="up">+$0.26</td></tr>
+<tr><td>2026-09-17 14:31 CT</td><td class="tick2">INTW</td><td>sell</td><td>10</td><td>$26.78</td><td class="dn">-$4.10</td></tr>
+<tr><td>2026-09-17 11:25 CT</td><td class="tick2">AG</td><td>sell</td><td>6</td><td>$19.465</td><td class="dn">-$0.78</td></tr>
+<tr><td>2026-09-17 10:56 CT</td><td class="tick2">NVDL</td><td>sell</td><td>11.797441</td><td>$33.8853</td><td class="up">+$2.72</td></tr>
+<tr><td>2026-09-17 10:06 CT</td><td class="tick2">SOXS</td><td>sell</td><td>2.580591</td><td>$45.3501</td><td class="dn">-$7.97</td></tr>
+<tr><td>2026-09-16 12:10 CT</td><td class="tick2">CRWV</td><td>sell</td><td>2</td><td>$84.19</td><td class="dn">-$1.43</td></tr>
+<tr><td>2026-09-16 12:10 CT</td><td class="tick2">SPCX</td><td>sell</td><td>1</td><td>$151.24</td><td class="dn">-$0.50</td></tr>
+<tr><td>2026-09-15 08:34 CT</td><td class="tick2">NVDL</td><td>sell</td><td>7.947327</td><td>$32.2498</td><td class="up">+$2.94</td></tr>
+<tr><td>2026-09-15 08:34 CT</td><td class="tick2">SOXL</td><td>sell</td><td>1.518299</td><td>$104.8278</td><td class="up">+$3.56</td></tr>
+<tr><td>2026-09-14 08:33 CT</td><td class="tick2">NVDL</td><td>sell</td><td>6.868502</td><td>$31.1494</td><td class="dn">-$19.02</td></tr>
+<tr><td>2026-09-14 08:33 CT</td><td class="tick2">SOXL</td><td>sell</td><td>1.348792</td><td>$101.2610</td><td class="dn">-$28.04</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Entry vs current</h2>
+<svg viewBox="0 0 340 158" class="chart" role="img" aria-label="Percent change from cost by holding">
+<line x1="96.00" y1="18" x2="96.00" y2="150" class="axg"/>
+<text x="96.00" y="13" class="axt" text-anchor="middle">-20%</text>
+<line x1="170.67" y1="18" x2="170.67" y2="150" class="axg"/>
+<text x="170.67" y="13" class="axt" text-anchor="middle">-10%</text>
+<line x1="245.33" y1="18" x2="245.33" y2="150" class="axz"/>
+<text x="245.33" y="13" class="axt" text-anchor="middle">0%</text>
+<line x1="320.00" y1="18" x2="320.00" y2="150" class="axg"/>
+<text x="320.00" y="13" class="axt" text-anchor="middle">10%</text>
+<rect x="245.33" y="36" width="53.29" height="10" class="bup"/>
+<circle cx="245.33" cy="41" r="3.5" class="mko"/>
+<circle cx="298.62" cy="41" r="3.5" class="mkup"/>
+<text x="0" y="39" class="lbl">SOXL</text>
+<text x="0" y="54" class="sub">$114.90 &#8594; $123.10 / sh</text>
+<text x="304.62" y="45" class="vup" text-anchor="start">+7.14%</text>
+<rect x="245.33" y="76" width="21.05" height="10" class="bup"/>
+<circle cx="245.33" cy="81" r="3.5" class="mko"/>
+<circle cx="266.38" cy="81" r="3.5" class="mkup"/>
+<text x="0" y="79" class="lbl">MSTU</text>
+<text x="0" y="94" class="sub">$39.03 &#8594; $40.13 / sh</text>
+<text x="272.38" y="85" class="vup" text-anchor="start">+2.82%</text>
+<rect x="0" y="106" width="340" height="36" class="optrow"/>
+<rect x="119.63" y="116" width="125.70" height="10" class="bdn"/>
+<circle cx="245.33" cy="121" r="3.5" class="mko"/>
+<circle cx="119.63" cy="121" r="3.5" class="mkdn"/>
+<text x="0" y="119" class="lbl">IREN $35C</text>
+<text x="0" y="134" class="sub">$14.85 &#8594; $12.35 / sh of premium</text>
+<text x="113.63" y="125" class="vdn" text-anchor="end">-16.84%</text>
+</svg>
+<p class="leg"><span class="sw" style="background:#182430"></span>tinted row = option contract &#183;
+<span class="swo"></span>hollow = entry (0%) &#183;
+<span class="sw" style="background:#3fb950"></span>filled = current.
+Bars plot <b>% change from cost</b> so a share, a contract and a coin share one axis; the line under
+each label carries the actual prices. Sorted best to worst.</p>
+<p class="leg">BTC is not plotted. Robinhood reports no cost basis for it, so there is no entry to
+measure a % change from. See the crypto section below.</p>
+
+<h2>Equity positions</h2>
+
+<div class="card">
+  <div class="chead"><span class="tick">SOXL</span>
+    <span class="chv up">+$9.02 <small>+7.14%</small></span></div>
+  
+  <div class="kv"><span>quantity</span><b>1.10 sh</b></div>
+  <div class="kv"><span>entry (avg cost)</span><b>$114.90</b></div>
+  <div class="kv"><span>last</span><b>$123.10 <small class="muted">reg-session close $123.77</small></b></div>
+  <div class="kv"><span>bid / ask</span><b>$123.00 / $130.00</b></div>
+  <div class="kv"><span>spread</span><b>$7.00 &#183; 553 bp</b></div>
+  <div class="kv"><span>day change</span><b class="up">+7.21% &#183; +$9.11 <small class="muted">vs prior close $114.82</small></b></div>
+  <div class="kv"><span>market value</span><b>$135.41 <small class="muted">7.77% of account</small></b></div>
+  <div class="kv"><span>cost basis</span><b>$126.39</b></div>
+  <div class="kv"><span>unrealized</span><b class="up">+$9.02 &#183; +7.14%</b></div>
+  <div class="kv"><span>sellable / reserved</span><b>1.10 / 0.00</b></div>
+  <div class="kv"><span>resting stop</span><b class="muted">none</b></div>
+</div>
+
+<div class="card">
+  <div class="chead"><span class="tick">MSTU</span>
+    <span class="chv up">+$7.70 <small>+2.82%</small></span></div>
+  <div class="flag">Opened in the most recent session (bought 2026-09-18 11:44 CT). The day-change line below is the <b>ticker's</b> move from the prior close, not your P/L &mdash; your result on this position is the unrealized line.</div>
+  <div class="kv"><span>quantity</span><b>7.00 sh</b></div>
+  <div class="kv"><span>entry (avg cost)</span><b>$39.03</b></div>
+  <div class="kv"><span>last</span><b>$40.13 <small class="muted">reg-session close $40.71</small></b></div>
+  <div class="kv"><span>bid / ask</span><b>$30.00 / $43.45</b></div>
+  <div class="kv"><span>spread</span><b>$13.45 &#183; 3,662 bp</b></div>
+  <div class="kv"><span>day change</span><b class="up">+30.72% &#183; +$66.01 <small class="muted">vs prior close $30.70</small></b></div>
+  <div class="kv"><span>market value</span><b>$280.91 <small class="muted">16.11% of account</small></b></div>
+  <div class="kv"><span>cost basis</span><b>$273.21</b></div>
+  <div class="kv"><span>unrealized</span><b class="up">+$7.70 &#183; +2.82%</b></div>
+  <div class="kv"><span>sellable / reserved</span><b>7.00 / 0.00</b></div>
+  <div class="kv"><span>resting stop</span><b class="muted">none</b></div>
+</div>
+
+<h2>Option positions</h2>
+<div class="card">
+  <div class="chead"><span class="tick">IREN 2026-10-16 $35 Call</span>
+    <span class="chv dn">-$250.00 <small>-16.84%</small></span></div>
+
+  <div class="warn">The whole contract is reserved &mdash; <b>pending sell quantity = 1</b>, held by the
+  resting GTC limit sell below. No second sell order can be placed against it.</div>
+
+  <div class="kv"><span>quantity</span><b>1 contract <small class="muted">long call &#183; opened 2026-09-08 11:16 CT</small></b></div>
+  <div class="kv"><span>mark</span><b>$1,235.00 / contract <small class="muted">$12.35 / share</small></b></div>
+  <div class="kv"><span>entry</span><b>$1,485.00 / contract <small class="muted">$14.85 / share</small></b></div>
+  <div class="kv"><span>bid / ask</span><b>$12.25 / $12.45 <small class="muted">spread $0.20 &#183; 162 bp</small></b></div>
+  <div class="kv"><span>day change</span><b class="up">+30.69% &#183; +$290.00 <small class="muted">vs prior close $9.45 / share</small></b></div>
+  <div class="kv"><span>market value</span><b>$1,235.00 <small class="muted">70.83% of account</small></b></div>
+  <div class="kv"><span>cost</span><b>$1,485.00</b></div>
+  <div class="kv"><span>unrealized</span><b class="dn">-$250.00 &#183; -16.84%</b></div>
+  <div class="kv"><span>strike vs spot</span><b>$35.00 vs $46.55 <small class="muted">$11.55 in the money</small></b></div>
+  <div class="kv"><span>underlying day change</span><b class="up">+7.06% <small class="muted">IREN, from $43.48</small></b></div>
+  <div class="kv"><span>days to expiry</span><b>26 <small class="muted">2026-10-16</small></b></div>
+  <div class="kv"><span>intrinsic / extrinsic</span><b>$1,155.00 / $80.00 <small class="muted">$11.55 / $0.80 per share</small></b></div>
+
+  <div class="be">
+    <div class="p"><span>Your breakeven at expiry</span><b>$49.85</b></div>
+    <div class="q"><span>Market breakeven &mdash; a buyer today, <b>not yours</b></span><b>$47.35</b></div>
+    <div class="n">Yours = strike $35.00 + premium you paid $14.85/share.
+    Robinhood's <i>break_even_price</i> of $47.35 is strike + today's mark &mdash; what
+    somebody buying this contract right now would need. It sits $2.50 below
+    yours. Do not price an exit off it.<br>IREN must rise $3.30
+    (+7.09%) from $46.55 to reach your breakeven.</div>
+  </div>
+
+  <div class="sec"><div class="st">Moneyness</div>
+<svg viewBox="0 0 340 112" class="chart" role="img" aria-label="Moneyness: strike, spot and breakevens">
+<rect x="48.42" y="42" width="187.23" height="14" class="itm"/>
+<line x1="16" y1="49" x2="324" y2="49" class="axz"/>
+<line x1="48.42" y1="36" x2="48.42" y2="62" class="tkl"/>
+<text x="48.42" y="28" class="tk" text-anchor="middle">strike</text>
+<text x="48.42" y="16" class="tks" text-anchor="middle">$35.00</text>
+<line x1="235.65" y1="36" x2="235.65" y2="62" class="tkspot"/>
+<text x="235.65" y="76" class="tk" text-anchor="middle">spot</text>
+<text x="235.65" y="88" class="tks" text-anchor="middle">$46.55</text>
+<line x1="248.62" y1="36" x2="248.62" y2="62" class="tkl"/>
+<text x="248.62" y="28" class="tk" text-anchor="middle">mkt BE</text>
+<text x="248.62" y="16" class="tks" text-anchor="middle">$47.35</text>
+<line x1="289.15" y1="36" x2="289.15" y2="62" class="tkb"/>
+<text x="289.15" y="76" class="tk" text-anchor="middle">YOUR BE</text>
+<text x="289.15" y="88" class="tks" text-anchor="middle">$49.85</text>
+<text x="170" y="107" class="tks" text-anchor="middle">spot must rise $3.30 (+7.09%) to reach your breakeven</text>
+</svg>
+  </div>
+
+  <div class="sec"><div class="st">Premium composition</div>
+<svg viewBox="0 0 340 96" class="chart" role="img" aria-label="Premium composition versus cost">
+<text x="8" y="12" class="tks">now &#183; mark $1,235 per contract</text>
+<rect x="8" y="18" width="233.89" height="20" class="pin"/>
+<rect x="241.89" y="18" width="16.20" height="20" class="pex"/>
+<text x="14" y="32" class="binl">intrinsic $1,155</text>
+<text x="258.09" y="50" class="tks" text-anchor="end">extrinsic $80</text>
+<text x="8" y="70" class="tks">paid &#183; cost $1,485 per contract</text>
+<rect x="8" y="76" width="300.71" height="12" class="pcost"/>
+<line x1="308.71" y1="14" x2="308.71" y2="92" class="dash"/>
+</svg>
+  <p class="leg"><span class="sw" style="background:#2a6b3c"></span>intrinsic &#183;
+  <span class="sw" style="background:#8a6a1f"></span>extrinsic &#183;
+  <span class="sw" style="background:#33404e"></span>what you paid; dashed line = your cost.
+  Mark is $250.00 below cost, and only $80.00 of the
+  $1,235.00 is time value.</p>
+  </div>
+
+  <div class="sec"><div class="st">Resting order</div>
+  <div class="kv"><span>sell to close, limit</span><b>$17.85 / share <small class="muted">$1,785.00 / contract</small></b></div>
+  <div class="kv"><span>time in force</span><b>GTC <small class="muted">placed 2026-09-08 11:19 CT &#183; agentic &#183; confirmed</small></b></div>
+  <div class="kv"><span>implied IREN at expiry</span><b>$52.85 <small class="muted">strike + limit</small></b></div>
+  <div class="warn"><b>This is not an exit and it is not protection.</b> The $17.85
+  limit sits 45% above the $12.35 mark and has done so since it was placed
+  on 2026-09-08. It cannot realistically fill &mdash; it only reserves the contract. Check the live
+  distance before relying on any of this.</div>
+  </div>
+
+  <div class="sec"><div class="st">Greeks</div>
+  <div class="kv"><span>delta</span><b>0.9074 <small class="muted">&#8776; 90.7 share-equivalents</small></b></div>
+  <div class="kv"><span>gamma</span><b>0.01467</b></div>
+  <div class="kv"><span>theta</span><b>-0.03922 <small class="muted">0.32%/day of mark &#183; $-3.92/day</small></b></div>
+  <div class="kv"><span>vega</span><b>0.02070 <small class="muted">&#8776; $2.07/contract per vol point</small></b></div>
+  <div class="kv"><span>rho</span><b>0.02146</b></div>
+  <div class="kv"><span>implied volatility</span><b>90.56%</b></div>
+  <div class="kv"><span>probability of profit (long)</span><b>43.43%</b></div>
+  <div class="kv"><span>open interest / volume</span><b>1,253 / 23</b></div>
+  </div>
+</div>
+
+<h2>Crypto positions</h2>
+<div class="card">
+  <div class="chead"><span class="tick">BTC <span class="muted" style="font-weight:500;font-size:13px">Bitcoin</span></span>
+    <span class="chv muted">unrealized <small>unavailable</small></span></div>
+  <div class="flag">Robinhood reports <b>no cost basis</b> for this position &mdash; every direct and
+  intraday cost-basis field comes back zero. Average cost, unrealized $ and unrealized % are shown as
+  &#8212;. They are not zero, and they are deliberately not derived from the mark.</div>
+  <div class="kv"><span>quantity</span><b>0.0011167 BTC</b></div>
+  <div class="kv"><span>average cost</span><b class="muted">&#8212;</b></div>
+  <div class="kv"><span>mark</span><b>$81,121.36</b></div>
+  <div class="kv"><span>bid / ask</span><b>$80,363.01 / $81,879.71</b></div>
+  <div class="kv"><span>market value</span><b>$90.59 <small class="muted">5.20% of account</small></b></div>
+  <div class="kv"><span>cost basis</span><b class="muted">&#8212;</b></div>
+  <div class="kv"><span>unrealized</span><b class="muted">&#8212; &#183; &#8212;</b></div>
+  <div class="kv"><span>sellable / held for sell</span><b>0.0011167 / 0.0000000</b></div>
+  <div class="kv"><span>resting order</span><b class="muted">none</b></div>
+  <div class="kv"><span>move since prior close</span><b class="up">+0.89% &#183; +$0.80</b></div>
+  <div class="note"><b>That last line is the asset's move, not your P/L.</b> It measures BTC from
+  $80,408.28 at Central midnight &mdash; a move the position may have been sitting through
+  rather than earning. With no cost basis there is no change-since-entry to show instead.</div>
+  <div class="warn"><b>Wide spread.</b> $1,516.70 between bid and ask &mdash;
+  187 bp. On 0.0011167 BTC that is roughly <b>$1.69</b> to buy and
+  sell once, against a position worth $90.59 &mdash; about 1.9% of the
+  position in round-trip cost.</div>
+  <p class="note">Resting orders were checked against the crypto order book this run: no open crypto
+  orders on the account.</p>
+</div>
+
+<h2>Dust &mdash; under $1.00</h2>
+<div class="dust">
+  <b>STRK</b> Starknet Token &#183; 0.5000 units &#183; value <b>$0.0246</b>
+  &#183; mark $0.0491315 &#183; entry <b>&#8212;</b> (no cost basis reported).
+  Residual left behind after selling 1,382.70 STRK at $0.035575 on 2026-09-18 10:40 CT.
+  Kept out of the cards and the chart at this size; no resting order.
+</div>
+
+<h2>Today's orders</h2>
+<p class="note"><b>None.</b> No equity, option or crypto order was created on 2026-09-20 &mdash; markets
+are closed. The only working order on the book is the IREN GTC limit sell above, placed 2026-09-08.</p>
+
+<footer>
+  Generated 2026-09-20 13:16 CT. Values as of generation, not live &mdash; this is a static snapshot.<br>
+  Buying power equals cash &mdash; limited margin provides instant settlement, not borrowing.<br>
+  Account &#8226;&#8226;&#8226;&#8226;6877 &#183; read-only holdings view.
+</footer>
+
 </body>
 </html>
