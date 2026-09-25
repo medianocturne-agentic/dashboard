@@ -1,0 +1,37 @@
+# dispatch-refresh.yml
+#
+# Triggers a full dashboard refresh (new broker data + GitHub Pages push) from
+# anywhere — GitHub mobile app, the Actions tab, or the GitHub CLI.
+#
+# HOW TO USE FROM YOUR PHONE:
+#   GitHub app → your repo → Actions → "Refresh dashboard" → Run workflow → Run
+#   (takes ~5 min; GitHub Pages goes live ~60s after the push lands)
+#
+# REQUIREMENT: a self-hosted Actions runner must be registered on your Mac.
+# One-time setup (run in Terminal on the Mac):
+#
+#   1. Go to:
+#      https://github.com/medianocturne-agentic/dashboard/settings/actions/runners/new
+#   2. Choose macOS, copy the token GitHub gives you, then run the commands shown.
+#      Install as a launchd service so it survives reboots:
+#        cd ~/actions-runner && ./svc.sh install && ./svc.sh start
+#   3. Leave RUNS_ON as "self-hosted" below — that's it.
+#
+# WHY SELF-HOSTED:
+#   Refreshing the page requires the Robinhood MCP connector, which only exists
+#   inside a local Claude session on your Mac. GitHub's cloud runners have no
+#   broker access, so the regeneration step must run here.
+
+name: Refresh dashboard
+
+on:
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: self-hosted
+    timeout-minutes: 15
+
+    steps:
+      - name: Refresh and publish
+        run: bash /Users/stevepodgorski/agentic-publish/refresh-and-publish.sh
