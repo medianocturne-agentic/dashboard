@@ -1,187 +1,38 @@
-<!doctype html>
-<html lang="en" data-generated="03f96af7b2e7"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Holdings</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#0b0f14;color:#c9d1d9;font:15px/1.45 -apple-system,system-ui,Segoe UI,sans-serif;font-variant-numeric:tabular-nums;padding:12px;max-width:900px;margin:0 auto}
-h1{font-size:22px;margin:4px 0} h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#8b949e;margin:22px 0 8px;border-bottom:1px solid #21262d;padding-bottom:4px}
-h3{font-size:16px;margin:0 0 6px}
-.pos{color:#3fb950} .neg{color:#f85149} .dim{color:#8b949e} .warn{color:#d29922}
-.stamp{background:#161b22;border:1px solid #d29922;border-radius:6px;padding:8px 10px;margin:8px 0;font-size:16px;font-weight:600}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-@media(max-width:760px){.grid{grid-template-columns:1fr}}
-.cell,.card{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:10px 12px}
-.big{font-size:24px;font-weight:700}
-.kv{display:flex;justify-content:space-between;gap:10px;padding:2px 0;border-bottom:1px dotted #21262d}
-.kv span:first-child{color:#8b949e} .kv span:last-child{text-align:right}
-.primary{background:#1f2a1f;border-left:3px solid #3fb950;padding:4px 8px;margin:6px 0;font-weight:600}
-.notme{background:#2a2418;border-left:3px solid #d29922;padding:4px 8px;margin:6px 0;color:#d29922}
-.flag{background:#2d1517;border:1px solid #f85149;border-radius:6px;padding:6px 8px;margin:8px 0;color:#f85149}
-table{width:100%;border-collapse:collapse;font-size:14px} td,th{padding:4px 6px;border-bottom:1px solid #21262d;text-align:left} th{color:#8b949e;font-weight:500} td.r,th.r{text-align:right}
-.ax{font-size:10px;fill:#8b949e} .lb{font-size:12px;fill:#c9d1d9;font-weight:600}
-.legend span{display:inline-block;margin-right:12px;font-size:12px;color:#8b949e}
-.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
-svg{display:block;max-width:100%}
-.foot{margin-top:24px;color:#8b949e;font-size:13px;border-top:1px solid #21262d;padding-top:8px}
-</style></head><body>
-<h1>Holdings</h1>
-<div class="stamp">Snapshot generated 2026-10-01 14:06 CT</div>
-<div class="dim">Account ••••6877 · static snapshot — values as of generation, not live</div>
-
-<h2>Summary</h2>
-<div class="grid">
-<div class="cell"><div class="dim">Account value</div><div class="big">$1,018.67</div>
-<div class="dim">equity $447.24 · options $565.00 · crypto $4.62 · cash $1.81</div>
-<div class="dim">Reconciliation: 447.24 + 565.00 + 4.62 + 1.81 = 1018.67 = total_value 1018.67 ✓</div></div>
-<div class="cell"><div class="dim">Total unrealized (open positions vs cost basis)</div><div class="big neg">−$942.68</div>
-<div class="dim">−48.10% on cost $1,959.98 · excludes realized P/L</div></div>
-<div class="cell"><div class="dim">Day change, open equities (SOXS)</div><div class="big neg">−$18.75</div>
-<div class="dim">−4.02% vs prior close 33.08</div></div>
-<div class="cell"><div class="dim">Cash / buying power</div><div class="big">$1.81 / $1.81</div></div>
-</div>
-<div class="dim" style="margin-top:6px;font-size:12px">Position-level marks use last-trade quotes at generation; broker equity_value ($447.24) is priced a moment differently from SOXS 14.1 × 31.75 = $447.68. Reconciliation above uses broker components.</div>
-
+<!doctype html><html lang="en" data-generated="fc71898db653"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Holdings</title><style>*{box-sizing:border-box}body{margin:0;background:#0b0f14;color:#e6edf3;font:15px/1.45 -apple-system,system-ui,Segoe UI,sans-serif;font-variant-numeric:tabular-nums}
+.w{max-width:1000px;margin:0 auto;padding:14px}h1{margin:0;font-size:24px}h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:#8b949e;margin:26px 0 8px;border-bottom:1px solid #222a33;padding-bottom:4px}
+.g{color:#3fb950}.r{color:#f85149}.mut{color:#8b949e}.sm{font-size:13px}
+.stamp{display:inline-block;background:#1c2530;border:1px solid #f0b429;color:#f0b429;padding:6px 10px;border-radius:6px;font-weight:600;margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.cell,.card{background:#131a22;border:1px solid #222a33;border-radius:8px;padding:10px}
+.cell .l{font-size:12px;color:#8b949e;text-transform:uppercase}.cell .v{font-size:20px;font-weight:600}
+.card{margin-bottom:10px}.card h3{margin:0 0 6px;font-size:17px}.kv{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 14px}.kv div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dotted #222a33;padding:2px 0}.kv span:first-child{color:#8b949e}
+.opt{border-left:3px solid #a371f7}.be1{font-size:17px;font-weight:700;color:#f0b429;margin:6px 0}.be2{color:#8b949e}
+.warn{background:#2b1d10;border:1px solid #9e6a03;border-radius:6px;padding:8px;margin:8px 0;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;padding:4px 6px;border-bottom:1px solid #222a33}th{color:#8b949e;font-weight:500}td.n,th.n{text-align:right}
+svg{width:100%;height:auto;display:block;background:#0f151c;border-radius:6px}svg text{fill:#c9d1d9;font-size:11px}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.kv{grid-template-columns:1fr}h1{font-size:21px}}</style></head><body><div class="w">
+<h1>Holdings</h1><div class="mut sm">Account ••••6877</div>
+<div class="stamp">Snapshot generated 2026-10-01 15:06 CT — static snapshot, values as of generation, not live</div>
+<h2>Summary</h2><div class="grid">
+<div class="cell"><div class="l">Account value</div><div class="v">$1,067.11</div><div class="sm mut">equity $447.68 · options $613.00 · crypto $4.62 · cash $1.81</div></div>
+<div class="cell"><div class="l">Total unrealized vs cost</div><div class="v r">-$894.68</div><div class="sm mut">on $1,959.98 cost (-45.65%) · open positions only</div></div>
+<div class="cell"><div class="l">Day change, open equities</div><div class="v r">-$18.75</div><div class="sm mut">SOXS -4.02% vs prior close</div></div>
+<div class="cell"><div class="l">Cash / buying power</div><div class="v">$1.81</div><div class="sm mut">buying power $1.81</div></div></div>
+<div class="sm mut" style="margin-top:8px">Reconciliation: $447.68 + $613.00 + $4.6209 + $1.81 = <b>$1,067.1059</b> = total_value $1,067.1059 ✓</div>
 <h2>Realized P/L — closed positions only, excluding open P/L</h2>
-<div class="grid">
-<div class="cell"><div class="dim">Today's realized</div><div class="big">no closed positions today</div><div class="dim">0 closing trades</div></div>
-<div class="cell"><div class="dim">Week-to-date realized (rolling week, 10 closes)</div><div class="big neg">−$68.65</div></div>
-</div>
-<div class="card" style="margin-top:8px"><div class="dim" style="margin-bottom:4px">Closes this week (times CT; today: none)</div>
-<table><tr><th>Time CT</th><th>Sym</th><th>Side</th><th class="r">Qty</th><th class="r">Price</th><th class="r">Realized</th></tr>
-<tr><td>09-30 10:28</td><td>YANG</td><td>sell</td><td class="r">4</td><td class="r">$31.96</td><td class="r neg">−$3.42</td></tr>
-<tr><td>09-30 10:28</td><td>SRTY</td><td>sell</td><td class="r">6</td><td class="r">$26.23</td><td class="r neg">−$1.17</td></tr>
-<tr><td>09-30 10:27</td><td>SPXS</td><td>sell</td><td class="r">4</td><td class="r">$24.21</td><td class="r neg">−$1.20</td></tr>
-<tr><td>09-30 10:27</td><td>TZA</td><td>sell</td><td class="r">1.9</td><td class="r">$46.60</td><td class="r neg">−$0.61</td></tr>
-<tr><td>09-29 10:44</td><td>SOXS</td><td>sell</td><td class="r">4</td><td class="r">$32.73</td><td class="r neg">−$12.20</td></tr>
-<tr><td>09-28 10:18</td><td>SOXL</td><td>sell</td><td class="r">2</td><td class="r">$135.96</td><td class="r neg">−$32.15</td></tr>
-<tr><td>09-28 10:18</td><td>KORU</td><td>sell</td><td class="r">3.49</td><td class="r">$19.57</td><td class="r neg">−$7.09</td></tr>
-<tr><td>09-28 10:17</td><td>JNUG</td><td>sell</td><td class="r">1</td><td class="r">$150.75</td><td class="r neg">−$17.74</td></tr>
-<tr><td>09-25 14:28</td><td>MULL</td><td>sell</td><td class="r">7.8</td><td class="r">$26.50</td><td class="r pos">$3.32</td></tr>
-<tr><td>09-25 14:27</td><td>JDST</td><td>sell</td><td class="r">15</td><td class="r">$22.59</td><td class="r pos">$3.61</td></tr>
-</table></div>
-
-<h2>Entry vs current (% change from cost)</h2>
-<div class="card">
-<div class="legend"><span><i class="sw" style="border:1.5px solid #c9d1d9"></i>entry (0%)</span><span><i class="sw" style="background:#3fb950"></i>current, up</span><span><i class="sw" style="background:#f85149"></i>current, down</span><span><i class="sw" style="background:#1c2430"></i>tinted row = option</span></div>
-<svg viewBox="0 0 360 192" width="100%" role="img" aria-label="Entry vs current percent change from cost">
-<line x1="126.7" y1="24" x2="126.7" y2="176" stroke="#30363d" stroke-dasharray="3 3"/>
-<text x="126.7" y="188" class="ax" text-anchor="middle">-60%</text>
-<line x1="180.0" y1="24" x2="180.0" y2="176" stroke="#30363d" stroke-dasharray="3 3"/>
-<text x="180.0" y="188" class="ax" text-anchor="middle">-40%</text>
-<line x1="233.3" y1="24" x2="233.3" y2="176" stroke="#30363d" stroke-dasharray="3 3"/>
-<text x="233.3" y="188" class="ax" text-anchor="middle">-20%</text>
-<line x1="286.7" y1="24" x2="286.7" y2="176" stroke="#8b949e"/>
-<text x="286.7" y="188" class="ax" text-anchor="middle">0%</text>
-<line x1="340.0" y1="24" x2="340.0" y2="176" stroke="#30363d" stroke-dasharray="3 3"/>
-<text x="340.0" y="188" class="ax" text-anchor="middle">20%</text>
-<text x="6" y="42" class="lb">FET</text>
-<text x="6" y="55" class="ax">0.2080→0.2301</text>
-<rect x="286.7" y="39" width="28.3" height="10" fill="#3fb950" opacity=".55"/>
-<circle cx="286.7" cy="44" r="5" fill="#0b0f14" stroke="#c9d1d9" stroke-width="1.5"/>
-<circle cx="314.9" cy="44" r="5" fill="#3fb950"/>
-<text x="323.9" y="35" class="lb" text-anchor="start" fill="#3fb950">+10.6%</text>
-<text x="6" y="86" class="lb">SOXS</text>
-<text x="6" y="99" class="ax">$33.39→$31.75</text>
-<rect x="273.6" y="83" width="13.1" height="10" fill="#f85149" opacity=".55"/>
-<circle cx="286.7" cy="88" r="5" fill="#0b0f14" stroke="#c9d1d9" stroke-width="1.5"/>
-<circle cx="273.6" cy="88" r="5" fill="#f85149"/>
-<text x="264.6" y="79" class="lb" text-anchor="end" fill="#f85149">−4.9%</text>
-<rect x="2" y="112" width="356" height="40" fill="#1c2430" rx="4"/>
-<text x="6" y="130" class="lb">IREN 10/16 $35C</text>
-<text x="6" y="143" class="ax">$14.85→$5.65</text>
-<rect x="121.5" y="127" width="165.2" height="10" fill="#f85149" opacity=".55"/>
-<circle cx="286.7" cy="132" r="5" fill="#0b0f14" stroke="#c9d1d9" stroke-width="1.5"/>
-<circle cx="121.5" cy="132" r="5" fill="#f85149"/>
-<text x="130.5" y="123" class="lb" text-anchor="start" fill="#f85149">−62.0%</text>
-</svg>
-<div class="dim" style="font-size:12px">Prices: equity per share, option per share of premium, crypto per coin. STRK is dust and omitted.</div></div>
-
-<h2>Equity positions</h2>
-<div class="card"><h3>SOXS <span class="dim">· long</span></h3>
-<div class="kv"><span>Quantity</span><span>14.1</span></div>
-<div class="kv"><span>Entry (avg)</span><span>$33.39</span></div>
-<div class="kv"><span>Last (bid / ask)</span><span>$31.75 (31.73 / 31.74)</span></div>
-<div class="kv"><span>Day change vs prior close $33.08</span><span class="neg">−4.02% · −$18.75</span></div>
-<div class="kv"><span>Market value / weight</span><span>$447.68 · 43.9%</span></div>
-<div class="kv"><span>Cost basis</span><span>$470.80</span></div>
-<div class="kv"><span>Unrealized</span><span class="neg">−$23.12 · −4.91%</span></div>
-<div class="kv"><span>Spread</span><span>3.2 bp</span></div>
-<div class="kv"><span>Sellable / reserved</span><span>14.1 / 0</span></div>
-<div class="kv"><span>Resting stop</span><span class="warn">none (no open equity orders on book)</span></div>
-<div class="dim" style="font-size:12px;margin-top:4px">Not opened today.</div></div>
-
-<h2>Option positions</h2>
-<div class="card"><h3>IREN Oct 16 2026 $35 Call <span class="dim">· long ×1</span></h3>
-<div class="primary">Your breakeven at expiry: $49.85 (strike 35.00 + paid 14.85)</div>
-<div class="notme">Market breakeven (a buyer today): $40.65 — not your breakeven</div>
-<div class="kv"><span>Spot needed to reach YOUR breakeven</span><span>+$9.76 (+24.3%) from $40.09</span></div>
-<div class="kv"><span>Mark</span><span>$5.65/sh · $565.00/contract</span></div>
-<div class="kv"><span>Entry</span><span>$14.85/sh · $1,485.00/contract</span></div>
-<div class="kv"><span>Bid / ask · spread</span><span>5.55 / 5.75 · 354 bp</span></div>
-<div class="kv"><span>Day change vs prev close $6.40</span><span class="neg">−11.72% · −$75.00</span></div>
-<div class="kv"><span>Value vs cost</span><span>$565.00 vs $1,485.00</span></div>
-<div class="kv"><span>Unrealized</span><span class="neg">−$920.00 · −61.95%</span></div>
-<div class="kv"><span>Weight</span><span>55.5%</span></div>
-<div class="kv"><span>Strike vs spot</span><span>35.00 vs 40.09 (ITM by 5.09)</span></div>
-<div class="kv"><span>Days to expiry</span><span>15 (2026-10-16)</span></div>
-<div class="kv"><span>Intrinsic / extrinsic</span><span>$5.09 / $0.56 per sh</span></div>
-<div class="flag">Resting order: SELL to close 1 @ limit $17.85/sh = $1,785.00/contract, GTC. Implies IREN ≈ $52.85 at expiry. The limit is 3.2× the current mark ($5.65) and cannot realistically fill — it is not an exit. pending_sell_quantity = 1.</div>
-<h3 style="margin-top:10px">Greeks</h3>
-<div class="kv"><span>Delta</span><span>0.8454 (≈ 84.5 share-equiv.)</span></div>
-<div class="kv"><span>Gamma</span><span>0.0408</span></div>
-<div class="kv"><span>Theta</span><span>−0.0493/sh/day · 0.87% of mark/day · −$4.93/day</span></div>
-<div class="kv"><span>Vega</span><span>0.0194</span></div>
-<div class="kv"><span>Rho</span><span>0.0116</span></div>
-<div class="kv"><span>IV</span><span>71.7%</span></div>
-<div class="kv"><span>Prob. of profit (broker, from today's price)</span><span>43.8%</span></div>
-<div class="kv"><span>Open interest / volume</span><span>1,271 / 3</span></div>
-<h3 style="margin-top:10px">Moneyness</h3>
-<svg viewBox="0 0 360 120" width="100%" role="img" aria-label="Moneyness">
-<rect x="79.1" y="44" width="264.9" height="16" fill="#3fb950" opacity=".18"/>
-<line x1="16" y1="52" x2="344" y2="52" stroke="#30363d"/>
-<line x1="79.1" y1="36" x2="79.1" y2="68" stroke="#8b949e" stroke-width="2"/>
-<text x="79.1" y="30" class="ax" fill="#8b949e" text-anchor="middle">strike 35.00</text>
-<line x1="143.3" y1="36" x2="143.3" y2="68" stroke="#58a6ff" stroke-width="2"/>
-<text x="143.3" y="84" class="ax" fill="#58a6ff" text-anchor="end">spot 40.09</text>
-<line x1="150.4" y1="36" x2="150.4" y2="68" stroke="#d29922" stroke-width="2" stroke-dasharray="3 3"/>
-<text x="150.4" y="96" class="ax" fill="#d29922" text-anchor="start">mkt BE 40.65</text>
-<line x1="266.4" y1="36" x2="266.4" y2="68" stroke="#f0f6fc" stroke-width="2"/>
-<text x="266.4" y="30" class="ax" fill="#f0f6fc" text-anchor="middle">YOUR BE 49.85</text>
-<line x1="304.3" y1="36" x2="304.3" y2="68" stroke="#a371f7" stroke-width="2" stroke-dasharray="3 3"/>
-<text x="304.3" y="84" class="ax" fill="#a371f7" text-anchor="middle">limit→52.85</text>
-<text x="83.1" y="112" class="ax" fill="#3fb950">ITM span (spot above 35.00)</text>
-<text x="204.8" y="48" class="ax" text-anchor="middle" fill="#c9d1d9">+9.76</text>
-</svg>
-<h3 style="margin-top:10px">Premium composition</h3>
-<svg viewBox="0 0 360 100" width="100%" role="img" aria-label="Premium composition">
-<rect x="16.0" y="30" width="104.3" height="24" fill="#3fb950" opacity=".7"/>
-<rect x="120.3" y="30" width="11.5" height="24" fill="#d29922" opacity=".8"/>
-<line x1="320.4" y1="20" x2="320.4" y2="64" stroke="#f0f6fc" stroke-width="2" stroke-dasharray="4 3"/>
-<text x="320.4" y="14" class="ax" text-anchor="end" fill="#f0f6fc">paid 14.85</text>
-<text x="16.0" y="78" class="ax" fill="#3fb950">intrinsic 5.09</text>
-<text x="135.8" y="46" class="ax" fill="#d29922">extrinsic 0.56</text>
-<text x="16.0" y="92" class="ax">mark 5.65/sh = $565.00 vs $1,485.00 paid</text>
-</svg>
-</div>
-
-<h2>Crypto positions</h2>
-<div class="card"><h3>FET <span class="dim">· Artificial Superintelligence</span></h3>
-<div class="kv"><span>Quantity</span><span>20</span></div>
-<div class="kv"><span>Average cost / unit</span><span>$0.2080</span></div>
-<div class="kv"><span>Mark (bid / ask)</span><span>$0.23006 (0.22777 / 0.23235)</span></div>
-<div class="kv"><span>Market value / weight</span><span>$4.60 · 0.5%</span></div>
-<div class="kv"><span>Cost basis</span><span>$4.16</span></div>
-<div class="kv"><span>Unrealized</span><span class="pos">$0.44 · +10.61%</span></div>
-<div class="kv"><span>Sellable / held for sell</span><span>20 / 0</span></div>
-<div class="kv"><span>Day move vs Central-midnight close $0.23509</span><span class="neg">−2.14%</span></div>
-<div class="kv"><span>Resting order</span><span class="warn">none (crypto order book read, no open orders)</span></div>
-<div class="flag" style="color:#d29922;border-color:#d29922">Wide spread: 199 bp ≈ $0.09 round-trip cost on this $4.60 position — about 21% of the unrealized gain. Not opened today.</div></div>
-<div class="dim" style="margin-top:8px"><b>Dust (&lt; $1):</b> STRK (Starknet Token) · qty 0.5 · value $0.0210 · price $0.04195 · entry $0.04 · basis $0.02 recorded, acquisition source not reported by broker.</div>
-
-<h2>Today's orders</h2>
-<div class="card">No equity, option or crypto orders were placed or filled today. One resting GTC option order (above) was placed 2026-09-08 and is still open.</div>
-
-<div class="foot">Generated 2026-10-01 14:06 CT · values as of generation, not live.<br>Buying power equals cash — limited margin provides instant settlement, not borrowing.</div>
-</body></html>
+<div class="grid" style="grid-template-columns:repeat(2,1fr)"><div class="cell"><div class="l">Today's realized</div><div class="v">no closed positions today</div><div class="sm mut">0 closing trades</div></div>
+<div class="cell"><div class="l">Week-to-date realized (last 7 days)</div><div class="v r">-$68.65</div><div class="sm mut">10 closing trades</div></div></div>
+<p class="sm mut">Closes today: none. Closes in the week window:</p><table><tr><th>Time CT</th><th>Symbol</th><th>Side</th><th class="n">Qty</th><th class="n">Exec px</th><th class="n">Realized</th></tr><tr><td>2026-09-30 10:28</td><td>YANG</td><td>sell</td><td class="n">4</td><td class="n">$31.96</td><td class="n r">-$3.42</td></tr><tr><td>2026-09-30 10:28</td><td>SRTY</td><td>sell</td><td class="n">6</td><td class="n">$26.235</td><td class="n r">-$1.17</td></tr><tr><td>2026-09-30 10:27</td><td>SPXS</td><td>sell</td><td class="n">4</td><td class="n">$24.215</td><td class="n r">-$1.20</td></tr><tr><td>2026-09-30 10:27</td><td>TZA</td><td>sell</td><td class="n">1.9</td><td class="n">$46.60</td><td class="n r">-$0.61</td></tr><tr><td>2026-09-29 10:44</td><td>SOXS</td><td>sell</td><td class="n">4</td><td class="n">$32.735</td><td class="n r">-$12.20</td></tr><tr><td>2026-09-28 10:18</td><td>SOXL</td><td>sell</td><td class="n">2</td><td class="n">$135.955</td><td class="n r">-$32.15</td></tr><tr><td>2026-09-28 10:18</td><td>KORU</td><td>sell</td><td class="n">3.49</td><td class="n">$19.573</td><td class="n r">-$7.09</td></tr><tr><td>2026-09-28 10:17</td><td>JNUG</td><td>sell</td><td class="n">1</td><td class="n">$150.75</td><td class="n r">-$17.74</td></tr><tr><td>2026-09-25 14:28</td><td>MULL</td><td>sell</td><td class="n">7.8</td><td class="n">$26.505</td><td class="n g">+$3.32</td></tr><tr><td>2026-09-25 14:27</td><td>JDST</td><td>sell</td><td class="n">15</td><td class="n">$22.591</td><td class="n g">+$3.61</td></tr></table>
+<h2>Entry vs current</h2><svg viewBox="0 0 640 198" role="img" aria-label="Entry vs current, % change from cost"><line x1="201.1" y1="20" x2="201.1" y2="184" stroke="#2d3743" stroke-dasharray="3 3"/><text x="201.1" y="196" text-anchor="middle">-60%</text><line x1="303.3" y1="20" x2="303.3" y2="184" stroke="#2d3743" stroke-dasharray="3 3"/><text x="303.3" y="196" text-anchor="middle">-40%</text><line x1="405.6" y1="20" x2="405.6" y2="184" stroke="#2d3743" stroke-dasharray="3 3"/><text x="405.6" y="196" text-anchor="middle">-20%</text><line x1="507.8" y1="20" x2="507.8" y2="184" stroke="#2d3743" stroke-dasharray="3 3"/><text x="507.8" y="196" text-anchor="middle">0%</text><line x1="610.0" y1="20" x2="610.0" y2="184" stroke="#2d3743" stroke-dasharray="3 3"/><text x="610.0" y="196" text-anchor="middle">20%</text><line x1="507.8" y1="20" x2="507.8" y2="184" stroke="#8b949e"/><text x="6" y="40">FET (crypto)</text><text x="6" y="54" class="mut" style="font-size:9px">entry $0.2080 → $0.2300 /coin</text><rect x="507.8" y="38" width="54.1" height="12" fill="#3fb950" opacity=".55"/><circle cx="507.8" cy="44" r="5" fill="#0b0f14" stroke="#e6edf3" stroke-width="1.5"/><circle cx="561.8" cy="44" r="5" fill="#3fb950"/><text x="569.8" y="35" style="font-size:10px">+10.6%</text><text x="6" y="86">SOXS</text><text x="6" y="100" class="mut" style="font-size:9px">entry $33.39 → $31.75 /sh</text><rect x="482.7" y="84" width="25.1" height="12" fill="#f85149" opacity=".55"/><circle cx="507.8" cy="90" r="5" fill="#0b0f14" stroke="#e6edf3" stroke-width="1.5"/><circle cx="482.7" cy="90" r="5" fill="#f85149"/><text x="490.7" y="81" style="font-size:10px">-4.9%</text><rect x="0" y="114" width="640" height="44" fill="#a371f7" opacity=".12"/><text x="6" y="132">IREN $35C</text><text x="6" y="146" class="mut" style="font-size:9px">entry $14.85 → $6.125 /sh premium</text><rect x="207.7" y="130" width="300.1" height="12" fill="#f85149" opacity=".55"/><circle cx="507.8" cy="136" r="5" fill="#0b0f14" stroke="#e6edf3" stroke-width="1.5"/><circle cx="207.7" cy="136" r="5" fill="#f85149"/><text x="215.7" y="127" style="font-size:10px">-58.7%</text></svg><div class="sm mut">% change from cost; hollow = entry (0%), filled = current. Purple-tinted row = option. Dust (&lt;$1) omitted. Sorted best to worst.</div>
+<h2>Equity positions</h2><div class="card"><h3>SOXS <span class="mut sm">14.1 sh</span></h3><div class="kv"><div><span>Entry</span><span>$33.39</span></div><div><span>Last (reg. close)</span><span>$31.74</span></div><div><span>Bid / ask</span><span>$31.76 / $31.78</span></div><div><span>Spread</span><span>6 bp</span></div><div><span>Broker mark (value basis)</span><span>$31.750</span></div><div><span>Day vs prior close $33.08</span><span><span class="r">-4.02% / -$18.75</span></span></div><div><span>Market value</span><span>$447.68 · 42.0% weight</span></div><div><span>Cost basis</span><span>$470.80</span></div><div><span>Unrealized</span><span><span class="r">-$23.12 (-4.91%)</span></span></div><div><span>Sellable / reserved</span><span>14.1 / 0</span></div><div><span>Resting stop</span><span>none</span></div></div><div class="sm mut">Not opened today. Order book checked: no open equity orders — this position has no stop protection.</div></div>
+<h2>Option positions</h2><div class="card opt"><h3>IREN $35 Call · exp 2026-10-16 <span class="mut sm">1 contract · 15 days to expiry</span></h3>
+<div class="be1">Your breakeven at expiry: $49.85</div><div class="be2 sm">Market breakeven (a buyer today, not yours): $41.13</div>
+<div class="kv"><div><span>Mark / contract</span><span>$612.50</span></div><div><span>Mark / share</span><span>$6.125</span></div><div><span>Entry / contract</span><span>$1485.00</span></div><div><span>Entry / share</span><span>$14.85</span></div><div><span>Bid / ask</span><span>$6.00 / $6.25</span></div><div><span>Spread</span><span>408 bp</span></div><div><span>Day vs prev close $6.40</span><span><span class="r">-4.30% / -$27.50</span></span></div><div><span>Market value (broker)</span><span>$613.00 vs cost $1,485.00</span></div><div><span>Unrealized</span><span><span class="r">-$872.00 (-58.72%)</span></span></div><div><span>Strike vs spot</span><span>$35 vs $40.67 (ITM $5.67)</span></div><div><span>Intrinsic / extrinsic</span><span>$5.67 / $0.455 per sh</span></div><div><span>Spot to reach your BE</span><span>+$9.18 (+22.6%)</span></div></div>
+<h3 style="margin-top:10px;font-size:14px">Greeks</h3><div class="kv"><div><span>Delta</span><span>0.8708 (87 share-equiv.)</span></div><div><span>Gamma</span><span>0.0361</span></div><div><span>Theta</span><span>-0.0442/sh · 0.72%/day · $4.42/day</span></div><div><span>Vega</span><span>0.0174</span></div><div><span>Rho</span><span>0.0120</span></div><div><span>IV</span><span>70.8%</span></div><div><span>Prob. of profit</span><span>44.5%</span></div><div><span>OI / volume</span><span>1,271 / 3</span></div></div>
+<div class="warn">Pending sell quantity: 1 (the resting order below).</div>
+<div class="warn"><b>Resting order:</b> sell-to-close 1 @ limit $17.85/share ($1,785/contract), GTC, regular hours, placed 2026-09-08. Implies underlying ≈ $52.85 at expiry. Limit is 2.9× the mark of $6.125 — it cannot realistically fill and is <b>not an exit</b>.</div>
+<p class="sm mut">Moneyness</p><svg viewBox="0 0 640 120" role="img" aria-label="Moneyness"><rect x="110.0" y="40" width="510.0" height="20" fill="#3fb950" opacity=".18"/><line x1="20" y1="50" x2="620" y2="50" stroke="#2d3743"/><line x1="110.0" y1="38" x2="110.0" y2="62" stroke="#c9d1d9" stroke-width="2"/><text x="110.0" y="34" text-anchor="middle" style="fill:#c9d1d9">strike 35</text><line x1="280.1" y1="38" x2="280.1" y2="62" stroke="#58a6ff" stroke-width="2"/><text x="280.1" y="78" text-anchor="middle" style="fill:#58a6ff">spot 40.67</text><line x1="293.9" y1="38" x2="293.9" y2="62" stroke="#8b949e" stroke-width="2"/><text x="293.9" y="96" text-anchor="middle" style="fill:#8b949e">mkt BE 41.13</text><line x1="555.5" y1="38" x2="555.5" y2="62" stroke="#f0b429" stroke-width="2"/><text x="555.5" y="34" text-anchor="middle" style="fill:#f0b429">YOUR BE 49.85</text><text x="380.0" y="112" text-anchor="middle" style="font-size:10px">spot must rise +$9.18 (+22.6%) to reach your breakeven · green = ITM</text></svg><p class="sm mut">Premium composition vs paid</p><svg viewBox="0 0 640 100" role="img" aria-label="Premium composition"><rect x="20" y="30" width="212.6" height="24" fill="#3fb950" opacity=".6"/><rect x="232.6" y="30" width="17.1" height="24" fill="#a371f7" opacity=".8"/><line x1="576.9" y1="20" x2="576.9" y2="66" stroke="#f0b429" stroke-dasharray="4 3" stroke-width="2"/><text x="20" y="80">intrinsic $5.67 (green)</text><text x="220" y="80">extrinsic $0.455 (purple)</text><text x="572.9" y="16" text-anchor="end" style="fill:#f0b429">paid $14.85/sh</text><text x="255.7" y="46" style="font-size:10px">mark $6.125</text></svg></div>
+<h2>Crypto positions</h2><div class="card"><h3>FET <span class="mut sm">Artificial Superintelligence · 20</span></h3><div class="kv"><div><span>Avg cost / coin</span><span>$0.2080</span></div><div><span>Mark</span><span>$0.2300</span></div><div><span>Bid / ask</span><span>$0.2277 / $0.2323</span></div><div><span>Spread</span><span>199 bp · round-trip ≈ $0.092</span></div><div><span>Market value</span><span>$4.60 · 0.43% weight</span></div><div><span>Cost basis</span><span>$4.16</span></div><div><span>Unrealized</span><span><span class="g">+$0.44 (+10.58%)</span></span></div><div><span>Day vs Central-midnight close</span><span><span class="r">-2.16%</span></span></div><div><span>Sellable / held for sell</span><span>20 / 0</span></div><div><span>Resting order</span><span>none</span></div></div><div class="sm mut">Wide spread: round-trip cost ≈ $0.09 on this size versus unrealized +$0.44. Not opened today. Crypto order book checked: no open orders.</div></div>
+<div class="sm mut"><b>Dust (&lt;$1):</b> STRK (Starknet Token) · 0.5 · $0.0209 · $0.0418/coin · entry $0.04/coin (cost $0.02) · held in crypto account, no resting order.</div>
+<h2>Today's orders</h2><p>No orders today (equity, option, crypto). Open resting orders: the IREN option limit above only.</p>
+<h2>Footer</h2><p class="sm mut">Generated 2026-10-01 15:06 CT · values as of generation, not live.<br>Buying power equals cash — limited margin provides instant settlement, not borrowing.</p>
+</div></body></html>
