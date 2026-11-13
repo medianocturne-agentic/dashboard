@@ -1,107 +1,176 @@
-<!doctype html><html lang="en" data-generated="d1351986637d"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Holdings</title>
+<!doctype html>
+<html lang="en" data-generated="8eb3a2c5fadd"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Holdings</title>
 <style>
-:root{--bg:#0b0f14;--card:#121821;--line:#232c38;--fg:#c9d1d9;--mut:#8b949e;--pos:#3fb950;--neg:#f85149;--warn:#d29922}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 -apple-system,system-ui,Segoe UI,Roboto,sans-serif;font-variant-numeric:tabular-nums}
-main{max-width:1000px;margin:0 auto;padding:16px}h1{margin:0;font-size:24px}h2{font-size:16px;margin:26px 0 10px;color:#e6edf3}
-.stamp{font-size:20px;font-weight:700;color:#e6edf3;margin:6px 0 2px}.mut{color:var(--mut)}.sm{font-size:13px}
-.pos{color:var(--pos)}.neg{color:var(--neg)}.warn{color:var(--warn)}
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:#0b0f14;color:#c9d1d9;font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-variant-numeric:tabular-nums}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+h1{margin:0;font-size:26px;color:#f0f6fc}
+h2{font-size:17px;margin:28px 0 10px;color:#f0f6fc;border-bottom:1px solid #21262d;padding-bottom:6px}
+.stamp{font-size:20px;font-weight:700;color:#f0f6fc;margin:6px 0 2px}
+.muted{color:#8b949e;font-size:13px}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.cell,.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
-.cell .k{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}.cell .v{font-size:22px;font-weight:700;margin:2px 0}
-.recon{margin-top:10px;font-size:13px}.card{margin-bottom:12px}.card h3{margin:0 0 8px;font-size:17px}
-.kv{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;font-size:14px}.kv div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dotted var(--line);padding:2px 0}
-.kv span:first-child{color:var(--mut)}.kv span:last-child{text-align:right}
-.tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:6px;border:1px solid var(--warn);color:var(--warn);margin-left:6px;vertical-align:middle}
-.note{font-size:13px;color:var(--mut);margin-top:8px}
-table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:6px 6px;border-bottom:1px solid var(--line)}th{color:var(--mut);font-weight:600;font-size:12px}
-.tw{overflow-x:auto}svg{display:block;width:100%;height:auto}
-footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
-@media(max-width:760px){.grid{grid-template-columns:1fr 1fr}.kv{grid-template-columns:1fr}.cell .v{font-size:19px}table{font-size:13px}}
-@media(max-width:420px){.grid{grid-template-columns:1fr}}
-</style></head><body><main>
+.cell{background:#11161d;border:1px solid #21262d;border-radius:8px;padding:12px}
+.cell .k{font-size:12px;color:#8b949e;text-transform:uppercase;letter-spacing:.04em}
+.cell .v{font-size:22px;font-weight:700;color:#f0f6fc}
+.cell .s{font-size:12px;color:#8b949e}
+.pos{color:#3fb950}.neg{color:#f85149}
+.card{background:#11161d;border:1px solid #21262d;border-radius:8px;padding:14px;margin-bottom:12px}
+.ch{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.sym{font-size:20px;font-weight:700;color:#f0f6fc}
+.big{font-size:18px;font-weight:700}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;margin:10px 0 0}
+dt{color:#8b949e}dd{margin:0}
+small{color:#8b949e;font-weight:400}
+.warn{background:#2d2410;border-left:3px solid #d29922;padding:8px 10px;margin:8px 0;font-size:14px}
+.note{font-size:13px;color:#8b949e;margin:10px 0 0}
+.recon{font-size:13px;color:#8b949e;margin-top:8px;word-wrap:break-word}
+.dust{font-size:13px;color:#8b949e;background:#11161d;border:1px dashed #30363d;border-radius:8px;padding:10px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid #21262d}
+th{color:#8b949e;font-weight:600}
+.tbl{overflow-x:auto}
+.chart{width:100%;height:auto;display:block;background:#0d1218;border:1px solid #21262d;border-radius:8px}
+.ax{fill:#8b949e;font-size:11px}
+.lbl{fill:#f0f6fc;font-size:14px;font-weight:700}
+.sub{fill:#8b949e;font-size:11px}
+.val{font-size:13px;font-weight:700}
+.val.pos{fill:#3fb950}.val.neg{fill:#f85149}
+.legend{font-size:12px;color:#8b949e;margin-top:6px}
+.sw{display:inline-block;width:12px;height:12px;background:#1f2a3a;border:1px solid #30363d;vertical-align:-2px;margin-right:4px}
+footer{margin:30px 0 10px;font-size:13px;color:#8b949e;border-top:1px solid #21262d;padding-top:12px}
+@media (max-width:760px){.grid{grid-template-columns:1fr 1fr}.cell .v{font-size:19px}}
+@media (max-width:420px){.grid{grid-template-columns:1fr}}
+</style></head>
+<body><div class="wrap">
 <header>
 <h1>Holdings</h1>
-<div class="stamp">Snapshot 2026-11-13 11:07 CT</div>
-<div class="mut sm">Account ••••6877 · static snapshot — values as of generation, not live</div>
+<div class="stamp">Snapshot 2026-11-13 12:06 CT</div>
+<div class="muted">Account ••••6877 · static snapshot — values as of generation, not live</div>
 </header>
 
 <h2>Summary</h2>
 <div class="grid">
-<div class="cell"><div class="k">Account value</div><div class="v">$192.64</div><div class="sm mut">Equity $188.15 · Options $0.00 · Crypto $2.95 · Cash $1.53</div></div>
-<div class="cell"><div class="k">Total unrealized</div><div class="v neg">−$1.84</div><div class="sm mut">−0.96% vs cost basis $192.85 (open positions only)</div></div>
-<div class="cell"><div class="k">Day change, open equities</div><div class="v neg">−$1.25</div><div class="sm mut">NVDQ +$2.74 (held overnight) · NVD −$3.99 since today's 10:05 CT entry</div></div>
-<div class="cell"><div class="k">Cash</div><div class="v">$1.53</div><div class="sm mut">Buying power $1.53 · crypto buying power $1.53</div></div>
+<div class="cell"><div class="k">Account value</div><div class="v">$193.02</div><div class="s">equity $188.55 · options $0.00 · crypto $2.94 · cash $1.53</div></div>
+<div class="cell"><div class="k">Total unrealized</div><div class="v neg">−$1.67</div><div class="s">−0.87% on $192.85 cost · 4 positions (incl. 1 dust)</div></div>
+<div class="cell"><div class="k">Day change, held equities</div><div class="v pos">+$2.82</div><div class="s">NVDQ only — NVD opened today (since-entry −$3.89)</div></div>
+<div class="cell"><div class="k">Cash</div><div class="v">$1.53</div><div class="s">buying power $1.53</div></div>
 </div>
-<div class="recon card">Reconciliation: equity $188.1537 + options $0.00 + crypto $2.954266 + cash $1.53 = <b>$192.637966</b> = broker total_value $192.637966 ✓<br><span class="mut">Position cards are priced from live quotes at snapshot time and sum to $191.01 for equities+crypto vs the broker's $191.11; the small gap is quote timing.</span></div>
+<p class="recon">Reconciliation: equity 188.5479 + options 0.0000 + crypto 2.9437 + cash 1.5300 = <b>193.0216</b> vs broker total_value 193.0216 — reconciles ✓. Position values below are recomputed from live quotes ($191.18 incl. crypto) and differ from the broker's figures by a few cents of quote timing.</p>
 
-<h2>Realized P/L <span class="mut sm">— closed positions only, excluding open P/L</span></h2>
-<div class="grid" style="grid-template-columns:repeat(2,1fr)">
-<div class="cell"><div class="k">Today's realized</div><div class="v neg">−$148.80</div><div class="sm mut">1 closing trade (−51.31% on that lot)</div></div>
-<div class="cell"><div class="k">Week-to-date realized</div><div class="v neg">−$156.00</div><div class="sm mut">3 closing trades (broker "week" window)</div></div>
+<h2>Realized P/L <small>— closed positions only, excluding open P/L</small></h2>
+<div class="grid">
+<div class="cell"><div class="k">Today's realized</div><div class="v neg">−$148.80</div><div class="s">1 closing trade</div></div>
+<div class="cell"><div class="k">Week-to-date realized</div><div class="v neg">−$156.00</div><div class="s">3 closing trades</div></div>
 </div>
-<div class="tw"><table><tr><th>Time CT</th><th>Symbol</th><th>Side</th><th>Qty</th><th>Exec price</th><th>Realized</th></tr>
-<tr><td>11-13 10:04 <span class="tag">today</span></td><td>IREN</td><td>sell</td><td>8</td><td>$17.65</td><td class="neg">−$148.80</td></tr>
+<div class="tbl"><table>
+<tr><th>Time CT</th><th>Symbol</th><th>Side</th><th>Qty</th><th>Price</th><th>Realized</th></tr>
+<tr><td>11-13 10:04</td><td>IREN</td><td>sell</td><td>8</td><td>$17.65</td><td class="neg">−$148.80</td></tr>
+<tr><td colspan="6" class="muted">Earlier this week:</td></tr>
 <tr><td>11-12 18:47</td><td>FNGU</td><td>sell</td><td>1</td><td>$25.52</td><td class="neg">−$7.32</td></tr>
 <tr><td>11-12 18:46</td><td>TSLL</td><td>sell</td><td>2</td><td>$10.86</td><td class="pos">+$0.12</td></tr>
 </table></div>
 
-<h2>Entry vs current — % change from cost</h2>
-<div class="card"><svg viewBox="0 0 600 176" role="img" aria-label="Percent change from cost per holding">
-<line x1="70.0" y1="22" x2="70.0" y2="170" stroke="#2d3743" stroke-dasharray="3 4"/>
-<line x1="122.0" y1="22" x2="122.0" y2="170" stroke="#2d3743" stroke-dasharray="3 4"/>
-<text x="122.0" y="16" fill="#8b949e" font-size="11" text-anchor="middle">-30%</text>
-<line x1="174.0" y1="22" x2="174.0" y2="170" stroke="#2d3743" stroke-dasharray="3 4"/>
-<line x1="226.0" y1="22" x2="226.0" y2="170" stroke="#2d3743" stroke-dasharray="3 4"/>
-<text x="226.0" y="16" fill="#8b949e" font-size="11" text-anchor="middle">-20%</text>
-<line x1="278.0" y1="22" x2="278.0" y2="170" stroke="#2d3743" stroke-dasharray="3 4"/>
-<line x1="330.0" y1="22" x2="330.0" y2="170" stroke="#2d3743" stroke-dasharray="3 4"/>
-<text x="330.0" y="16" fill="#8b949e" font-size="11" text-anchor="middle">-10%</text>
-<line x1="382.0" y1="22" x2="382.0" y2="170" stroke="#2d3743" stroke-dasharray="3 4"/>
-<line x1="434.0" y1="22" x2="434.0" y2="170" stroke="#2d3743" stroke-dasharray="3 4"/>
-<text x="434.0" y="16" fill="#8b949e" font-size="11" text-anchor="middle">+0%</text>
-<line x1="486.0" y1="22" x2="486.0" y2="170" stroke="#2d3743" stroke-dasharray="3 4"/>
-<line x1="538.0" y1="22" x2="538.0" y2="170" stroke="#2d3743" stroke-dasharray="3 4"/>
-<text x="538.0" y="16" fill="#8b949e" font-size="11" text-anchor="middle">+10%</text>
-<line x1="590.0" y1="22" x2="590.0" y2="170" stroke="#2d3743" stroke-dasharray="3 4"/>
-<text x="590.0" y="16" fill="#8b949e" font-size="11" text-anchor="middle">+15%</text>
-<line x1="434.0" y1="22" x2="434.0" y2="170" stroke="#c9d1d9" stroke-width="1.5"/>
-<text x="6" y="46" fill="#e6edf3" font-size="13" font-weight="700">NVDQ</text>
-<line x1="434.0" y1="42" x2="517.2" y2="42" stroke="#3fb950" stroke-width="6" stroke-linecap="round"/>
-<circle cx="434.0" cy="42" r="5" fill="#0b0f14" stroke="#c9d1d9" stroke-width="2"/>
-<circle cx="517.2" cy="42" r="5" fill="#3fb950"/>
-<text x="70" y="64" fill="#8b949e" font-size="11">entry $14.03/sh → $15.1529/sh · +8.00%</text>
-<text x="6" y="92" fill="#e6edf3" font-size="13" font-weight="700">NVD</text>
-<line x1="434.0" y1="88" x2="405.7" y2="88" stroke="#f85149" stroke-width="6" stroke-linecap="round"/>
-<circle cx="434.0" cy="88" r="5" fill="#0b0f14" stroke="#c9d1d9" stroke-width="2"/>
-<circle cx="405.7" cy="88" r="5" fill="#f85149"/>
-<text x="70" y="110" fill="#8b949e" font-size="11">entry $6.98/sh → $6.7901/sh · −2.72%</text>
-<rect x="2" y="120" width="596" height="42" fill="#1a1530" rx="4"/>
-<text x="6" y="138" fill="#e6edf3" font-size="13" font-weight="700">FET</text>
-<line x1="434.0" y1="134" x2="128.5" y2="134" stroke="#f85149" stroke-width="6" stroke-linecap="round"/>
-<circle cx="434.0" cy="134" r="5" fill="#0b0f14" stroke="#c9d1d9" stroke-width="2"/>
-<circle cx="128.5" cy="134" r="5" fill="#f85149"/>
-<text x="70" y="156" fill="#8b949e" font-size="11">entry $0.2080/coin → $0.1469/coin · −29.37%</text>
+<h2>Entry vs current <small>— % change from cost</small></h2>
+<svg viewBox="0 0 600 172" class="chart" role="img" aria-label="Entry vs current, percent change from cost">
+<line x1="122.0" y1="18" x2="122.0" y2="166" stroke="#30363d" stroke-dasharray="3 4"/>
+<text x="122.0" y="12" class="ax" text-anchor="middle">-30%</text>
+<line x1="226.0" y1="18" x2="226.0" y2="166" stroke="#30363d" stroke-dasharray="3 4"/>
+<text x="226.0" y="12" class="ax" text-anchor="middle">-20%</text>
+<line x1="330.0" y1="18" x2="330.0" y2="166" stroke="#30363d" stroke-dasharray="3 4"/>
+<text x="330.0" y="12" class="ax" text-anchor="middle">-10%</text>
+<line x1="434.0" y1="18" x2="434.0" y2="166" stroke="#8b949e"/>
+<text x="434.0" y="12" class="ax" text-anchor="middle">0%</text>
+<line x1="538.0" y1="18" x2="538.0" y2="166" stroke="#30363d" stroke-dasharray="3 4"/>
+<text x="538.0" y="12" class="ax" text-anchor="middle">+10%</text>
+<text x="8" y="48" class="lbl">NVDQ</text>
+<rect x="434.0" y="41" width="85.2" height="6" fill="#3fb950" opacity="0.55"/>
+<circle cx="434.0" cy="44" r="5" fill="none" stroke="#c9d1d9" stroke-width="1.5"/>
+<circle cx="519.2" cy="44" r="5" fill="#3fb950"/>
+<text x="528.2" y="48" class="val pos" text-anchor="start">+8.2%</text>
+<text x="442.0" y="63" class="sub">$14.03 → $15.180/sh</text>
+<text x="8" y="92" class="lbl">NVD</text>
+<rect x="406.4" y="85" width="27.6" height="6" fill="#f85149" opacity="0.55"/>
+<circle cx="434.0" cy="88" r="5" fill="none" stroke="#c9d1d9" stroke-width="1.5"/>
+<circle cx="406.4" cy="88" r="5" fill="#f85149"/>
+<text x="397.4" y="92" class="val neg" text-anchor="end">−2.7%</text>
+<text x="442.0" y="107" class="sub">$6.98 → $6.795/sh</text>
+<rect x="2" y="118" width="596" height="40" fill="#1f2a3a" opacity="0.6"/>
+<text x="8" y="136" class="lbl">FET</text>
+<rect x="126.0" y="129" width="308.0" height="6" fill="#f85149" opacity="0.55"/>
+<circle cx="434.0" cy="132" r="5" fill="none" stroke="#c9d1d9" stroke-width="1.5"/>
+<circle cx="126.0" cy="132" r="5" fill="#f85149"/>
+<text x="117.0" y="136" class="val neg" text-anchor="end">−29.6%</text>
+<text x="442.0" y="151" class="sub">$0.2080 → $0.1464/coin</text>
 </svg>
-<div class="note">Hollow circle = entry (0%), filled = current; bar green above cost, red below. Purple-tinted rows are crypto. No option positions are open, so there are no option rows. STRK dust is excluded.</div></div>
+<div class="legend">Hollow circle = entry (0%), filled = current. <span class="sw"></span>Tinted row = crypto. No option positions held. STRK dust excluded.</div>
 
 <h2>Equity positions</h2>
-<div class="card"><h3>NVDQ</h3><div class="kv"><div><span>Quantity</span><span>3 sh</span></div><div><span>Entry (avg cost)</span><span>$14.03/sh</span></div><div><span>Last</span><span>$15.1529</span></div><div><span>Bid / ask</span><span>$15.16 / $15.17</span></div><div><span>Spread</span><span>6.6 bp</span></div><div><span>Day change vs prior close $14.24</span><span><span class="pos">+6.41% · +$2.74</span></span></div><div><span>Market value</span><span>$45.46 (23.6% of account)</span></div><div><span>Cost basis</span><span>$42.09</span></div><div><span>Unrealized</span><span><b class="pos">+$3.37 (+8.00%)</b></span></div><div><span>Sellable / reserved</span><span>3 / 0</span></div><div><span>Resting stop</span><span><span class="warn">none — no stop on the order book</span></span></div></div></div>
-<div class="card"><h3>NVD<span class="tag">opened today 10:05 CT</span></h3><div class="kv"><div><span>Quantity</span><span>21 sh</span></div><div><span>Entry (avg cost)</span><span>$6.98/sh</span></div><div><span>Last</span><span>$6.7901</span></div><div><span>Bid / ask</span><span>$6.79 / $6.80</span></div><div><span>Spread</span><span>14.7 bp</span></div><div><span>Change since entry</span><span><b class="neg">−$3.99 (−2.72%)</b></span></div><div><span>Ticker day move vs prior close $6.40</span><span><span class="pos">+6.10% (+$0.3901/sh)</span> — before the position existed, not his P/L</span></div><div><span>Market value</span><span>$142.59 (74.0% of account)</span></div><div><span>Cost basis</span><span>$146.58</span></div><div><span>Unrealized</span><span><b class="neg">−$3.99 (−2.72%)</b></span></div><div><span>Sellable / reserved</span><span>21 / 0</span></div><div><span>Resting stop</span><span><span class="warn">none — no stop on the order book</span></span></div></div></div>
+<div class="card">
+<div class="ch"><span class="sym">NVDQ</span><span class="pos big">+$3.45 <small>+8.20%</small></span></div>
+
+<dl>
+<dt>Quantity</dt><dd>3 sh</dd>
+<dt>Entry (avg cost)</dt><dd>$14.03</dd>
+<dt>Last</dt><dd>$15.180 <small>bid $15.16 / ask $15.17</small></dd>
+<dt>Day change</dt><dd class="pos">+6.60% · +$2.82 <small>vs $14.24 close 11-12</small></dd>
+<dt>Market value</dt><dd>$45.54 <small>23.6% of account</small></dd>
+<dt>Cost basis</dt><dd>$42.09</dd>
+<dt>Unrealized</dt><dd class="pos">+$3.45 (+8.20%)</dd>
+<dt>Spread</dt><dd>6.6 bp</dd>
+<dt>Sellable / reserved</dt><dd>3 / 0</dd>
+<dt>Resting stop</dt><dd class="neg">none — no open order on the book</dd>
+</dl></div><div class="card">
+<div class="ch"><span class="sym">NVD</span><span class="neg big">−$3.89 <small>−2.65%</small></span></div>
+<p class="warn">Opened today 10:05 CT (21 @ $6.975 fill). The day change below is the ticker's move vs yesterday's close (before this position existed) — <b>not your P/L</b>. Your P/L since entry is −$3.89 (−2.65%).</p>
+<dl>
+<dt>Quantity</dt><dd>21 sh</dd>
+<dt>Entry (avg cost)</dt><dd>$6.98</dd>
+<dt>Last</dt><dd>$6.795 <small>bid $6.79 / ask $6.80</small></dd>
+<dt>Day change (ticker)</dt><dd class="pos">+6.17% · +$8.29 <small>vs $6.40 close 11-12</small></dd>
+<dt>Market value</dt><dd>$142.69 <small>73.9% of account</small></dd>
+<dt>Cost basis</dt><dd>$146.58</dd>
+<dt>Unrealized</dt><dd class="neg">−$3.89 (−2.65%)</dd>
+<dt>Spread</dt><dd>14.7 bp</dd>
+<dt>Sellable / reserved</dt><dd>21 / 0</dd>
+<dt>Resting stop</dt><dd class="neg">none — no open order on the book</dd>
+</dl></div>
 
 <h2>Option positions</h2>
-<div class="card mut">No open option positions. No resting option orders (read: none confirmed).</div>
+<p class="muted">No open option positions. No resting option orders (confirmed state checked).</p>
 
 <h2>Crypto positions</h2>
-<div class="card" style="border-color:#3b2f6b"><h3>FET <span class="mut sm">Artificial Superintelligence</span></h3><div class="kv"><div><span>Quantity</span><span>20 FET</span></div><div><span>Avg cost</span><span>$0.2080/coin <span class='mut sm'>(direct basis $4.16 ÷ 20)</span></span></div><div><span>Mark</span><span>$0.146906</span></div><div><span>Bid / ask</span><span>$0.145476 / $0.148336</span></div><div><span>Spread</span><span><span class='warn'>195 bp ≈ $0.057 round trip on this size</span></span></div><div><span>Market value</span><span>$2.94 (1.53% of account)</span></div><div><span>Cost basis</span><span>$4.16</span></div><div><span>Unrealized</span><span><b class="neg">−$1.22 (−29.37%)</b></span></div><div><span>Day move vs Central-midnight close $0.142304</span><span><span class="pos">+3.23% · +$0.092</span></span></div><div><span>Sellable / held for sell</span><span>20 / 0</span></div><div><span>Resting order</span><span><span class="warn">none — crypto order book read, no open orders</span></span></div></div>
-<div class="note">Round-trip spread cost ($0.057) is small relative to the −$1.22 unrealized loss here, but the 195 bp spread means a sale realizes roughly half that below mark.</div></div>
-<div class="card sm"><b>Dust</b> (&lt; $1.00): STRK (Starknet Token) · 0.5 · value $0.0185 · price $0.036932 · entry $0.0400/coin (direct basis $0.02) · origin not recorded by broker beyond that prior cost basis · no resting order</div>
+<div class="card">
+<div class="ch"><span class="sym">FET <small>Artificial Superintelligence</small></span><span class="neg big">−$1.23 <small>−29.62%</small></span></div>
+<dl>
+<dt>Quantity</dt><dd>20 FET</dd>
+<dt>Avg cost / unit</dt><dd>$0.2080 <small>direct basis $4.16 ÷ 20</small></dd>
+<dt>Mark</dt><dd>$0.146393 <small>bid $0.144926 / ask $0.147860</small></dd>
+<dt>Day change</dt><dd class="pos">+2.87% · +$0.082 <small>vs Central-midnight $0.142304</small></dd>
+<dt>Market value</dt><dd>$2.93 <small>1.5% of account</small></dd>
+<dt>Cost basis</dt><dd>$4.16</dd>
+<dt>Unrealized</dt><dd class="neg">−$1.23 (−29.62%)</dd>
+<dt>Spread</dt><dd>200 bp · round trip ≈ $0.059 on this size</dd>
+<dt>Sellable / held for sell</dt><dd>20 / 0</dd>
+<dt>Resting order</dt><dd class="neg">none — crypto order book read, no open orders</dd>
+</dl>
+<p class="note">Crypto spreads are wide: buying at the ask and selling at the bid costs about $0.059 on this position (200 bp), separate from the unrealized figure. Held since before today.</p>
+</div>
+<p class="dust"><b>Dust:</b> STRK (Starknet Token) — 0.5 units · value $0.0185 · mark $0.036992 · entry $0.0400/unit (basis $0.02) · unrealized −$0.0015 · held from a prior purchase; no resting order.</p>
 
 <h2>Today's orders</h2>
-<div class="tw"><table><tr><th>Time CT</th><th>Side</th><th>Symbol</th><th>Qty</th><th>Price</th><th>State</th></tr>
-<tr><td>10:04</td><td>sell (market)</td><td>IREN</td><td>8</td><td>$17.65 avg</td><td>filled</td></tr>
-<tr><td>10:05</td><td>buy (market)</td><td>NVD</td><td>21</td><td>$6.975 avg</td><td>filled</td></tr>
+<div class="tbl"><table>
+<tr><th>Time CT</th><th>Side</th><th>Symbol</th><th>Qty</th><th>Price</th><th>State</th></tr>
+<tr><td>10:04</td><td>sell (market)</td><td>IREN</td><td>8</td><td>$17.65</td><td>filled</td></tr>
+<tr><td>10:05</td><td>buy (market)</td><td>NVD</td><td>21</td><td>$6.975</td><td>filled</td></tr>
 </table></div>
-<div class="note">No stop orders today. No open equity, option or crypto orders resting.</div>
+<p class="muted">No resting equity, option or crypto orders — no stops on the book.</p>
 
-<footer>Generated 2026-11-13 11:07 CT · values as of generation, not live.<br>Buying power equals cash — limited margin provides instant settlement, not borrowing.</footer>
-</main></body></html>
+<footer>
+Generated 2026-11-13 12:06 CT · values as of generation, not live.<br>
+Buying power equals cash — limited margin provides instant settlement, not borrowing.
+</footer>
+</div></body></html>
